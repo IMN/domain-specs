@@ -1,0 +1,84 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "IMN ADAPTER - Offer Importation - Merchant's Message Router"
+  },
+  "host" : "IMN.ADPT.OfferIMP.Routers",
+  "basePath" : "/OfferImportationMerchantMessageRouter",
+  "paths" : {
+    "/offerImportationEnabled" : {
+      "post" : {
+        "summary" : "When the offer importation is enabled",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/merchantMarketplaceOfferImportationEnabled"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "OK"
+          }
+        }
+      }
+    },
+    "/offerImportationDisabled" : {
+      "post" : {
+        "summary" : "When the offer importation is disabled",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/merchantMarketplaceOfferImportationDisabled"
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "merchantMarketplaceOfferImportationEnabled" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/IMN.Common.MerchantMarketplaceBase"
+      } ],
+      "x-format" : "Event"
+    },
+    "merchantMarketplaceOfferImportationDisabled" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/IMN.Common.MerchantMarketplaceBase"
+      } ],
+      "x-format" : "Event"
+    },
+    "IMN.Common.MerchantMarketplaceBase" : {
+      "type" : "object",
+      "required" : [ "marketplaceCode", "merchantCode" ],
+      "properties" : {
+        "merchantCode" : {
+          "$ref" : "#/definitions/IMN.Common.MerchantCode"
+        },
+        "marketplaceCode" : {
+          "$ref" : "#/definitions/IMN.Common.MarketplaceCode"
+        }
+      },
+      "x-exclude" : true
+    },
+    "IMN.Common.MerchantCode" : {
+      "type" : "string",
+      "description" : "The merchant code identifier in IMN",
+      "example" : "\"MLT01\""
+    },
+    "IMN.Common.MarketplaceCode" : {
+      "type" : "string",
+      "description" : "The marketplace code identifier in IMN",
+      "example" : "\"C1\""
+    }
+  }
+}
