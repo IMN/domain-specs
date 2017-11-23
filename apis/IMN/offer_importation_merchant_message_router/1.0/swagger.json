@@ -47,35 +47,34 @@
   "definitions" : {
     "merchantMarketplaceOfferImportationEnabled" : {
       "allOf" : [ {
-        "$ref" : "#/definitions/IMN.Common.MerchantMarketplaceBase"
+        "$ref" : "#/definitions/merchantMarketplaceBase"
       } ],
       "x-format" : "Event"
     },
     "merchantMarketplaceOfferImportationDisabled" : {
       "allOf" : [ {
-        "$ref" : "#/definitions/IMN.Common.MerchantMarketplaceBase"
+        "$ref" : "#/definitions/merchantMarketplaceBase"
       } ],
       "x-format" : "Event"
     },
-    "IMN.Common.MerchantMarketplaceBase" : {
+    "merchantMarketplaceBase" : {
       "type" : "object",
       "required" : [ "marketplaceCode", "merchantCode" ],
       "properties" : {
         "merchantCode" : {
-          "$ref" : "#/definitions/IMN.Common.MerchantCode"
+          "$ref" : "#/definitions/merchantCode"
         },
         "marketplaceCode" : {
-          "$ref" : "#/definitions/IMN.Common.MarketplaceCode"
+          "$ref" : "#/definitions/marketplaceCode"
         }
-      },
-      "x-exclude" : true
+      }
     },
-    "IMN.Common.MerchantCode" : {
+    "merchantCode" : {
       "type" : "string",
       "description" : "The merchant code identifier in IMN",
       "example" : "\"MLT01\""
     },
-    "IMN.Common.MarketplaceCode" : {
+    "marketplaceCode" : {
       "type" : "string",
       "description" : "The marketplace code identifier in IMN",
       "example" : "\"C1\""
