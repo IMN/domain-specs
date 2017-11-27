@@ -4,7 +4,7 @@
     "title" : "IMN - Merchant Schemas",
     "description" : "IMN - Merchant Schemas"
   },
-  "x-IMN-ops" : {
+  "x-beezup-ops" : {
     "repo" : "IMN",
     "appRoot" : "TBD",
     "apiName" : "TBD",
