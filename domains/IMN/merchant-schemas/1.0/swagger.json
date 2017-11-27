@@ -1,0 +1,15 @@
+{
+  "info" : {
+    "version" : "1.0",
+    "title" : "IMN - Merchant Schemas",
+    "description" : "IMN - Merchant Schemas"
+  },
+  "x-IMN-ops" : {
+    "repo" : "IMN",
+    "appRoot" : "TBD",
+    "apiName" : "TBD",
+    "namespace" : "IMN.MER.Schemas",
+    "comment" : "IMN.MER.Schemas\n"
+  },
+  "definitions" : { }
+}
