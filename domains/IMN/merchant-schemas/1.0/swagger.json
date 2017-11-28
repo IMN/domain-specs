@@ -106,6 +106,74 @@
       "default" : "SamePricing",
       "enum" : [ "PercentIncreasePricing", "PercentDecreasePricing", "AmountIncreasePricing", "AmountDecreasePricing", "SamePricing" ],
       "x-lov" : "MarketplacePricingRuleType"
+    },
+    "marketplaceInfo" : {
+      "type" : "object",
+      "required" : [ "code", "imageUrl", "subscriptionStatus", "credentialStatus", "transportSettingsStatus", "source" ],
+      "properties" : {
+        "code" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode"
+        },
+        "imageUrl" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl"
+        },
+        "subscriptionStatus" : {
+          "$ref" : "#/definitions/marketplaceSubcriptionStatus"
+        },
+        "credentialStatus" : {
+          "$ref" : "#/definitions/markeplaceCredentialStatus"
+        },
+        "transportSettingsStatus" : {
+          "$ref" : "#/definitions/marketplaceTransportSettingsStatus"
+        },
+        "source" : {
+          "type" : "boolean",
+          "description" : "If true, this marketplace is the source of offers",
+          "default" : false,
+          "example" : false
+        }
+      }
+    },
+    "marketplaceSubcriptionReporting" : {
+      "type" : "object",
+      "required" : [ "status", "messages" ],
+      "properties" : {
+        "status" : {
+          "$ref" : "#/definitions/marketplaceSubcriptionStatus"
+        },
+        "messages" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/marketplaceSubcriptionMessage"
+          }
+        }
+      }
+    },
+    "marketplaceSubcriptionMessage" : {
+      "type" : "object",
+      "required" : [ "senderType", "utcDate", "status" ],
+      "properties" : {
+        "senderType" : {
+          "$ref" : "#/definitions/marketplaceSubcriptionMessageSenderType"
+        },
+        "utcDate" : {
+          "type" : "string",
+          "format" : "date-time",
+          "example" : "2009-06-15T13:45:30Z"
+        },
+        "status" : {
+          "$ref" : "#/definitions/marketplaceSubcriptionStatus"
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "Wrong shoes!"
+        }
+      }
+    },
+    "marketplaceSubcriptionMessageSenderType" : {
+      "type" : "string",
+      "enum" : [ "merchant", "marketplace" ],
+      "example" : "marketplace"
     }
   }
 }
