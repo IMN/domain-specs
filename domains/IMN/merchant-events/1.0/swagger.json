@@ -20,6 +20,13 @@
       "properties" : {
         "merchantCode" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
+        },
+        "companyName" : {
+          "type" : "string",
+          "description" : "The company name of the merchant"
+        },
+        "email" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email"
         }
       }
     },
@@ -28,9 +35,6 @@
       "description" : "The merchant declared this marketplace as a source of his offers",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
-      }, {
-        "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode" ]
       } ]
     },
     "merchantOffersSourceMarketplaceUndeclared" : {
@@ -38,9 +42,6 @@
       "description" : "The merchant undeclared this marketplace as a source of his offers",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
-      }, {
-        "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode" ]
       } ]
     },
     "merchantMarketplaceCredentialConfigured" : {
