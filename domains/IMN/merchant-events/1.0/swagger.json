@@ -57,6 +57,24 @@
         }
       } ]
     },
+    "merchantRegistrationCompleted" : {
+      "x-format" : "Event",
+      "description" : "When the merchant registration has been completed",
+      "type" : "object",
+      "required" : [ "merchantCode", "marketplacesRequested" ],
+      "properties" : {
+        "merchantCode" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
+        },
+        "marketplacesRequested" : {
+          "type" : "array",
+          "minItems" : 1,
+          "items" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode"
+          }
+        }
+      }
+    },
     "merchantProjectionReminded" : {
       "x-format" : "Event",
       "description" : "The merchant projection to database is reminded",
