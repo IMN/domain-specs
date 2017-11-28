@@ -12,7 +12,7 @@
     "comment" : "IMN.MER.Schemas\n"
   },
   "definitions" : {
-    "merchantMarketplaceSubscriptionRefusedReason" : {
+    "merchantMarketplaceSubscriptionRefusalReason" : {
       "type" : "string",
       "minLength" : 5
     }
