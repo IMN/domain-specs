@@ -14,7 +14,8 @@
   "definitions" : {
     "merchantMarketplaceSubscriptionRefusalReason" : {
       "type" : "string",
-      "minLength" : 5
+      "minLength" : 5,
+      "description" : "The marketplace reason for the subscription's refusal"
     },
     "merchantCompanyName" : {
       "type" : "string",
