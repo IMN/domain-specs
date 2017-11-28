@@ -57,7 +57,7 @@
         }
       } ]
     },
-    "projectionReminded" : {
+    "merchantProjectionReminded" : {
       "x-format" : "Event",
       "description" : "The merchant projection to database is reminded",
       "allOf" : [ {
