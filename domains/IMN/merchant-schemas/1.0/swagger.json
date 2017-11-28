@@ -21,6 +21,85 @@
       "type" : "string",
       "minLength" : 2,
       "description" : "Merchant's company name"
+    },
+    "markeplaceCredentialStatus" : {
+      "description" : "The marketplace credential status",
+      "type" : "string",
+      "enum" : [ "configured", "notConfigured", "expired" ],
+      "example" : "configured"
+    },
+    "marketplaceTransportSettingsStatus" : {
+      "description" : "The marketplace transport settings status",
+      "type" : "string",
+      "enum" : [ "configured", "notConfigured" ]
+    },
+    "marketplaceTransportSettingList" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/marketplaceTransportSetting"
+      }
+    },
+    "marketplaceTransportSetting" : {
+      "type" : "object",
+      "required" : [ "transportType", "shippingCharge", "additionalShippingCharge" ],
+      "properties" : {
+        "transportType" : {
+          "type" : "string",
+          "example" : "Standard"
+        },
+        "shippingCharge" : {
+          "type" : "number",
+          "example" : 3.35
+        },
+        "additionalShippingCharge" : {
+          "type" : "number",
+          "example" : 1.52
+        }
+      }
+    },
+    "marketplacePricingSetting" : {
+      "type" : "object",
+      "required" : [ "ruleType" ],
+      "properties" : {
+        "ruleType" : {
+          "$ref" : "#/definitions/marketplacePricingRuleType"
+        },
+        "value" : {
+          "type" : "number",
+          "example" : 42.01
+        }
+      }
+    },
+    "marketplacePricingRuleList" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/marketplacePricingRule"
+      }
+    },
+    "marketplacePricingRule" : {
+      "type" : "object",
+      "required" : [ "ruleType" ],
+      "properties" : {
+        "ruleType" : {
+          "$ref" : "#/definitions/marketplacePricingRuleType"
+        },
+        "operatorType" : {
+          "type" : "string",
+          "enum" : [ "plus", "minus" ],
+          "example" : "plus"
+        },
+        "unit" : {
+          "type" : "string",
+          "enum" : [ "percent", "amount" ],
+          "example" : "percent"
+        }
+      }
+    },
+    "marketplacePricingRuleType" : {
+      "type" : "string",
+      "default" : "SamePricing",
+      "enum" : [ "PercentIncreasePricing", "PercentDecreasePricing", "AmountIncreasePricing", "AmountDecreasePricing", "SamePricing" ],
+      "x-lov" : "MarketplacePricingRuleType"
     }
   }
 }
