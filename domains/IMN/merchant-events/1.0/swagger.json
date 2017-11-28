@@ -81,7 +81,7 @@
         "required" : [ "merchantCode", "marketplaceCode", "reason" ],
         "properties" : {
           "reason" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusedReason"
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusalReason"
           }
         }
       } ]
