@@ -57,23 +57,34 @@
         }
       } ]
     },
-    "merchantRegistrationCompleted" : {
+    "merchantMarketplaceSubscriptionRequested" : {
       "x-format" : "Event",
-      "description" : "When the merchant registration has been completed",
-      "type" : "object",
-      "required" : [ "merchantCode", "marketplacesRequested" ],
-      "properties" : {
-        "merchantCode" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
-        },
-        "marketplacesRequested" : {
-          "type" : "array",
-          "minItems" : 1,
-          "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode"
+      "description" : "When the merchant marketplace subscription has been requested",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      } ]
+    },
+    "merchantMarketplaceSubscriptionAccepted" : {
+      "x-format" : "Event",
+      "description" : "When the marketplace accept the mechant subscription request",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      } ]
+    },
+    "merchantMarketplaceSubscriptionRefused" : {
+      "x-format" : "Event",
+      "description" : "When the marketplace refuse the subscription requested by the merchant",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "marketplaceCode", "reason" ],
+        "properties" : {
+          "reason" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusedReason"
           }
         }
-      }
+      } ]
     },
     "merchantProjectionReminded" : {
       "x-format" : "Event",
