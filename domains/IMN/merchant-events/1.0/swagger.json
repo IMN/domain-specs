@@ -65,7 +65,14 @@
       }, {
         "type" : "object",
         "required" : [ "merchantCode", "senderMessageId" ]
-      } ]
+      } ],
+      "properties" : {
+        "senderMessageId" : {
+          "type" : "string",
+          "format" : "MessageId",
+          "description" : "The last message identifier applied on the aggregate"
+        }
+      }
     },
     "merchantProjected" : {
       "x-format" : "Event",
