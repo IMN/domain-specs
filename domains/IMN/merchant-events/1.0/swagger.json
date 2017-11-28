@@ -15,8 +15,8 @@
     "merchantCreated" : {
       "x-format" : "Event",
       "type" : "object",
-      "description" : "This event",
-      "required" : [ "merchantCode" ],
+      "description" : "When the merchant creates his account on IMN",
+      "required" : [ "merchantCode", "companyName", "email" ],
       "properties" : {
         "merchantCode" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
