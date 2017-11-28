@@ -12,6 +12,12 @@
     "comment" : "IMN.MER.Schemas\n"
   },
   "definitions" : {
+    "marketplaceSubcriptionStatus" : {
+      "description" : "The subscription status",
+      "type" : "string",
+      "enum" : [ "notRequested", "requested", "processing", "accepted", "refused" ],
+      "example" : "accepted"
+    },
     "merchantMarketplaceSubscriptionRefusalReason" : {
       "type" : "string",
       "minLength" : 5,
