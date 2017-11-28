@@ -11,5 +11,10 @@
     "namespace" : "IMN.MER.Schemas",
     "comment" : "IMN.MER.Schemas\n"
   },
-  "definitions" : { }
+  "definitions" : {
+    "merchantMarketplaceSubscriptionRefusedReason" : {
+      "type" : "string",
+      "minLength" : 5
+    }
+  }
 }
