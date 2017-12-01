@@ -6,7 +6,7 @@
   },
   "x-beezup-ops" : {
     "repo" : "IMN",
-    "appRoot" : "TBD",
+    "appRoot" : "IMN.Schemas",
     "apiName" : "TBD",
     "namespace" : "IMN.Schemas",
     "comment" : "IMN.Schemas\n"
