@@ -138,6 +138,25 @@
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       } ]
+    },
+    "externalMerchantMarketplaceSubscriptionsRequested" : {
+      "x-format" : "Event",
+      "type" : "object",
+      "description" : "When the merchant marketplace subscription has been requested",
+      "required" : [ "merchantCode", "marketplacesRequested" ],
+      "properties" : {
+        "merchantCode" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
+        },
+        "marketplacesRequested" : {
+          "type" : "array",
+          "minItems" : 1,
+          "uniqueItems" : true,
+          "items" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode"
+          }
+        }
+      }
     }
   }
 }
