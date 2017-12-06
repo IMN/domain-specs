@@ -72,37 +72,6 @@
         }
       } ]
     },
-    "merchantProjectionReminded" : {
-      "x-format" : "Event",
-      "description" : "The merchant projection to database is reminded",
-      "allOf" : [ {
-        "type" : "object",
-        "required" : [ "merchantCode", "senderMessageId" ],
-        "properties" : {
-          "merchantCode" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
-          },
-          "senderMessageId" : {
-            "type" : "string",
-            "format" : "MessageId",
-            "description" : "The sender message Id"
-          }
-        }
-      } ]
-    },
-    "merchantProjected" : {
-      "x-format" : "Event",
-      "description" : "The merchant state is projected to database",
-      "allOf" : [ {
-        "type" : "object",
-        "required" : [ "merchantCode" ],
-        "properties" : {
-          "merchantCode" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
-          }
-        }
-      } ]
-    },
     "merchantMarketplaceOfferImportationEnabled" : {
       "x-format" : "Event",
       "allOf" : [ {
