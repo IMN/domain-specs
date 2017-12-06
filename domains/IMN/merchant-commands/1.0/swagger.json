@@ -32,7 +32,7 @@
         "required" : [ "merchantCode", "marketplaceCode" ]
       } ]
     },
-    "AcceptMerchantSubscription" : {
+    "acceptMerchantSubscription" : {
       "x-format" : "Command",
       "description" : "When the marketplace accepts the merchant subscription",
       "allOf" : [ {
@@ -42,7 +42,7 @@
         "required" : [ "merchantCode", "marketplaceCode" ]
       } ]
     },
-    "RefuseMerchantSubscription" : {
+    "refuseMerchantSubscription" : {
       "x-format" : "Command",
       "description" : "When the marketplace refuses the merchant subscription",
       "allOf" : [ {
