@@ -777,6 +777,7 @@
       "example" : "http://www.mydomain.com"
     },
     "errorResponseMessage" : {
+      "x-exclude" : true,
       "type" : "object",
       "required" : [ "errors" ],
       "properties" : {
