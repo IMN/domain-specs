@@ -10,7 +10,7 @@
     "apiName" : "TBD",
     "namespace" : "IMN.Offer.Events",
     "comment" : "IMN.Offer.Events\n",
-    "using" : [ "IMN.Offer.Schemas" ]
+    "using" : [ "IMN.Offer.Schemas", "IMN.Schemas" ]
   },
   "definitions" : {
     "merchantOfferEventBase" : {
