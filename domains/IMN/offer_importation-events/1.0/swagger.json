@@ -8,7 +8,8 @@
     "appRoot" : "TBD",
     "apiName" : "TBD",
     "namespace" : "IMN.ADPT.OfferIMP.Events",
-    "comment" : "IMN.ADPT.OfferIMP.Events\n"
+    "comment" : "IMN.ADPT.OfferIMP.Events\n",
+    "using" : [ "IMN.Schemas" ]
   },
   "definitions" : {
     "offerImportationStarted" : {
