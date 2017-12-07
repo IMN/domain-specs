@@ -480,6 +480,7 @@
       "description" : "Indicate the http method to use on this link"
     },
     "link3" : {
+      "x-exclude" : true,
       "type" : "object",
       "required" : [ "href" ],
       "properties" : {
@@ -529,6 +530,7 @@
       }
     },
     "link2" : {
+      "x-exclude" : true,
       "type" : "object",
       "x-deprecated" : true,
       "required" : [ "rel" ],
@@ -685,6 +687,7 @@
       }
     },
     "linkParameter2" : {
+      "x-exclude" : true,
       "type" : "object",
       "x-deprecated" : true,
       "required" : [ "name" ],
