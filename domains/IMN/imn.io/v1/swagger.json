@@ -575,6 +575,7 @@
       "example" : "string"
     },
     "linkParameter3" : {
+      "x-exclude" : true,
       "type" : "object",
       "required" : [ "in" ],
       "properties" : {
