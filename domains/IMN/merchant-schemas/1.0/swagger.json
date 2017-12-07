@@ -94,7 +94,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleOperationType"
         },
         "unit" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleOperationType"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleUnit"
         }
       }
     },
