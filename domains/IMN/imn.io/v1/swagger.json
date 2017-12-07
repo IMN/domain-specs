@@ -476,6 +476,7 @@
       "example" : "GetOrder"
     },
     "httpMethod" : {
+      "x-exclude" : true,
       "type" : "string",
       "enum" : [ "GET", "POST", "PATCH", "DELETE", "PUT", "HEAD" ],
       "default" : "GET",
