@@ -1,0 +1,30 @@
+{
+  "info" : {
+    "version" : "1.0",
+    "title" : "IMN - ADAPTER - Offer Importation Domain"
+  },
+  "x-beezup-ops" : {
+    "repo" : "IMN",
+    "appRoot" : "IMN.ADPT.OfferIMP.Commands",
+    "apiName" : "TBD",
+    "namespace" : "IMN.ADPT.OfferIMP.Commands",
+    "comment" : "IMN.ADPT.OfferIMP.Commands\n",
+    "using" : [ "IMN.Schemas" ]
+  },
+  "definitions" : {
+    "prepareOfferImportation" : {
+      "x-format" : "Command",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "marketplaceCode", "credential" ],
+        "properties" : {
+          "credential" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential"
+          }
+        }
+      } ]
+    }
+  }
+}
