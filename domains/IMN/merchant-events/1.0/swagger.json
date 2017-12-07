@@ -10,7 +10,7 @@
     "apiName" : "TBD",
     "namespace" : "IMN.MER.Events",
     "comment" : "IMN.MER.Events\n",
-    "using" : [ "IMN.MER.Events" ]
+    "using" : [ "IMN.MER.Schemas" ]
   },
   "definitions" : {
     "merchantCreated" : {
