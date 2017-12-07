@@ -128,7 +128,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubcriptionStatus"
         },
         "credentialStatus" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/markeplaceCredentialStatus"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceCredentialStatus"
         },
         "transportSettingsStatus" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceTransportSettingsStatus"
