@@ -444,6 +444,7 @@
       }
     },
     "paginationResultLinks" : {
+      "x-exclude" : true,
       "description" : "The navigation links 'first', 'last', 'next', 'previous'",
       "type" : "object",
       "required" : [ "first", "last" ],
