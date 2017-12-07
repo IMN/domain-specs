@@ -9,7 +9,8 @@
     "appRoot" : "TBD",
     "apiName" : "TBD",
     "namespace" : "IMN.MER.Commands",
-    "comment" : "IMN.MER\n"
+    "comment" : "IMN.MER\n",
+    "using" : [ "IMN.Schemas" ]
   },
   "definitions" : {
     "declareOffersSourceMarketplace" : {
