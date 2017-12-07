@@ -9,7 +9,8 @@
     "appRoot" : "IMN.MER.Schemas",
     "apiName" : "TBD",
     "namespace" : "IMN.MER.Schemas",
-    "comment" : "IMN.MER.Schemas\n"
+    "comment" : "IMN.MER.Schemas\n",
+    "using" : [ "IMN.Schemas" ]
   },
   "definitions" : {
     "marketplaceSubcriptionStatus" : {
