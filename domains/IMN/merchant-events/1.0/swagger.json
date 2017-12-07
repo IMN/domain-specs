@@ -10,7 +10,7 @@
     "apiName" : "TBD",
     "namespace" : "IMN.MER.Events",
     "comment" : "IMN.MER.Events\n",
-    "using" : [ "IMN.MER.Schemas", "IMN.Schemas" ]
+    "using" : [ "IMN.MER.Schemas", "IMN.Schemas", "BeezUP2.ApiModels.Generated.Models.Generated" ]
   },
   "definitions" : {
     "merchantCreated" : {
