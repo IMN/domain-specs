@@ -9,7 +9,8 @@
     "appRoot" : "IMN.Offer.Schemas",
     "apiName" : "TBD",
     "namespace" : "IMN.Offer.Schemas",
-    "comment" : "IMN.Offer.Schemas\n"
+    "comment" : "IMN.Offer.Schemas\n",
+    "using" : [ "IMN.Schemas" ]
   },
   "definitions" : {
     "sku" : {
