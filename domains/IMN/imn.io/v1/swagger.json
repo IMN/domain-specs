@@ -306,6 +306,7 @@
       "example" : "EUR"
     },
     "email" : {
+      "x-exclude" : true,
       "description" : "The email",
       "type" : "string",
       "format" : "email",
