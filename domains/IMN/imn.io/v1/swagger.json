@@ -5,7 +5,6 @@
     "description" : "IMN - Common Domain"
   },
   "x-beezup-ops" : {
-    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "IMN.Schemas",
     "apiName" : "TBD",
@@ -467,11 +466,13 @@
       }
     },
     "href" : {
+      "x-exclude" : true,
       "type" : "string",
       "example" : "/v1/user/orders/{marketplaceCode}/{IMNOrderId}",
       "description" : "Indicate the relative uri for this link"
     },
     "operationId" : {
+      "x-exclude" : true,
       "type" : "string",
       "description" : "The operationId to call.",
       "example" : "GetOrder"
@@ -568,6 +569,7 @@
       }
     },
     "parameterIn" : {
+      "x-exclude" : true,
       "type" : "string",
       "description" : "* path: if the parameter must be pass in the path uri\n* header: if the parameter must be passed in http header\n* query: if the parameter must be passed in querystring\n* body: if the parameter must be passed in the body\n* file: if the parameter must be passed in a multipart/form-data (https://swagger.io/docs/specification/2-0/file-upload/)\n",
       "example" : "path",
