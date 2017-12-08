@@ -4,6 +4,7 @@
     "title" : "IMN - ADAPTER - Offer Importation Domain"
   },
   "x-beezup-ops" : {
+    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "IMN.ADPT.OfferIMP.Commands",
     "apiName" : "TBD",
