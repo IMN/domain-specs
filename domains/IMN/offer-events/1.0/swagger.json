@@ -5,6 +5,7 @@
     "title" : "IMN - Offer Events"
   },
   "x-beezup-ops" : {
+    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "IMN.Offer.Events",
     "apiName" : "TBD",
