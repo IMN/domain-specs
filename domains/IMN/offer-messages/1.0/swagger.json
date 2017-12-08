@@ -5,6 +5,7 @@
     "title" : "IMN - Offer Messages"
   },
   "x-beezup-ops" : {
+    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "IMN.Offer.Messages",
     "apiName" : "TBD",
