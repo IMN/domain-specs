@@ -5,6 +5,7 @@
     "description" : "IMN - Common Domain"
   },
   "x-beezup-ops" : {
+    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "IMN.Schemas",
     "apiName" : "TBD",
