@@ -5,6 +5,7 @@
     "description" : "IMN - Merchant Commands"
   },
   "x-beezup-ops" : {
+    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "TBD",
     "apiName" : "TBD",
