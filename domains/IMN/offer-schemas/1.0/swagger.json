@@ -5,6 +5,7 @@
     "title" : "IMN - Offer Schemas"
   },
   "x-beezup-ops" : {
+    "codeGenType" : "domain",
     "repo" : "IMN",
     "appRoot" : "IMN.Offer.Schemas",
     "apiName" : "TBD",
