@@ -14,7 +14,7 @@
     "using" : [ "IMN.Schemas" ]
   },
   "definitions" : {
-    "marketplaceSubcriptionStatus" : {
+    "marketplaceSubscriptionStatus" : {
       "description" : "The subscription status",
       "type" : "string",
       "enum" : [ "notRequested", "requested", "processing", "accepted", "refused" ],
@@ -126,7 +126,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl"
         },
         "subscriptionStatus" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubcriptionStatus"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubscriptionStatus"
         },
         "credentialStatus" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceCredentialStatus"
@@ -142,27 +142,27 @@
         }
       }
     },
-    "marketplaceSubcriptionReporting" : {
+    "marketplaceSubscriptionReporting" : {
       "type" : "object",
       "required" : [ "status", "messages" ],
       "properties" : {
         "status" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubcriptionStatus"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubscriptionStatus"
         },
         "messages" : {
           "type" : "array",
           "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubcriptionMessage"
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubscriptionMessage"
           }
         }
       }
     },
-    "marketplaceSubcriptionMessage" : {
+    "marketplaceSubscriptionMessage" : {
       "type" : "object",
       "required" : [ "senderType", "utcDate", "status" ],
       "properties" : {
         "senderType" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubcriptionMessageSenderType"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubscriptionMessageSenderType"
         },
         "utcDate" : {
           "type" : "string",
@@ -170,7 +170,7 @@
           "example" : "2009-06-15T13:45:30Z"
         },
         "status" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubcriptionStatus"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceSubscriptionStatus"
         },
         "message" : {
           "type" : "string",
@@ -178,7 +178,7 @@
         }
       }
     },
-    "marketplaceSubcriptionMessageSenderType" : {
+    "marketplaceSubscriptionMessageSenderType" : {
       "type" : "string",
       "enum" : [ "merchant", "marketplace" ],
       "example" : "marketplace"
