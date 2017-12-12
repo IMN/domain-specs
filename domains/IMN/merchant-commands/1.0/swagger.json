@@ -32,7 +32,7 @@
         }
       } ]
     },
-    "declareOffersSourceMarketplace" : {
+    "declareMerchantOffersSourceMarketplace" : {
       "x-format" : "Command",
       "description" : "When the merchant wants to declare this marketplace as offers's source",
       "allOf" : [ {
