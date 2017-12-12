@@ -74,7 +74,12 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode" ]
+        "required" : [ "merchantCode", "marketplaceCode", "reason" ],
+        "properties" : {
+          "reason" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusalReason"
+          }
+        }
       } ]
     },
     "configureMerchantMarketplaceCredential" : {
