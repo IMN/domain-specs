@@ -11,7 +11,7 @@
     "apiName" : "TBD",
     "namespace" : "IMN.MER.Commands",
     "comment" : "IMN.MER\n",
-    "using" : [ "IMN.Schemas" ]
+    "using" : [ "IMN.Schemas", "IMN.MER.Schemas" ]
   },
   "definitions" : {
     "createMerchant" : {
