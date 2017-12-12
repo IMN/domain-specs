@@ -54,12 +54,17 @@
     },
     "acceptMerchantMarketplaceSubscription" : {
       "x-format" : "Command",
-      "description" : "When the marketplace accepts the merchant subscription",
+      "description" : "When the marketplace configures credential and accepts the merchant subscription",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode" ]
+        "required" : [ "merchantCode", "marketplaceCode", "credential" ],
+        "properties" : {
+          "credential" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential"
+          }
+        }
       } ]
     },
     "refuseMerchantMarketplaceSubscription" : {
