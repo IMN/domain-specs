@@ -42,7 +42,7 @@
         "required" : [ "merchantCode", "marketplaceCode" ]
       } ]
     },
-    "undeclareOffersSourceMarketplace" : {
+    "undeclareMerchantOffersSourceMarketplace" : {
       "x-format" : "Command",
       "description" : "When the merchant wants to undeclare this marketplace as offers's source",
       "allOf" : [ {
