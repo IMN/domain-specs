@@ -33,13 +33,13 @@
     "marketplaceCredentialStatus" : {
       "description" : "The marketplace credential status",
       "type" : "string",
-      "enum" : [ "configured", "notConfigured", "expired" ],
+      "enum" : [ "notConfigured", "configured", "expired" ],
       "example" : "configured"
     },
     "marketplaceTransportSettingsStatus" : {
       "description" : "The marketplace transport settings status",
       "type" : "string",
-      "enum" : [ "configured", "notConfigured" ]
+      "enum" : [ "notConfigured", "configured" ]
     },
     "marketplaceTransportSettingList" : {
       "type" : "array",
