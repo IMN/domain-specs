@@ -17,20 +17,31 @@
     "createMerchant" : {
       "x-format" : "Command",
       "description" : "When the merchant declares his information",
-      "allOf" : [ {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
-      }, {
-        "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode", "companyName", "email" ],
-        "properties" : {
-          "companyName" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantCompanyName"
-          },
-          "email" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email"
-          }
+      "type" : "object",
+      "required" : [ "merchantCode", "userId", "companyName", "email", "lastName", "firstName", "country" ],
+      "properties" : {
+        "merchantCode" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
+        },
+        "userId" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+        },
+        "companyName" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantCompanyName"
+        },
+        "email" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "country" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/countryIsoCodeAlpha3"
         }
-      } ]
+      }
     },
     "declareMerchantOffersSourceMarketplace" : {
       "x-format" : "Command",
