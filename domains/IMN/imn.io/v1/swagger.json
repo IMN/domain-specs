@@ -316,6 +316,7 @@
       "example" : "paulsimon@mysupercompany.com"
     },
     "userId" : {
+      "x-exclude" : true,
       "format" : "guid",
       "description" : "The user identifier",
       "type" : "string",
