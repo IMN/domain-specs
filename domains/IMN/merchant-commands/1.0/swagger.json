@@ -16,7 +16,7 @@
   "definitions" : {
     "createMerchant" : {
       "x-format" : "Command",
-      "description" : "When the merchant declares his information",
+      "description" : "When the merchant creates his account on IMN",
       "type" : "object",
       "required" : [ "merchantCode", "userId", "companyName", "email", "lastName", "firstName", "country" ],
       "properties" : {
