@@ -45,7 +45,7 @@
     },
     "updateMerchantAcountInfo" : {
       "x-format" : "Command",
-      "description" : "When the merchant updates his information",
+      "description" : "When the merchant updates his account information",
       "type" : "object",
       "required" : [ "merchantCode", "userId", "companyName", "email", "lastName", "firstName", "country" ],
       "properties" : {
