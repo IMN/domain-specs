@@ -43,6 +43,35 @@
         }
       }
     },
+    "updateMerchantAcountInfo" : {
+      "x-format" : "Command",
+      "description" : "When the merchant updates his information",
+      "type" : "object",
+      "required" : [ "merchantCode", "userId", "companyName", "email", "lastName", "firstName", "country" ],
+      "properties" : {
+        "merchantCode" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
+        },
+        "userId" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+        },
+        "companyName" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantCompanyName"
+        },
+        "email" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "country" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/countryIsoCodeAlpha3"
+        }
+      }
+    },
     "declareMerchantOffersSourceMarketplace" : {
       "x-format" : "Command",
       "description" : "When the merchant wants to declare this marketplace as offers's source",
