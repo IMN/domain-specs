@@ -18,7 +18,7 @@
       "x-format" : "Event",
       "type" : "object",
       "description" : "When the merchant creates his account on IMN",
-      "required" : [ "merchantCode" ],
+      "required" : [ "merchantCode", "userId" ],
       "properties" : {
         "merchantCode" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
@@ -91,7 +91,7 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode", "credential", "userId" ],
+        "required" : [ "merchantCode", "userId", "marketplaceCode", "credential" ],
         "properties" : {
           "credential" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential"
@@ -107,6 +107,14 @@
       "description" : "When the merchant marketplace subscription has been requested",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "merchantMarketplaceSubscriptionAccepted" : {
@@ -114,6 +122,14 @@
       "description" : "When the marketplace accept the mechant subscription request",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "merchantMarketplaceSubscriptionRefused" : {
@@ -123,8 +139,11 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode", "reason" ],
+        "required" : [ "merchantCode", "userId", "marketplaceCode", "reason" ],
         "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          },
           "reason" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusalReason"
           }
@@ -135,18 +154,42 @@
       "x-format" : "Event",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "merchantMarketplaceOfferImportationDisabled" : {
       "x-format" : "Event",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "merchantMarketplaceOfferPublicationEnabled" : {
       "x-format" : "Event",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "merchantMarketplaceOfferPublicationDisabled" : {
@@ -159,22 +202,41 @@
       "x-format" : "Event",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "merchantMarketplaceOrderImportationDisabled" : {
       "x-format" : "Event",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          }
+        }
       } ]
     },
     "externalMerchantMarketplaceSubscriptionsRequested" : {
       "x-format" : "Event",
       "type" : "object",
       "description" : "When the merchant marketplace subscription has been requested",
-      "required" : [ "merchantCode", "marketplacesRequested", "subscriptionRequestUtcDate" ],
+      "required" : [ "merchantCode", "userId", "marketplacesRequested", "subscriptionRequestUtcDate" ],
       "properties" : {
         "merchantCode" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode"
+        },
+        "userId" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
         },
         "marketplacesRequested" : {
           "type" : "array",
