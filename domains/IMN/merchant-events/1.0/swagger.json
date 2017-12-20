@@ -28,7 +28,7 @@
         }
       }
     },
-    "updateMerchantAcountInfo" : {
+    "merchantAcountInfoUpdated" : {
       "x-format" : "Event",
       "description" : "When the merchant updates his information",
       "type" : "object",
