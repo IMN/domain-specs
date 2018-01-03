@@ -96,7 +96,7 @@
       "description" : "The wallet document code"
     },
     "marketplaceCodeParameter" : {
-      "format" : "string",
+      "format" : "MarketplaceCode",
       "name" : "marketplaceCode",
       "in" : "path",
       "required" : true,
@@ -104,7 +104,7 @@
       "description" : "The marketplace code"
     },
     "merchantCodeParameter" : {
-      "format" : "string",
+      "format" : "MerchantCode",
       "name" : "merchantCode",
       "in" : "path",
       "required" : true,
