@@ -152,7 +152,7 @@
     },
     "merchantMarketplaceSubscriptionBlocked" : {
       "x-format" : "Event",
-      "description" : "When the marketplace blocks a merchant subscription",
+      "description" : "When the marketplace blocks the merchant subscription",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
