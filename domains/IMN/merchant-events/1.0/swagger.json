@@ -134,7 +134,25 @@
     },
     "merchantMarketplaceSubscriptionRefused" : {
       "x-format" : "Event",
-      "description" : "When the marketplace refuse the subscription requested by the merchant",
+      "description" : "When the marketplace refuses the merchant subscription",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode", "reason" ],
+        "properties" : {
+          "userId" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+          },
+          "reason" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusalReason"
+          }
+        }
+      } ]
+    },
+    "merchantMarketplaceSubscriptionBlocked" : {
+      "x-format" : "Event",
+      "description" : "When the marketplace blocks a merchant subscription",
       "allOf" : [ {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
