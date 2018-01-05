@@ -25,6 +25,7 @@
       "maxLength" : 50
     },
     "price" : {
+      "x-exclude" : true,
       "type" : "number",
       "format" : "decimal",
       "description" : "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes. http://schema.org/price"
