@@ -292,6 +292,23 @@
           "description" : "The exact date time of the subscription request"
         }
       }
+    },
+    "merchantMarketplacePricingSettingConfigured" : {
+      "x-format" : "Event",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
+      }, {
+        "type" : "object",
+        "required" : [ "merchantCode", "userId", "marketplaceCode", "pricingSettings" ]
+      } ],
+      "properties" : {
+        "userId" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId"
+        },
+        "pricingSettings" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingSetting"
+        }
+      }
     }
   }
 }
