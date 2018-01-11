@@ -41,10 +41,39 @@
       "type" : "string",
       "enum" : [ "notConfigured", "configured" ]
     },
-    "marketplaceShippingSettingList" : {
-      "type" : "array",
-      "items" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSetting"
+    "marketplacePreparationRuleType" : {
+      "type" : "string",
+      "enum" : [ "Increase", "Decrease", "Same" ],
+      "default" : "Same",
+      "example" : "Same"
+    },
+    "marketplacePreparationSetting" : {
+      "type" : "object",
+      "required" : [ "preparationRuleType" ],
+      "properties" : {
+        "preparationRuleType" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePreparationRuleType"
+        },
+        "preparationDelay" : {
+          "type" : "number",
+          "format" : "int32",
+          "description" : "The delay considering the rule"
+        }
+      }
+    },
+    "marketplaceShippingSettings" : {
+      "type" : "object",
+      "required" : [ "preparationSetting", "deliverySettings" ],
+      "properties" : {
+        "preparationSetting" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePreparationSetting"
+        },
+        "deliverySettings" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSetting"
+          }
+        }
       }
     },
     "deliveryMode" : {
@@ -52,23 +81,25 @@
       "example" : "Standard",
       "x-lov" : "DeliveryMode"
     },
-    "marketplaceShippingSetting" : {
+    "marketplaceDeliverySetting" : {
       "type" : "object",
-      "required" : [ "deliveryMode", "shippingChargeRuleType", "shippingCharge", "additionalShippingCharge" ],
+      "required" : [ "deliveryMode", "ruleType" ],
       "properties" : {
         "deliveryMode" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/deliveryMode"
         },
-        "shippingChargeRuleType" : {
+        "ruleType" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingChargeRuleType"
         },
-        "shippingCharge" : {
+        "charge" : {
           "type" : "number",
-          "example" : 3.35
+          "example" : 3.35,
+          "description" : "The charge for this delivery mode considering the rule"
         },
-        "additionalShippingCharge" : {
+        "additionalCharge" : {
           "type" : "number",
-          "example" : 1.52
+          "example" : 1.52,
+          "description" : "The additional charge for this delivery mode"
         }
       }
     },
