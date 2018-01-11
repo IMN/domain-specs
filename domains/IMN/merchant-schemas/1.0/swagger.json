@@ -49,14 +49,16 @@
     },
     "marketplaceShippingSetting" : {
       "type" : "object",
-      "required" : [ "deliveryMode", "shippingCharge", "additionalShippingCharge" ],
+      "required" : [ "deliveryMode", "shippingChargeRuleType", "shippingCharge", "additionalShippingCharge" ],
       "properties" : {
         "deliveryMode" : {
           "type" : "string",
           "example" : "Standard",
           "x-lov" : "DeliveryMode"
         },
-        "shippingChargeRuleType" : null,
+        "shippingChargeRuleType" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingChargeRuleType"
+        },
         "shippingCharge" : {
           "type" : "number",
           "example" : 3.35
