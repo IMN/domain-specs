@@ -49,12 +49,14 @@
     },
     "marketplaceShippingSetting" : {
       "type" : "object",
-      "required" : [ "shippingType", "shippingCharge", "additionalShippingCharge" ],
+      "required" : [ "deliveryMode", "shippingCharge", "additionalShippingCharge" ],
       "properties" : {
-        "shippingType" : {
+        "deliveryMode" : {
           "type" : "string",
-          "example" : "Standard"
+          "example" : "Standard",
+          "x-lov" : "DeliveryMode"
         },
+        "shippingChargeRuleType" : null,
         "shippingCharge" : {
           "type" : "number",
           "example" : 3.35
@@ -111,9 +113,15 @@
     },
     "marketplacePricingRuleType" : {
       "type" : "string",
-      "default" : "SamePricing",
-      "enum" : [ "PercentIncreasePricing", "PercentDecreasePricing", "AmountIncreasePricing", "AmountDecreasePricing", "SamePricing" ],
+      "default" : "Same",
+      "enum" : [ "PercentIncrease", "PercentDecrease", "AmountIncrease", "AmountDecrease", "Same" ],
       "x-lov" : "MarketplacePricingRuleType"
+    },
+    "marketplaceShippingChargeRuleType" : {
+      "type" : "string",
+      "default" : "SamePricing",
+      "enum" : [ "PercentIncrease", "PercentDecrease", "AmountIncrease", "AmountDecrease", "Same", "FixedAmount" ],
+      "x-lov" : "MarketplaceShippingChargeRuleType"
     },
     "marketplaceInfo" : {
       "type" : "object",
