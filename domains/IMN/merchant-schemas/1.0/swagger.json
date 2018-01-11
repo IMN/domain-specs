@@ -57,9 +57,7 @@
       "required" : [ "deliveryMode", "shippingChargeRuleType", "shippingCharge", "additionalShippingCharge" ],
       "properties" : {
         "deliveryMode" : {
-          "type" : "string",
-          "example" : "Standard",
-          "x-lov" : "DeliveryMode"
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/deliveryMode"
         },
         "shippingChargeRuleType" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingChargeRuleType"
