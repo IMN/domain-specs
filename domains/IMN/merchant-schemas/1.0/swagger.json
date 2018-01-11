@@ -71,7 +71,7 @@
         "deliverySettings" : {
           "type" : "array",
           "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSetting"
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceDeliverySetting"
           }
         }
       }
