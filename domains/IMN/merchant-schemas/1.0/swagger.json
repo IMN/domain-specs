@@ -36,22 +36,22 @@
       "enum" : [ "notConfigured", "configured", "expired" ],
       "example" : "configured"
     },
-    "marketplaceTransportSettingsStatus" : {
-      "description" : "The marketplace transport settings status",
+    "marketplaceShippingSettingsStatus" : {
+      "description" : "The marketplace shipping settings status",
       "type" : "string",
       "enum" : [ "notConfigured", "configured" ]
     },
-    "marketplaceTransportSettingList" : {
+    "marketplaceShippingSettingList" : {
       "type" : "array",
       "items" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceTransportSetting"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSetting"
       }
     },
-    "marketplaceTransportSetting" : {
+    "marketplaceShippingSetting" : {
       "type" : "object",
-      "required" : [ "transportType", "shippingCharge", "additionalShippingCharge" ],
+      "required" : [ "shippingType", "shippingCharge", "additionalShippingCharge" ],
       "properties" : {
-        "transportType" : {
+        "shippingType" : {
           "type" : "string",
           "example" : "Standard"
         },
@@ -117,7 +117,7 @@
     },
     "marketplaceInfo" : {
       "type" : "object",
-      "required" : [ "code", "subscriptionStatus", "credentialStatus", "transportSettingsStatus", "source" ],
+      "required" : [ "code", "subscriptionStatus", "credentialStatus", "shippingSettingsStatus", "source" ],
       "properties" : {
         "code" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode"
@@ -131,8 +131,8 @@
         "credentialStatus" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceCredentialStatus"
         },
-        "transportSettingsStatus" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceTransportSettingsStatus"
+        "shippingSettingsStatus" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSettingsStatus"
         },
         "source" : {
           "type" : "boolean",
