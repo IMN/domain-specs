@@ -47,6 +47,11 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSetting"
       }
     },
+    "deliveryMode" : {
+      "type" : "string",
+      "example" : "Standard",
+      "x-lov" : "DeliveryMode"
+    },
     "marketplaceShippingSetting" : {
       "type" : "object",
       "required" : [ "deliveryMode", "shippingChargeRuleType", "shippingCharge", "additionalShippingCharge" ],
