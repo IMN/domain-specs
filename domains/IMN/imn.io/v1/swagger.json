@@ -1031,11 +1031,11 @@
       "description" : "The API credentials of the merchant on his marketplace.",
       "type" : "object",
       "additionalProperties" : {
-        "type" : "string"
-      },
-      "example" : {
-        "login" : "mylogin",
-        "password" : "myPassword"
+        "type" : "string",
+        "example" : {
+          "login" : "mylogin",
+          "password" : "myPassword"
+        }
       }
     },
     "merchantMarketplaceBase" : {
