@@ -144,6 +144,7 @@
     },
     "merchantNotFound" : {
       "description" : "The merchant code is not found.",
+      "x-exceptions" : [ "MerchantCodeNotFoundException" ],
       "schema" : {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
       }
