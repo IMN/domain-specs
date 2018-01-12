@@ -106,6 +106,10 @@
         }
       }
     },
+    "marketplacePricingValue" : {
+      "type" : "number",
+      "example" : 42.01
+    },
     "marketplacePricingSetting" : {
       "type" : "object",
       "required" : [ "ruleType" ],
@@ -114,8 +118,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleType"
         },
         "value" : {
-          "type" : "number",
-          "example" : 42.01
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingValue"
         }
       }
     },
