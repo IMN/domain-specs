@@ -69,10 +69,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePreparationSetting"
         },
         "deliverySettings" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceDeliverySetting"
-          }
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceDeliverySettingList"
         }
       }
     },
@@ -80,6 +77,12 @@
       "type" : "string",
       "example" : "Standard",
       "x-lov" : "DeliveryMode"
+    },
+    "marketplaceDeliverySettingList" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceDeliverySetting"
+      }
     },
     "marketplaceDeliverySetting" : {
       "type" : "object",
