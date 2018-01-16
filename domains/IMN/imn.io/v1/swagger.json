@@ -155,6 +155,13 @@
       "schema" : {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
       }
+    },
+    "merchantCodeAlreadyUsed" : {
+      "description" : "The merchant code is not available",
+      "x-exceptions" : [ "merchantCodeAlreadyUsedException" ],
+      "schema" : {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+      }
     }
   },
   "definitions" : {
