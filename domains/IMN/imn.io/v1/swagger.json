@@ -158,7 +158,7 @@
     },
     "merchantCodeAlreadyUsed" : {
       "description" : "The merchant code is not available",
-      "x-exceptions" : [ "merchantCodeAlreadyUsedException" ],
+      "x-exceptions" : [ "MerchantCodeAlreadyUsedException" ],
       "schema" : {
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
       }
