@@ -356,6 +356,7 @@
       "description" : "The country iso code alpha 3 <a href=\"https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3\">(ISO 3166-1_alpha-3)</a>",
       "type" : "string",
       "x-lov" : "Country",
+      "pattern" : "^[A-Z]{3}$",
       "example" : "FRA"
     },
     "currencyCode" : {
