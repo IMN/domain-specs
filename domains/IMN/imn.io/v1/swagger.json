@@ -341,7 +341,7 @@
         },
         "productImageUrl" : {
           "type" : "string",
-          "format" : "uri",
+          "format" : "HttpUrl",
           "description" : "The product image Url",
           "example" : "http://i2.cdscdn.com/pdt2/3/9/0/1/550x550/hai6901018043390/rw/haier-b20fwrss-refrigerateur-americain.jpg"
         },
