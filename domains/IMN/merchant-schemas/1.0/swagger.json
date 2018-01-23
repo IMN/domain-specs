@@ -122,27 +122,6 @@
         }
       }
     },
-    "marketplacePricingRuleList" : {
-      "type" : "array",
-      "items" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRule"
-      }
-    },
-    "marketplacePricingRule" : {
-      "type" : "object",
-      "required" : [ "ruleType" ],
-      "properties" : {
-        "ruleType" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleType"
-        },
-        "operatorType" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleOperationType"
-        },
-        "unit" : {
-          "$ref" : "https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleUnit"
-        }
-      }
-    },
     "marketplacePricingRuleOperationType" : {
       "type" : "string",
       "enum" : [ "plus", "minus" ],
