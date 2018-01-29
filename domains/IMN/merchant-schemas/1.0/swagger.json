@@ -134,7 +134,6 @@
     },
     "marketplacePricingRuleType" : {
       "type" : "string",
-      "default" : "Same",
       "enum" : [ "PercentIncrease", "PercentDecrease", "AmountIncrease", "AmountDecrease", "Same" ]
     },
     "marketplaceShippingChargeRuleType" : {
