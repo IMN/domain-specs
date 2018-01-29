@@ -1083,6 +1083,7 @@
       }
     },
     "sort" : {
+      "x-exclude" : true,
       "type" : "string",
       "default" : "ascending",
       "enum" : [ "ascending", "descending" ]
