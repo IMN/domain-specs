@@ -135,8 +135,7 @@
     "marketplacePricingRuleType" : {
       "type" : "string",
       "default" : "Same",
-      "enum" : [ "PercentIncrease", "PercentDecrease", "AmountIncrease", "AmountDecrease", "Same" ],
-      "x-lov" : "MarketplacePricingRuleType"
+      "enum" : [ "PercentIncrease", "PercentDecrease", "AmountIncrease", "AmountDecrease", "Same" ]
     },
     "marketplaceShippingChargeRuleType" : {
       "type" : "string",
