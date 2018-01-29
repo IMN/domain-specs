@@ -146,49 +146,49 @@
       "description" : "The merchant code is not found.",
       "x-exceptions" : [ "MerchantCodeNotFoundException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "marketplaceNotFound" : {
       "description" : "The marketplace code is not found.",
       "x-exceptions" : [ "MarketplaceCodeNotFoundException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "invalidMarketplaceCredential" : {
       "description" : "The marketplace credential is invalid",
       "x-exceptions" : [ "InvalidMarketplaceCredentialException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "merchantOrMarketplaceNotFound" : {
       "description" : "The merchant code or marketplace code is not found.",
       "x-exceptions" : [ "MarketplaceCodeNotFoundException", "MerchantCodeNotFoundException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "merchantCodeAlreadyUsed" : {
       "description" : "The merchant code is not available",
       "x-exceptions" : [ "MerchantCodeAlreadyUsedException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "invalidMerchantCode" : {
       "description" : "The merchant code is different from the state",
       "x-exceptions" : [ "InvalidMerchantCodeException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "notOfferSourceMarketplace" : {
       "description" : "The marketplace is not the offer source",
       "x-exceptions" : [ "NotOfferSourceMarketplaceException" ],
       "schema" : {
-        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
       }
     },
     "subscriptionNotAcceptedByMarketplace" : {
@@ -849,7 +849,7 @@
           "type" : "array",
           "uniqueItems" : false,
           "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage"
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage"
           }
         }
       }
