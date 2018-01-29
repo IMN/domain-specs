@@ -357,7 +357,6 @@
       "type" : "string",
       "maxLength" : 3,
       "x-lov" : "Country",
-      "x-maxLength" : 3,
       "example" : "FRA"
     },
     "currencyCode" : {
