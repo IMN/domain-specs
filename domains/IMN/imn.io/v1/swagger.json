@@ -833,7 +833,8 @@
     "httpUrl" : {
       "x-exclude" : true,
       "description" : "toto",
-      "type" : "string"
+      "type" : "string",
+      "format" : "email"
     },
     "errorResponseMessage" : {
       "x-exclude" : true,
