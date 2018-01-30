@@ -833,9 +833,7 @@
     "httpUrl" : {
       "x-exclude" : true,
       "description" : "toto",
-      "type" : "string",
-      "pattern" : "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
-      "example" : "http://www.mydomain.com"
+      "type" : "string"
     },
     "errorResponseMessage" : {
       "x-exclude" : true,
