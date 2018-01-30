@@ -834,7 +834,6 @@
       "x-exclude" : true,
       "description" : "The URL <a href=\"https://en.wikipedia.org/wiki/URL\">https://en.wikipedia.org/wiki/URL</a>",
       "type" : "string",
-      "format" : "uri",
       "pattern" : "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "example" : "http://www.mydomain.com"
     },
