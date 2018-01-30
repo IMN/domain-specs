@@ -1082,7 +1082,7 @@
       }
     },
     "sort" : {
-      "x-exclude" : true,
+      "x-excludeSql" : true,
       "type" : "string",
       "default" : "ascending",
       "enum" : [ "ascending", "descending" ]
