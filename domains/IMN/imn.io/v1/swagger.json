@@ -832,7 +832,7 @@
     },
     "httpUrl" : {
       "x-exclude" : true,
-      "description" : "The URL <a href=\"https://en.wikipedia.org/wiki/URL\">https://en.wikipedia.org/wiki/URL</a>",
+      "description" : "toto",
       "type" : "string",
       "pattern" : "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "example" : "http://www.mydomain.com"
