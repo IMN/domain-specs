@@ -573,6 +573,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpMethod"
         },
         "parameters" : {
+          "type" : "object",
           "additionalProperties" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3"
           }
