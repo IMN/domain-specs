@@ -203,13 +203,13 @@
     "merchantCode" : {
       "type" : "string",
       "description" : "The merchant code identifier in IMN",
-      "pattern" : "$([A-Z|0-9])5",
+      "x-pattern" : "$([A-Z|0-9])5",
       "example" : "MLT01"
     },
     "marketplaceCode" : {
       "type" : "string",
       "description" : "The marketplace code identifier in IMN. \nFor now we have:\n- C1 for Cdiscount\n- E1 for ePrice\n- R1 for Real.DE\n- B1 for BOL\n",
-      "pattern" : "$([A-Z][0-9])2",
+      "x-pattern" : "$([A-Z][0-9])2",
       "example" : "C1"
     },
     "paginationRequestParameters" : {
@@ -355,7 +355,7 @@
     "countryIsoCodeAlpha3" : {
       "description" : "The country iso code alpha 3 <a href=\"https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3\">(ISO 3166-1_alpha-3)</a>",
       "type" : "string",
-      "maxLength" : 3,
+      "x-maxLength" : 3,
       "x-lov" : "Country",
       "example" : "FRA"
     },
@@ -369,7 +369,7 @@
       "description" : "The email",
       "type" : "string",
       "format" : "email",
-      "pattern" : "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+      "x-pattern" : "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
       "example" : "paulsimon@mysupercompany.com"
     },
     "userId" : {
@@ -573,6 +573,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpMethod"
         },
         "parameters" : {
+          "type" : "object",
           "additionalProperties" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3"
           }
@@ -691,6 +692,7 @@
         },
         "properties" : {
           "description" : "If the parameter is an object with flexible properties (additionProperties/dictionary), we will describe the properties of the object.",
+          "type" : "object",
           "additionalProperties" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameterProperty3"
           },
@@ -834,7 +836,7 @@
       "x-exclude" : true,
       "description" : "The URL <a href=\"https://en.wikipedia.org/wiki/URL\">https://en.wikipedia.org/wiki/URL</a>",
       "type" : "string",
-      "pattern" : "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
+      "x-pattern" : "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$",
       "example" : "http://www.mydomain.com"
     },
     "errorResponseMessage" : {
