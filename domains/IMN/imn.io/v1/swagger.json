@@ -225,7 +225,7 @@
     },
     "pageSize" : {
       "description" : "Indicate the item count per page",
-      "type" : "number",
+      "type" : "integer",
       "format" : "int32",
       "default" : 100,
       "minimum" : 25,
