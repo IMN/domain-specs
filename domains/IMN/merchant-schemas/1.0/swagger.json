@@ -22,12 +22,12 @@
     },
     "merchantMarketplaceSubscriptionRefusalReason" : {
       "type" : "string",
-      "minLength" : 5,
+      "x-minLength" : 5,
       "description" : "The marketplace reason for the subscription's refusal"
     },
     "merchantCompanyName" : {
       "type" : "string",
-      "minLength" : 2,
+      "x-minLength" : 2,
       "description" : "Merchant's company name"
     },
     "marketplaceCredentialStatus" : {
