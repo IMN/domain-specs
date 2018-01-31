@@ -114,6 +114,10 @@
     },
     "marketplacePricingValue" : {
       "type" : "number",
+      "minimum" : 0,
+      "x-minimum" : 0,
+      "maximum" : 1.0E13,
+      "x-maximum" : 1.0E13,
       "example" : 42.01
     },
     "marketplacePricingSetting" : {
