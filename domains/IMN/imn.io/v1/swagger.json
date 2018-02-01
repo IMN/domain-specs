@@ -206,8 +206,8 @@
     "merchantCode" : {
       "type" : "string",
       "description" : "The merchant code identifier in IMN",
-      "pattern" : "$([A-Z|0-9]){5}",
-      "x-pattern" : "$([A-Z|0-9]){5}",
+      "pattern" : "^([A-Z|0-9]){5}$",
+      "x-pattern" : "^([A-Z|0-9]){5}$",
       "example" : "MLT01"
     },
     "marketplaceCode" : {
