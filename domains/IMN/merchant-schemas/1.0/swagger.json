@@ -17,7 +17,7 @@
     "marketplaceSubscriptionStatus" : {
       "description" : "The subscription status",
       "type" : "string",
-      "enum" : [ "notRequested", "requested", "accepted", "refused", "blocked" ],
+      "enum" : [ "notRequested", "requested", "accepted", "declined", "blocked" ],
       "example" : "accepted"
     },
     "merchantMarketplaceSubscriptionRefusalReason" : {
