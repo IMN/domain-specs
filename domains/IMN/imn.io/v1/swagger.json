@@ -585,10 +585,7 @@
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpMethod"
         },
         "parameters" : {
-          "type" : "object",
-          "additionalProperties" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3"
-          }
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameters3"
         },
         "urlTemplated" : {
           "type" : "boolean",
@@ -605,6 +602,12 @@
         "info" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/infoSummaries"
         }
+      }
+    },
+    "linkParameters3" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3"
       }
     },
     "link2" : {
