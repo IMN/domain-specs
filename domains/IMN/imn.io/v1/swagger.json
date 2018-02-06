@@ -712,7 +712,7 @@
           },
           "example" : {
             "shipOrder" : {
-              "type" : "string"
+              "type" : "​string"
             }
           }
         }
