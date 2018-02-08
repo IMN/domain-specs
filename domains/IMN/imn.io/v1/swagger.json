@@ -217,6 +217,11 @@
       "x-pattern" : "^([A-Z][0-9]){1}$",
       "example" : "C1"
     },
+    "marketplaceMerchantCode" : {
+      "type" : "string",
+      "description" : "The merchant code for a marketplace",
+      "example" : "005145"
+    },
     "paginationRequestParameters" : {
       "type" : "object",
       "properties" : {
