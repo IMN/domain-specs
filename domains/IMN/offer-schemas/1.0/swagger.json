@@ -116,18 +116,10 @@
       } ]
     },
     "merchantOfferList" : {
-      "allOf" : [ {
-        "type" : "object",
-        "required" : [ "merchantOffers" ],
-        "properties" : {
-          "merchantOffers" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/merchantOffer"
-            }
-          }
-        }
-      } ]
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/merchantOffer"
+      }
     },
     "merchantOffer" : {
       "allOf" : [ {
