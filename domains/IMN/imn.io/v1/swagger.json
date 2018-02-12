@@ -472,7 +472,7 @@
         "totalEntryCount" : 943,
         "links" : {
           "first" : {
-            "href" : "/v2/user/marketplaces/orders/list/full",
+            "href" : "/merchant/orders/v1/list/full",
             "method" : "POST",
             "parameters" : [ {
               "name" : "request",
@@ -488,7 +488,7 @@
             } ]
           },
           "last" : {
-            "href" : "/v2/user/marketplaces/orders/list/full",
+            "href" : "/merchant/orders/v1/list/full",
             "method" : "POST",
             "parameters" : [ {
               "name" : "request",
@@ -504,7 +504,7 @@
             } ]
           },
           "next" : {
-            "href" : "/v2/user/marketplaces/orders/list/full",
+            "href" : "/merchant/orders/v1/list/full",
             "method" : "POST",
             "parameters" : [ {
               "name" : "request",
@@ -817,8 +817,7 @@
         },
         "href" : {
           "type" : "string",
-          "default" : "/v2/user/{listName}",
-          "example" : "/v2/public/{listName}",
+          "example" : "/merchant/lov/v1/{listName}",
           "description" : "Indicate the relative uri pattern to the list of value"
         },
         "listName" : {
@@ -837,7 +836,7 @@
         "href" : {
           "type" : "string",
           "format" : "uri",
-          "example" : "/v2/public/Go2CultureName",
+          "example" : "/merchant/lov/v1/Go2CultureName",
           "description" : "Indicate the uri to the list of value"
         },
         "method" : {
