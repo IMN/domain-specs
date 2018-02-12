@@ -545,7 +545,7 @@
     "href" : {
       "x-exclude" : true,
       "type" : "string",
-      "example" : "/v1/user/orders/{marketplaceCode}/{IMNOrderId}",
+      "example" : "/merchant/orders/v1/{marketplaceCode}/{IMNOrderId}",
       "description" : "Indicate the relative uri for this link"
     },
     "operationId" : {
