@@ -20,13 +20,7 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer"
       } ]
     },
-    "merchantOfferCreated" : {
-      "x-format" : "Event",
-      "allOf" : [ {
-        "$ref" : "#/definitions/merchantOfferEventBase"
-      } ]
-    },
-    "merchantOfferUpdated" : {
+    "merchantOfferReceived" : {
       "x-format" : "Event",
       "allOf" : [ {
         "$ref" : "#/definitions/merchantOfferEventBase"
