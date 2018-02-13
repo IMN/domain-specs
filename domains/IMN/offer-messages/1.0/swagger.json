@@ -53,7 +53,7 @@
         "updated" : {
           "type" : "array",
           "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer"
+            "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer"
           }
         },
         "deleted" : {
