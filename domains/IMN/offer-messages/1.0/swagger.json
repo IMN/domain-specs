@@ -19,13 +19,7 @@
       "type" : "object",
       "description" : "Contains all changes for one marketplace for one merchant",
       "properties" : {
-        "created" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer"
-          }
-        },
-        "updated" : {
+        "received" : {
           "type" : "array",
           "items" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer"
@@ -44,13 +38,7 @@
       "type" : "object",
       "description" : "Contains all changes",
       "properties" : {
-        "created" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer"
-          }
-        },
-        "updated" : {
+        "received" : {
           "type" : "array",
           "items" : {
             "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer"
