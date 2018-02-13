@@ -20,6 +20,24 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer"
       } ]
     },
+    "merchantOfferCreated" : {
+      "x-format" : "Event",
+      "allOf" : [ {
+        "$ref" : "#/definitions/merchantOfferEventBase"
+      } ]
+    },
+    "merchantOfferUpdated" : {
+      "x-format" : "Event",
+      "allOf" : [ {
+        "$ref" : "#/definitions/merchantOfferEventBase"
+      } ]
+    },
+    "merchantOfferDeleted" : {
+      "x-format" : "Event",
+      "allOf" : [ {
+        "$ref" : "https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier"
+      } ]
+    },
     "merchantMarketplaceOfferEventBase" : {
       "x-exclude" : true,
       "allOf" : [ {
