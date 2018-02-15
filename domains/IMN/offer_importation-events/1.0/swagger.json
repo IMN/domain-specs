@@ -1,7 +1,7 @@
 {
   "info" : {
     "version" : "1.0",
-    "title" : "IMN - ADAPTER - Offer Importation Domain"
+    "title" : "IMN - ADAPTER - Offer Importation Events"
   },
   "x-beezup-ops" : {
     "codeGenType" : "domain",
