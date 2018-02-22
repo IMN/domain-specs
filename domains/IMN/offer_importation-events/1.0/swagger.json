@@ -42,9 +42,9 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode", "partitionId" ],
+        "required" : [ "merchantCode", "marketplaceCode", "partitionKey" ],
         "properties" : {
-          "partitionId" : {
+          "partitionKey" : {
             "type" : "string",
             "description" : "The offer partition identifier"
           }
@@ -57,9 +57,9 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode", "partitionIds" ],
+        "required" : [ "merchantCode", "marketplaceCode", "partitionKeys" ],
         "properties" : {
-          "partitionIds" : {
+          "partitionKeys" : {
             "type" : "array",
             "description" : "The offer partition identifier list",
             "items" : {
@@ -75,9 +75,9 @@
         "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase"
       }, {
         "type" : "object",
-        "required" : [ "merchantCode", "marketplaceCode", "partitionId" ],
+        "required" : [ "merchantCode", "marketplaceCode", "partitionKey" ],
         "properties" : {
-          "partitionId" : {
+          "partitionKey" : {
             "type" : "string",
             "description" : "The offer partition identifier"
           }
