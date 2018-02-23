@@ -47,6 +47,22 @@
           "partitionKey" : {
             "type" : "string",
             "description" : "The offer partition identifier"
+          },
+          "offerCreatedCount" : {
+            "type" : "integer",
+            "description" : "The offer created count"
+          },
+          "offerUpdatedCount" : {
+            "type" : "integer",
+            "description" : "The offer updated count"
+          },
+          "offerUnchangedCount" : {
+            "type" : "integer",
+            "description" : "The offer unchanged count"
+          },
+          "offerDeletedCount" : {
+            "type" : "integer",
+            "description" : "The offer deleted count"
           }
         }
       } ]
