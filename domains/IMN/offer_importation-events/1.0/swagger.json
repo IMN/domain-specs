@@ -63,10 +63,6 @@
           "offerDeletedCount" : {
             "type" : "integer",
             "description" : "The offer deleted count"
-          },
-          "offerFailedCount" : {
-            "type" : "integer",
-            "description" : "The offer failed count"
           }
         }
       } ]
