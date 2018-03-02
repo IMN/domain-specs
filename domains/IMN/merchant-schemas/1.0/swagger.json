@@ -218,11 +218,11 @@
       "enum" : [ "merchant", "marketplace" ],
       "example" : "marketplace"
     },
-    "marketplaceOfferImportationStatus" : {
+    "marketplaceOfferPublicationStatus" : {
       "description" : "The Offer Importation status",
       "type" : "string",
       "enum" : [ "enabled", "disabled" ],
-      "example" : "accepted"
+      "example" : "enabled"
     }
   }
 }
