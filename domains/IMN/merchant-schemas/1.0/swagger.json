@@ -217,6 +217,12 @@
       "type" : "string",
       "enum" : [ "merchant", "marketplace" ],
       "example" : "marketplace"
+    },
+    "marketplaceOfferImportationStatus" : {
+      "description" : "The Offer Importation status",
+      "type" : "string",
+      "enum" : [ "enabled", "disabled" ],
+      "example" : "accepted"
     }
   }
 }
