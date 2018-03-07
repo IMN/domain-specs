@@ -1099,6 +1099,31 @@
       "type" : "string",
       "default" : "ascending",
       "enum" : [ "ascending", "descending" ]
+    },
+    "marketplaceStatus" : {
+      "type" : "string",
+      "description" : "Indicate the status of the marketplace",
+      "enum" : [ "PROD", "TEST" ]
+    },
+    "marketplaceOfferImportationStatus" : {
+      "type" : "string",
+      "description" : "Indicate the marketplace offer importation status",
+      "enum" : [ "Ok", "notOk" ]
+    },
+    "marketplaceOfferPublicationStatus" : {
+      "type" : "string",
+      "description" : "Indicate the marketplace offer publication status",
+      "enum" : [ "Ok", "notOk" ]
+    },
+    "marketplaceOrderHarvestingStatus" : {
+      "type" : "string",
+      "description" : "Indicate the marketplace order harvesting status",
+      "enum" : [ "Ok", "notOk" ]
+    },
+    "marketplaceOrdeChangingStatus" : {
+      "type" : "string",
+      "description" : "Indicate the marketplace order changing status",
+      "enum" : [ "Ok", "notOk" ]
     }
   }
 }
