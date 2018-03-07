@@ -1105,12 +1105,12 @@
       "description" : "Indicate the status of the marketplace",
       "enum" : [ "PROD", "TEST" ]
     },
-    "marketplaceOfferImportationStatus" : {
+    "marketplaceOfferImportatingStatus" : {
       "type" : "string",
       "description" : "Indicate the marketplace offer importation status",
       "enum" : [ "Ok", "notOk" ]
     },
-    "marketplaceOfferPublicationStatus" : {
+    "marketplaceOfferPublicatingStatus" : {
       "type" : "string",
       "description" : "Indicate the marketplace offer publication status",
       "enum" : [ "Ok", "notOk" ]
