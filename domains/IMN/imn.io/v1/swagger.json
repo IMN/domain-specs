@@ -1120,7 +1120,7 @@
       "description" : "Indicate the marketplace order harvesting status",
       "enum" : [ "Ok", "notOk" ]
     },
-    "marketplaceOrdeChangingStatus" : {
+    "marketplaceOrderChangingStatus" : {
       "type" : "string",
       "description" : "Indicate the marketplace order changing status",
       "enum" : [ "Ok", "notOk" ]
