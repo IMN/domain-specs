@@ -152,7 +152,7 @@
     },
     "marketplaceInfo" : {
       "type" : "object",
-      "required" : [ "code", "name", "imageUrl", "subscriptionStatus", "credentialStatus", "shippingSettingsStatus", "source" ],
+      "required" : [ "code", "name", "sellerBackOfficeUrl", "imageUrl", "subscriptionStatus", "credentialStatus", "shippingSettingsStatus", "source" ],
       "properties" : {
         "code" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode"
@@ -161,6 +161,9 @@
           "type" : "string",
           "description" : "The name of the marketplace",
           "example" : "Cdiscount"
+        },
+        "sellerBackOfficeUrl" : {
+          "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl"
         },
         "imageUrl" : {
           "$ref" : "https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl"
