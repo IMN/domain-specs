@@ -1099,11 +1099,6 @@
       "type" : "string",
       "default" : "ascending",
       "enum" : [ "ascending", "descending" ]
-    },
-    "marketplaceStatus" : {
-      "type" : "string",
-      "description" : "Indicate the status of the marketplace",
-      "enum" : [ "PROD", "TEST" ]
     }
   }
 }
