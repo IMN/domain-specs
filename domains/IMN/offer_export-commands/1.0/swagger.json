@@ -21,6 +21,12 @@
         "type" : "object",
         "required" : [ "merchantCode", "marketplaceCode" ]
       } ]
+    },
+    "cancelInitOffersExport" : {
+      "x-format" : "Command",
+      "allOf" : [ {
+        "type" : "object"
+      } ]
     }
   }
 }
