@@ -213,8 +213,8 @@
     "marketplaceCode" : {
       "type" : "string",
       "description" : "The marketplace code identifier in IMN. \nFor now we have:\n- C1 for Cdiscount\n- E1 for ePrice\n- R1 for Real.DE\n- B1 for BOL\n",
-      "pattern" : "^([A-Z][0-9]){1}$",
-      "x-pattern" : "^([A-Z][0-9]){1}$",
+      "pattern" : "^[A-Z][0-9]$",
+      "x-pattern" : "^A-Z][0-9]$",
       "example" : "C1"
     },
     "marketplaceMerchantCode" : {
