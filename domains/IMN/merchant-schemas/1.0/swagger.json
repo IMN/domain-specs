@@ -234,6 +234,23 @@
       "type" : "string",
       "enum" : [ "enabled", "disabled" ],
       "example" : "enabled"
+    },
+    "merchantEvents" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/merchantEvent"
+      }
+    },
+    "merchantEvent" : {
+      "type" : "object",
+      "properties" : {
+        "eventType" : {
+          "type" : "string"
+        },
+        "eventContent" : {
+          "type" : "object"
+        }
+      }
     }
   }
 }
