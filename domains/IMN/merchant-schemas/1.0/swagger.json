@@ -242,7 +242,6 @@
       }
     },
     "merchantEvent" : {
-      "x-exclude" : true,
       "type" : "object",
       "properties" : {
         "eventType" : {
