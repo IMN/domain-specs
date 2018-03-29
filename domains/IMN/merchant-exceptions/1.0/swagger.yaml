@@ -1,0 +1,155 @@
+info:
+  description: "Merchant exceptions"
+  version: '1.0'
+  title: Merchant exceptions
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.MER
+  apiName: TBD
+  namespace: IMN.MER.Exceptions
+  comment: |
+    IMN.MER.Exceptions
+    changed to yaml format
+  using:
+  - IMN.Schemas
+
+definitions:
+  merchantCodeAlreadyUsedException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - merchantCode
+    description: |
+      The merchant code '{merchantCode}' already exists
+    properties:
+      merchantCode: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+        
+  marketplaceCodeNotFoundException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - marketplaceCode
+    description: |
+      The marketplace code '{marketplaceCode}' does not exists
+    properties:
+      marketplaceCode: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+        
+  merchantCodeNotFoundException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - merchantCode
+    description: |
+      The merchant code '{merchantCode}' does not exists
+    properties:
+      merchantCode: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+        
+  invalidMerchantCodeException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - merchantCode
+    description: |
+      The merchant code '{merchantCode}' is different from the state
+    properties:
+      merchantCode: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+        
+  invalidMarketplaceCredentialException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - marketplaceApiCredential
+    description: |
+      The marketplace credential '{marketplaceApiCredential}' is invalid
+    properties:
+      marketplaceApiCredential: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential'
+        
+  subscriptionNotAcceptedByMarketplaceException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - marketplaceCode
+    description: |
+      The subscription is not accepted by marketplace '{marketplaceCode}'
+    properties:
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+    
+  notOfferSourceMarketplaceException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - marketplaceCode
+    description: |
+      The marketplace '{marketplaceCode}' is not the offer source
+    properties:
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+        
+#  emailBadFormattedException:
+#    x-format: Exception
+ #   x-transient: true
+  #  x-technical: false
+   # type: object
+  #  description: | 
+  #    Format of the email is not valid
+  #  properties:
+  #    walletPropertyCode: 
+  #      $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+  
+#  sortException:
+#    x-format: Exception
+#    x-transient: false
+#    x-technical: true
+#    type: object
+#    description: |
+#      example
+#    properties:
+#      sort:
+#        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/sort'
+    
+  
+      
+
+# responses:
+  # GeneralError:
+  #   description: General Error
+  #   schema:
+  #     $ref: '#/definitions/ErrorModel'
+
+# parameters:
+  # skipParam:
+  #   name: "skip"
+  #   in: "query"
+  #   description: "number of items to skip"
+  #   type: "integer"
+
+# pathitems:
+  # EntityOperations:
+  #   get:
+  #     description: "Returns a pet based on ID"
+  #     summary: "Find pet by ID"
+  #     responses:
+  #       default:
+  #         $ref: '#/responses/GeneralError'
