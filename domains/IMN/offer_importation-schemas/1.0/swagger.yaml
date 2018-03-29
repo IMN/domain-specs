@@ -1,0 +1,32 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  version: '1.0'
+  title: IMN - ADAPTER - Offer Importation Schemas
+  description: IMN - ADAPTER - Offer Importation Schemas
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.ADPT.OfferIMP.Schemas
+  apiName: TBD
+  namespace: IMN.ADPT.OfferIMP.Schemas
+  comment: |
+    IMN.ADPT.OfferIMP.Schemas
+    changed to yaml format
+  using:
+  - IMN.Schemas
+
+definitions: 
+    
+  offerImportationStatus:
+    description: The Offer Importation status
+    type: string
+    enum:
+    - started
+    - completed
+    - expired
+    - failed
+    example: started
