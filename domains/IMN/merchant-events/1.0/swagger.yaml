@@ -16,7 +16,6 @@ x-beezup-ops:
   comment: |
     Add sourceMarketplaceCode in the externalMerchantMarketplaceSubscriptionsRequested
     IMN.MER.Events
-    Changed to yaml format 
   using:
   - IMN.MER.Schemas
   - IMN.Schemas
@@ -267,7 +266,7 @@ definitions:
     - merchantCode
     - userId
     - sourceMarketplaceCode
-    - targetMarketplacesSubcriptionRequested
+    - targetMarketplacesSubscriptionRequested
     - subscriptionRequestUtcDate
     properties:
       merchantCode:
@@ -279,7 +278,7 @@ definitions:
       sourceMarketplaceCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
         
-      targetMarketplacesSubcriptionRequested:
+      targetMarketplacesSubscriptionRequested:
         type: array
         minItems: 1
         uniqueItems: true
