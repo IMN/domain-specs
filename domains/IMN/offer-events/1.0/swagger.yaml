@@ -1,0 +1,107 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  description: IMN Core - Offer Events 
+  version: '1.0'
+  title: IMN - Offer Events
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.Offer.Events
+  apiName: TBD
+  namespace: IMN.Offer.Events
+  comment: |
+    IMN.Offer.Events
+    changed to yaml format
+  using:
+  - IMN.Offer.Schemas
+  - IMN.Schemas
+
+definitions:
+
+
+  
+  
+  merchantOfferEventBase:
+    x-exclude: true
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer'
+
+  
+  
+  merchantOfferCreated:
+    x-format: Event
+    allOf:
+    - $ref: '#/definitions/merchantOfferEventBase'
+
+
+  
+  merchantOfferUpdated:
+    x-format: Event
+    allOf:
+    - $ref: '#/definitions/merchantOfferEventBase'
+
+
+  merchantOfferDeleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
+    
+
+  merchantMarketplaceOfferEventBase:
+    x-exclude: true
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer'
+
+
+
+  merchantMarketplaceOfferCreated:
+    x-format: Event
+    allOf:
+    - $ref: '#/definitions/merchantMarketplaceOfferEventBase'
+
+
+  
+  merchantMarketplaceOfferUpdated:
+    x-format: Event
+    allOf:
+    - $ref: '#/definitions/merchantMarketplaceOfferEventBase'
+
+
+  merchantMarketplaceOfferDeleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOfferIdentifier'
+
+
+
+
+  merchantOfferNotImported:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
+    - type: object
+      properties:
+        reasons:
+          type: array
+          items:
+            $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferNoneImportationReason'
+          
+  MerchantOfferPushQueueReminded:
+    x-format: Event
+    description: The merchant offer pusher is reminded
+    allOf:
+    - type: object
+      required: 
+      - merchantCode
+      - senderMessageId
+      properties:
+        merchantCode:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+        senderMessageId:
+          type: string
+          format: MessageId
+          description: The sender message Id
