@@ -1,0 +1,148 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  version: '1.0'
+  title: IMN - ADAPTER - Offer Importation Events
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: TBD
+  apiName: TBD
+  namespace: IMN.ADPT.OfferIMP.Events
+  comment: |
+    IMN.ADPT.OfferIMP.Events
+    changed to yaml format
+  using:
+  - IMN.Schemas
+
+
+definitions:
+
+
+  offerImportationStarted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+
+
+  offerImportationExpired:
+    x-format: Event
+    description: Sent in the reminder to expire the process if it's expired
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - merchantCode
+      - marketplaceCode
+      - lastMessageIdApplied
+      properties:
+        lastMessageIdApplied:
+          type: string
+          format: MessageId
+          description: The last message identifier applied on the aggregate
+
+
+
+
+
+
+  offerImportationPreparationPartitionCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - merchantCode
+      - marketplaceCode
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string
+          description: The offer partition identifier
+          
+
+
+
+
+
+  offerImportationPreparationAllPartitionsCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - merchantCode
+      - marketplaceCode
+      - partitionKeys
+      properties:
+        partitionKeys:
+          type: array
+          description: The offer partition identifier list
+          items:
+            type: string
+        offerCreatedCount:
+          type: integer
+          description: The offer created count
+        offerUpdatedCount:
+          type: integer
+          description: The offer updated count
+        offerUnchangedCount:
+          type: integer
+          description: The offer unchanged count
+        offerDeletedCount:
+          type: integer
+          description: The offer deleted count
+
+
+
+
+  offerImportationSendPartitionCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - merchantCode
+      - marketplaceCode
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string
+          description: The offer partition identifier
+
+
+
+  offerImportationFailed:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required:
+      - merchantCode
+      - marketplaceCode
+      - operationNameInCause
+      - errors
+      properties:
+        operationNameInCause:
+          type: string
+        errors:
+          type: array
+          items:
+            $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage'
+        
+
+  offerImportationCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required:
+      - merchantCode
+      - marketplaceCode
+      - success
+      properties:
+        success:
+          type: boolean
