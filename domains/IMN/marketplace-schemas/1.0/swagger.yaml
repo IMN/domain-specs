@@ -1,0 +1,38 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  description: "This is a sample Domain"
+  version: '1.0'
+  title: IMN - Marketplace Schemas
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.MKP.Schemas
+  apiName: TBD
+  namespace: IMN.MKP.Schemas
+  comment: |
+    IMN.MKP.Schemas
+    changed to yaml format
+  using:
+  - IMN.Schemas
+
+
+definitions:
+
+  marketplaceApiIntegrationStatus:
+    type: string
+    enum:
+    - up
+    - down
+    - paused
+
+
+  marketplaceStatus:
+    type: string
+    description: Indicate the status of the marketplace 
+    enum:
+    - PROD
+    - TEST
