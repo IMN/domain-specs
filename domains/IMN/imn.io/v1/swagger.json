@@ -9,7 +9,7 @@
     "appRoot" : "IMN.Schemas",
     "apiName" : "TBD",
     "namespace" : "IMN.Schemas",
-    "comment" : "IMN.Schemas\n"
+    "comment" : "20180329 - Fix the errorResponseMessage to use userErrorMessage\nIMN.Schemas\n"
   },
   "parameters" : {
     "storeIdOnlyGeneralParameters" : {
