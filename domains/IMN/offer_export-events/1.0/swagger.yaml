@@ -14,6 +14,7 @@ x-beezup-ops:
   using:
   - IMN.Schemas
   - IMN.Offer.Schemas
+  - IMN.Offer.Events
 
 definitions:
 
@@ -25,8 +26,20 @@ definitions:
 
   offerExportInitializationCompleted:
     x-format: Event
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    type: object
+    required:
+    - merchantCode
+    - marketplaceCode
+    - merchantOffers
+    properties:
+      merchantCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+      merchantOffers:
+        type: array
+        items:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer-events/1.0#/definitions/merchantOfferCreated'
     
   offerExportInitializationExpired:
     x-format: Event
