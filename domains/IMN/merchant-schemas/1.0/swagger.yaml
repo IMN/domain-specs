@@ -144,7 +144,7 @@ definitions:
     properties:
       ruleType:
         $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingRuleType'
-      value:
+      pricingValue:
         $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingValue'
 
   marketplacePricingRuleOperationType:
