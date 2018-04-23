@@ -268,6 +268,7 @@ definitions:
     - sourceMarketplaceCode
     - targetMarketplacesSubscriptionRequested
     - subscriptionRequestUtcDate
+    - salesforceSubscriptionId
     properties:
       merchantCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
