@@ -292,6 +292,7 @@ definitions:
       salesforceSubscriptionId:
         type: string
         description: The Salesforce identifier of the subscription
+        example: 'BLA0O00001v8aNuQAI'
         
   merchantMarketplacePricingSettingConfigured:
     x-format: Event
