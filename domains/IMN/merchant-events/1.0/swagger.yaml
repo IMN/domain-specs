@@ -288,6 +288,9 @@ definitions:
         type: string
         format: date-time
         description: The exact date time of the subscription request
+      salesforceSubscriptionId:
+        type: string
+        description: The Salesforce identifier of the subscription
         
   merchantMarketplacePricingSettingConfigured:
     x-format: Event
