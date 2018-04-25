@@ -57,19 +57,19 @@ definitions:
 
 
 
-  # offerImportationPreparationPartitionCompleted:
-  #   x-format: Event
-  #   allOf:
-  #   - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-  #   - type: object
-  #     required: 
-  #     - merchantCode
-  #     - marketplaceCode
-  #     - partitionKey
-  #     properties:
-  #       partitionKey:
-  #         type: string
-  #         description: The offer partition identifier
+  offerImportationPreparationPartitionCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - merchantCode
+      - marketplaceCode
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string
+          description: The offer partition identifier
           
 
   offerImportationPageFetched:
