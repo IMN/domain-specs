@@ -80,7 +80,6 @@ definitions:
       required: 
       - merchantCode
       - marketplaceCode
-      - offset
       properties:
         offset:
           type: string
