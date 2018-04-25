@@ -236,6 +236,28 @@ responses:
     schema:
       $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage'
 definitions:
+
+
+  correlationId:
+    description: The correlation identifier. It's a guid.
+    format: CorrelationId
+    type: string
+    example: 'b0d3faea-f881-439f-ba92-02b1168511ea'
+
+  messageId:
+    description: The message identifier. It's a guid.
+    format: MessageId
+    type: string
+    example: 'b0d3faea-f881-439f-ba92-02b1168511ea'
+
+
+  causeId:
+    description: The cause identifier. It's a guid.
+    format: CauseId
+    type: string
+    example: 'b0d3faea-f881-439f-ba92-02b1168511ea'
+
+
   merchantCode:
     type: string
     description: The merchant code identifier in IMN
