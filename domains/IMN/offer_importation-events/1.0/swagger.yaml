@@ -84,7 +84,7 @@ definitions:
       properties:
         offset:
           type: string
-          description: The offer partition identifier
+          description: The offset of imported page
 
 
 
