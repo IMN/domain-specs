@@ -80,10 +80,6 @@ definitions:
       required: 
       - merchantCode
       - marketplaceCode
-      properties:
-        offset:
-          type: string
-          description: The offset of imported page
 
 
 
