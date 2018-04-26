@@ -80,6 +80,12 @@ definitions:
       required: 
       - merchantCode
       - marketplaceCode
+      - offerCount
+      properties:
+        offerCount:
+          type: integer
+          description: The offer count in the page
+          example: 100
 
 
 
