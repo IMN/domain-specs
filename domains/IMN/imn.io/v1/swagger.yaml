@@ -251,6 +251,7 @@ definitions:
     
 
   correlationId:
+    x-exclude: true
     description: The correlation identifier. It's a guid.
     format: CorrelationId
     type: string
