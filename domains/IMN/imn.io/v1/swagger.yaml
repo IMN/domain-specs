@@ -258,6 +258,7 @@ definitions:
     example: 'b0d3faea-f881-439f-ba92-02b1168511ea'
 
   messageId:
+    x-exclude: true
     description: The message identifier. It's a guid.
     format: MessageId
     type: string
@@ -265,6 +266,7 @@ definitions:
 
 
   causeId:
+    x-exclude: true
     description: The cause identifier. It's a guid.
     format: CauseId
     type: string
