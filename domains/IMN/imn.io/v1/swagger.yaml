@@ -238,6 +238,18 @@ responses:
 definitions:
 
 
+
+  firstName:
+    type: string
+    description: The first name of a person
+    example: Marilyne
+
+  lastName:
+    type: string
+    description: The last name of a person
+    example: Monroe
+    
+
   correlationId:
     description: The correlation identifier. It's a guid.
     format: CorrelationId
@@ -274,6 +286,7 @@ definitions:
       - E1 for ePrice
       - R1 for Real.DE
       - B1 for BOL
+      - E2 for eMAG
     pattern: ^[A-Z][0-9]$
     x-pattern: ^[A-Z][0-9]$
     example: C1
