@@ -81,7 +81,7 @@ definitions:
       marketplaceApiCredential: 
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential'
         
-  credentialNotConfiguredException:
+  subscriptionNotAcceptedByMarketplaceException:
     x-format: Exception
     x-transient: false
     x-technical: false
@@ -89,7 +89,7 @@ definitions:
     required: 
     - marketplaceCode
     description: |
-      The credential are not configured for the marketplace '{marketplaceCode}'
+      The subscription has not yet been accepted by the marketplace '{marketplaceCode}'
     properties:
       marketplaceCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
@@ -107,6 +107,18 @@ definitions:
       marketplaceCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
         
+  credentialNotConfiguredException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - marketplaceCode
+    description: |
+      The credential are not configured for the marketplace '{marketplaceCode}'
+    properties:
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'        
 #  emailBadFormattedException:
 #    x-format: Exception
  #   x-transient: true
