@@ -1,0 +1,518 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  description: IMN Core - Order Schemas
+  version: '1.0'
+  title: IMN - Order Schemas
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.Order.Schemas
+  apiName: TBD
+  namespace: IMN.Order.Schemas
+  comment: |
+    IMN.Order.Schemas
+  using:
+  - IMN.Schemas
+
+parameters:
+
+  imnOrderIdParameter:
+    description: The IMN Order identifier
+    name: imnOrderId
+    in: path
+    required: true
+    type: string
+    format: imnOrderId
+    x-example: 'A0CD3FG'
+
+  userNameInQueryParameter:
+    name: userName
+    description: Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+    in: query
+    required: true
+    type: string
+
+  testModeInQueryParameter:
+    name: testMode
+    description: If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+    in: query
+    required: false
+    type: boolean
+    default: false
+    x-example: false
+
+definitions:
+
+  imnOrderStatus:
+    type: string
+    description: IMN order status. Unified for all marketplaces.
+    example: Shipped
+    x-lov: IMNOrderState
+
+  marketplaceOrderStatus:
+    description: The marketplace order state
+    type: string
+    example: In_progress_3
+
+  marketplaceOrderId:
+    description: The order marketplace identifier
+    type: string
+    example: CDISCOUNT12345
+
+  imnOrderId:
+    description: The IMN Order identifier
+    type: string
+    example: 'A0CD3FG'
+    pattern: ^([A-Z|0-9]){7}$
+    x-pattern: ^([A-Z|0-9]){7}$
+
+  orderChangeUserName:
+    type: string
+    description: The name of the user who did the order change
+
+  merchantOrderId:
+    description: The order merchant identifier
+    type: string
+    example: MyOrderMerchantId
+
+  merchantECommerceSoftwareName:
+    description: The e-commerce software name of the merchant
+    type: string
+    example: Prestashop
+
+  merchantECommerceSoftwareVersion:
+    description: The e-commece software version of the merchant
+    type: string
+    example: 123.0.1
+
+  orderDateSearchType:
+    description: Indicates on which date you want to make the filter
+    type: string
+    enum:
+    - Modification
+    - Purchase
+    - MarketPlaceModification
+    default: Modification
+
+  orderEtag:
+    description: |
+      ETag value to identify the order.\
+      This information is required for the operation GetOrder and ChangeOrder.\
+      For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+    type: string
+    example: '"ca071a4580129f932a03971968ffef69"'
+
+  orderProcessing:
+    description: If true, there is currently a harvest or an order change in progress. Otherwise false.
+    type: boolean
+    example: false
+
+  orderIdentifier:
+    type: object
+    required:
+    - marketplaceCode
+    - merchantCode
+    - imnOrderId
+    properties:
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+      merchantCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      imnOrderId:
+        $ref: '#/definitions/imnOrderId'
+
+  carrierName:
+    type: string
+    description: The carrier name related to the shipping
+    example: 'My special carrier name'
+
+  trackingUrl:
+    type: string
+    description: The tracking url related to the shipping
+    example: 'https://trackingpackage.com?number=1H01845163783'
+
+  trackingNumber:
+    type: string
+    description: The shipper tracking number related to the shipping
+    example: '1H01845163783'
+
+  carrierCode:
+    type: string
+    example: MondialRelay
+    description: |
+      The carrier code related to the shipping
+      * DeutschePost: DeutschePost
+      * DHL: DHL
+      * GLS: GLS
+      * TNT: TNT
+      * UPS: UPS
+      * DPD: DPD
+      * FEDEX: FEDEX
+      * 4PX: 4PX
+      * Bpost: Bpost
+      * ChinaEMSePacket: China EMS (ePacket)
+      * ChinaPost: China Post
+      * Chronopost: Chronopost
+      * CNEExpress: CNE Express
+      * ColisPrive: Colis Privé
+      * Colissimo: Colissimo
+      * GEODIS: GEODIS
+      * LaPosteCourrier: La Poste - Courrier
+      * MalaysiaPost: Malaysia Post
+      * MondialRelay: Mondial Relay
+      * PostNL: PostNL
+      * RelaisColis: Relais Colis
+      * RoyalMail: Royal Mail
+      * SFExpress: SF Express
+      * SFCService: SFC Service
+      * SingaporePost: Singapore Post
+      * USPS: USPS
+      * Yanwen: Yanwen
+      * AMATI: AMATI
+      * BRTID: BRTID
+      * BRTRIFMIT: BRTRIFMIT
+      * BRTSPED: BRTSPED
+      * CORREOS: CORREOS
+      * ENERGO: ENERGO
+      * FERCAM: FERCAM
+      * NEXIVE: NEXIVE
+      * ItalianPost: Italian Post
+      * SDA: SDA
+      * SGTFlyer: SGT Flyer
+      * TECNOTRANS: TECNOTRANS
+      * Bursped: Bursped
+      * Cargoline: Cargoline
+      * Computeruniverse: Computeruniverse
+      * Dachser: Dachser
+      * DHLFreight: DHL Freight
+      * dtl: dtl
+      * Emons: Emons
+      * GEL: GEL
+      * Hellmann: Hellmann
+      * Hermes: Hermes
+      * Hermes2MH: Hermes 2 MH
+      * IDSLogistik: IDS Logistik
+      * Iloxx: Iloxx
+      * KuehneNagel: Kuehne & Nagel
+      * Marktanlieferung: Marktanlieferung
+      * Rhenus: Rhenus
+      * Schenker: Schenker
+      * SpeditionGuettler: Spedition Guettler
+
+    enum:
+    - DeutschePost
+    - DHL
+    - GLS
+    - TNT
+    - UPS
+    - DPD
+    - FEDEX
+    - 4PX
+    - Bpost
+    - ChinaEMSePacket
+    - ChinaPost
+    - Chronopost
+    - CNEExpress
+    - ColisPrivé
+    - Colissimo
+    - GEODIS
+    - LaPosteCourrier
+    - MalaysiaPost
+    - MondialRelay
+    - PostNL
+    - RelaisColis
+    - RoyalMail
+    - SFExpress
+    - SFCService
+    - SingaporePost
+    - USPS
+    - Yanwen
+    - AMATI
+    - BRTID
+    - BRTRIFMIT
+    - BRTSPED
+    - CORREOS
+    - ENERGO
+    - FERCAM
+    - NEXIVE
+    - ItalianPost
+    - SDA
+    - SGTFlyer
+    - TECNOTRANS
+    - Bursped
+    - Cargoline
+    - Computeruniverse
+    - Dachser
+    - DHLFreight
+    - dtl
+    - Emons
+    - GEL
+    - Hellmann
+    - Hermes
+    - Hermes2MH
+    - IDSLogistik
+    - Iloxx
+    - KuehneNagel
+    - Marktanlieferung
+    - Rhenus
+    - Schenker
+    - SpeditionGuettler
+
+  cancellationReason:
+    type: string
+    description: The reason why you cancel the order
+    enum:
+    - WrongPrice
+    - DelayedInventory
+    - WrongProductInfo
+    - BuyerFeedbackTimeout
+    - BuyerAgreement
+    - BuyerCancelled
+    - NoInventory
+    - ShippingAddressUndeliverable
+    - Other
+
+  refundReason:
+    type: string
+    description: The reason why you refund the order
+    enum:
+    - BuyerWarrantyOrRetractation
+    - WrongPrice
+    - LateDelivery
+    - IncorrectDelivery
+    - IncompleteDelivery
+    - DamagedDelivery
+    - BuyerFeedbackTimeout
+    - BuyerAgreement
+    - BuyerCancelled
+    - NoInventory
+    - ShippingAddressUndeliverable
+    - Other
+
+  orderItem:
+    description: Describe an order item.
+    type: object
+    required:
+    - imnOrderItemId
+    properties:
+      imnOrderItemId:
+        description: The IMN identifier of the order Item
+        type: string
+        example: '1'
+
+      title:
+        description: The title of the order item
+        example: 'bLA acide-plomb 6v-4.5ah 70x48x106mm'
+        type: string
+
+      condition:
+        description: The condition of the order item
+        example: 'new'
+        type: string
+
+      imageUrl:
+        description: The URL of the image of the order item
+        example: 'http://blabla.com//das6-45.jpg'
+        type: string
+
+      merchantOfferSku:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/sku'
+
+      gtin:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/gtin'
+
+      marketPlaceProductId:
+        description: The marketplace product identifier of the order item
+        example: 'MarketplaceProductId'
+        type: string
+
+      itemPrice:
+        description: The price of the order item
+        example: 6.86
+        type: number
+        format: decimal
+
+      itemTax:
+        description: The tax of the order item
+        type: number
+        format: decimal
+        example: 0.0
+
+      quantity:
+        description: The quantity of the order item
+        example: 1
+        type: number
+        format: decimal
+
+      shippingPrice:
+        description: The shipping price of the order item
+        type: number
+        example: 0.00
+        format: decimal
+
+      totalPrice:
+        description: The total price of the order item
+        example: 6.86
+        type: number
+        format: decimal
+
+      marketplaceProductUrl:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
+
+  orderBillingInfo:
+    type: object
+    description: The billing information related to the order
+    properties:
+      customer:
+        $ref: '#/definitions/orderCustomer'
+      adress:
+        $ref: '#/definitions/postalAddress'
+
+  orderShippingInfo:
+    type: object
+    description: The shipping information related to the order
+    properties:
+      contact:
+        $ref: '#/definitions/person'
+
+      relayId:
+        description: The company name of The address for this order
+        type: string
+        example: My Company
+
+      address:
+        $ref: '#/definitions/postalAddress'
+
+      price:
+        description: The shipping price of this order
+        type: number
+        format: decimal
+        example: 6.9
+
+      method:
+        description: The shipping method of this order
+        type: string
+        example: DPD Domicile
+
+      fulfilledBy:
+        description: The shipment is fulfilled by
+        type: string
+        example: Cdiscount Fulfillment
+
+      tax:
+        description: The shipping tax for this order
+        type: number
+        format: decimal
+        example: 0.0
+
+      earliestShipUtcDate:
+        description: The UTC date of the earliest ship for this order
+        type: string
+        example: '2017-04-02T21:30:00Z'
+        format: date-time
+
+      latestShipUtcDate:
+        description: The UTC date of the latest ship for this order
+        type: string
+        format: date-time
+        example: '2017-04-30T21:30:00Z'
+
+  orderCustomer:
+    allOf:
+    - $ref: '#/definitions/person'
+    - type: object
+      description: The customer
+      properties:
+        customerIdentifier:
+          description: The buyer identifier for this order
+          type: string
+          example: '1234567890'
+
+  person:
+    type: object
+    properties:
+      civility:
+        description: The civility of the person
+        type: string
+        example: MRS
+
+      firstName:
+        description: The first name of the person
+        type: string
+        example: Jacques
+
+      lastName:
+        description: The last name of the person
+        type: string
+        example: BAUREGARD
+      companyName:
+        type: string
+        description: The company name of the person
+        example: App
+
+      email:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+
+      phoneNumber:
+        $ref: '#/definitions/telephoneNumber'
+
+      mobilePhoneNumber:
+        $ref: '#/definitions/telephoneNumber'
+
+  telephoneNumber:
+    type: string
+    description: The telephone number
+    example: '+33000000042'
+
+  postalAddress:
+    type: object
+    properties:
+
+      line1:
+        description: The address line 1
+        type: string
+        example: '5 rue amélie'
+
+      line2:
+        description: The address line 2
+        type: string
+        example: 'BDR'
+
+      line3:
+        description: The address line 3
+        type: string
+        example: 'RDC'
+
+      comment:
+        description: The comment to access to this address
+        type: string
+        example: 'The instructions from the buyer'
+
+      postalCode:
+        description: The address postal code
+        type: string
+        example: '13014'
+
+      city:
+        description: The address city
+        type: string
+        example: Marseille
+
+      stateOrRegion:
+        description: The address state or region
+        type: string
+        example: BDR
+
+      countryName:
+        description: The address country name
+        type: string
+        example: France
+
+      countryIsoCodeAlpha2:
+        description: The address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#/decoding_table for more details)
+        type: string
+        example: FR
