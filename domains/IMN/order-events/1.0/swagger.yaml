@@ -1,0 +1,108 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  description: IMN Core - Order Events
+  version: '1.0'
+  title: IMN - Order Events
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.Order.Events
+  apiName: TBD
+  namespace: IMN.Order.Events
+  comment: |
+    IMN.Order.Events
+  using:
+  - IMN.Schemas
+  - IMN.Order.Schemas
+
+definitions:
+
+  orderChangeEventBase:
+    x-exclude: true
+    type: object
+    required:
+    - order
+    - userId
+    - userName
+    properties:
+      order:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+      userId:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+      userName:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
+
+  orderAccepted:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+
+  orderRefused:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+
+  orderShipped:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+    - type: object
+      required:
+      - order
+      - userId
+      - userName
+      - carrierCode
+      - trackingNumber
+      properties:
+        carrierCode:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierCode'
+        trackingNumber:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/trackingNumber'
+
+  orderShippedWithTrackingUrl:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+    - type: object
+      required:
+      - order
+      - userId
+      - userName
+      - carrierName
+      - trackingNumber
+      - trackingUrl
+      properties:
+        carrierName:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierName'
+        trackingNumber:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/trackingNumber'
+        trackingUrl:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/trackingUrl'
+
+  orderRefunded:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+    - type: object
+      required:
+      - order
+      - userId
+      - userName
+      - refundReason
+      properties:
+        order:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+        refundReason:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/refundReason'
+
+  orderCancelled:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+    - type: object
+      required:
+      - order
+      - userId
+      - userName
+      - cancellationReason
+      properties:
+        cancellationReason:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
