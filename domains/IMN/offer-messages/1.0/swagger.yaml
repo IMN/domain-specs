@@ -41,7 +41,7 @@ definitions:
       deleted:
         type: array
         items:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'    
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOfferIdentifier'
 
     
   batchMerchantOfferChanges:
