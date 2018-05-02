@@ -320,10 +320,10 @@ definitions:
         type: string
 
       merchantOfferSku:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/sku'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/sku'
 
       gtin:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/gtin'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/gtin'
 
       marketPlaceProductId:
         description: The marketplace product identifier of the order item
