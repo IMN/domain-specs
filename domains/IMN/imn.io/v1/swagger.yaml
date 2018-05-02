@@ -25,7 +25,6 @@ parameters:
     type: string
     format: guid
     description: Your store identifier
-    
 
   pageNumberQueryStringParameter:
     name: pageNumber
@@ -37,7 +36,7 @@ parameters:
     minimum: 1
     x-minimum: 1
     x-example: 1
-    
+
   pageSizeQueryStringParameter:
     name: pageSize
     description: The entry count you want to get
@@ -51,9 +50,6 @@ parameters:
     x-maximum: 100
     x-example: 25
 
-    
-    
-  
   ifNoneMatchParameter:
     name: If-None-Match
     type: string
@@ -65,7 +61,6 @@ parameters:
       If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\
       For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
 
-    
   ifMatchParameter:
     name: If-Match
     in: header
@@ -88,7 +83,7 @@ parameters:
 
   acceptEncodingRequiredParameter:
     name: Accept-Encoding
-    description: Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size. 
+    description: Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size.
     in: header
     required: true
     type: array
@@ -98,14 +93,13 @@ parameters:
 
   acceptEncodingOptionalParameter:
     name: Accept-Encoding
-    description: Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size. 
+    description: Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size.
     in: header
     required: false
     type: array
     collectionFormat: csv
     items:
       type: string
-
 
   walletPropertyCodeParameter:
     name: walletPropertyCode
@@ -130,7 +124,6 @@ parameters:
     type: string
     description: The merchant code
 
-
 # To remind the http header
 # responseHeaders:
 #    Content-Language:
@@ -149,17 +142,13 @@ parameters:
 #        type: string
 #        collectionFormat: csv
 
-
-    
-    
 responses:
 
   GeneralError:
     description: Occurs when something goes wrong
     schema:
       $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage'
-      
-      
+
   304_NotModified:
     description: The ETag sent in the http header If-None-Match did not change. So you are up to date !
     headers:
@@ -174,7 +163,7 @@ responses:
         description: |
           ETag value to identify the current version of the resource\
           For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
-          
+
   412_PreConditionFailed:
     description: The ETag sent in the http header If-Match did not match with the current version. Please refresh the information related to this resource.
     headers:
@@ -208,14 +197,14 @@ responses:
     - MerchantCodeNotFoundException
     schema:
       $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage'
-      
+
   merchantCodeAlreadyUsed:
     description: The merchant code is not available
     x-exceptions:
     - MerchantCodeAlreadyUsedException
     schema:
       $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage'
-      
+
   invalidMerchantCode:
     description: The merchant code is different from the state
     x-exceptions:
@@ -246,8 +235,6 @@ responses:
 
 definitions:
 
-
-
   firstName:
     type: string
     description: The first name of a person
@@ -257,7 +244,6 @@ definitions:
     type: string
     description: The last name of a person
     example: Monroe
-    
 
   correlationId:
     x-exclude: true
@@ -273,14 +259,12 @@ definitions:
     type: string
     example: 'b0d3faea-f881-439f-ba92-02b1168511ea'
 
-
   causeId:
     x-exclude: true
     description: The cause identifier. It's a guid.
     format: CauseId
     type: string
     example: 'b0d3faea-f881-439f-ba92-02b1168511ea'
-
 
   merchantCode:
     type: string
@@ -292,7 +276,7 @@ definitions:
   marketplaceCode:
     type: string
     description: |
-      The marketplace code identifier in IMN. 
+      The marketplace code identifier in IMN.
       For now we have:
       - C1 for Cdiscount
       - E1 for ePrice
@@ -302,12 +286,12 @@ definitions:
     pattern: ^[A-Z][0-9]$
     x-pattern: ^[A-Z][0-9]$
     example: C1
-  
+
   marketplaceMerchantCode:
     type: string
     description: The merchant code for a marketplace
     example: '005145'
-    
+
   paginationRequestParameters:
     type: object
     properties:
@@ -341,7 +325,7 @@ definitions:
     properties:
       categoryPath:
         type: array
-        items: 
+        items:
           type: string
         description: Indicates on which catalog category path you want to make the filter
         example:
@@ -353,7 +337,7 @@ definitions:
     properties:
       categoryPath:
         type: array
-        items: 
+        items:
           type: string
         description: Indicates on which channel category path you want to make the filter
         example:
@@ -371,7 +355,7 @@ definitions:
         type: string
         description: The product title filter
         example: 'Refrigérateur'
-        
+
       additionalProductFilters:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/additionalProductFilters'
 
@@ -387,7 +371,7 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/productFilterOperatorName'
       values:
         description: |
-          Must be null if the operator is "IsNull" or "IsNotNull". 
+          Must be null if the operator is "IsNull" or "IsNotNull".
           Can contains multiple value in case of "InList" operator. Otherwise a single value is expected.
         type: array
         items:
@@ -418,6 +402,38 @@ definitions:
     - InList
     - IsNull
     - IsNotNull
+
+  sku:
+    type: string
+    description: The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers. http://schema.org/sku
+    maxLength: 50
+
+  gtin:
+    type: string
+    description: |
+      Global Trade Item Number (GTIN) of the item.
+      Supported values:
+
+      - UPC (in North America / GTIN-12)
+      12-digit number like 323456789012
+      8-digit UPC-E codes should be converted to 12-digit codes
+      - EAN (in Europe / GTIN-13)
+      13-digit number like 3001234567892
+      - JAN (in Japan / GTIN-13)
+      8 or 13-digit number like 49123456 or 4901234567894
+      - ISBN (for books)
+      10 or 13-digit number like 1455582344 or 978-1455582341. If you have both, only include the 13-digit number. ISBN-10 are deprecated and should be converted to ISBN-13
+      - ITF-14 (for multipacks / GTIN-14)
+      14-digit number like 10856435001702
+
+      Schema.org property:
+      - [Offer.gtin8](http://schema.org/gtin8)
+      - [Offer.gtin12](http://schema.org/gtin12)
+      - [Offer.gtin13](http://schema.org/gtin13)
+      - [Offer.gtin14](http://schema.org/gtin14)
+      - [Offer.isbn](http://schema.org/isbn)
+
+    maxLength: 50
 
   productBasicInfo:
     description: The basic information related to a product
@@ -500,7 +516,7 @@ definitions:
     type: string
     format: guid
     description: The channel column identifier
-    example: '8a76f06a-fefc-4c0d-bcfe-b210f1482977'    
+    example: '8a76f06a-fefc-4c0d-bcfe-b210f1482977'
 
   listOfValueItem:
     description: This object is used by LOV apis
@@ -523,7 +539,7 @@ definitions:
         format: int32
         type: integer
         example: 1
-  
+
   paginationResult:
     x-exclude: true
     type: object
@@ -533,17 +549,17 @@ definitions:
     - totalEntryCount
     - links
     properties:
-      entryCount: 
+      entryCount:
         type: integer
         description: The entry count currently returned
         example: 25
         minimum: 0
-      pageCount: 
+      pageCount:
         type: integer
         description: The page count
         example: 38
         minimum: 0
-      totalEntryCount: 
+      totalEntryCount:
         type: integer
         description: The total entry count
         example: 943
@@ -617,14 +633,13 @@ definitions:
     type: string
     example: /merchant/orders/v1/{marketplaceCode}/{IMNOrderId}
     description: Indicate the relative uri for this link
-    
-    
+
   operationId:
     x-exclude: true
     type: string
     description: The operationId to call.
     example: GetOrder
-    
+
   httpMethod:
     x-exclude: true
     type: string
@@ -638,7 +653,6 @@ definitions:
     default: GET
     example: GET
     description: Indicate the http method to use on this link
-  
 
   link3:
     x-exclude: true
@@ -678,7 +692,6 @@ definitions:
       info:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/infoSummaries
 
-
   link2:
     x-exclude: true
     type: object
@@ -715,13 +728,13 @@ definitions:
       * body: if the parameter must be passed in the body
       * file: if the parameter must be passed in a multipart/form-data (https://swagger.io/docs/specification/2-0/file-upload/)
     example: path
-    enum: 
+    enum:
       - path
       - header
       - query
       - body
       - file
-      
+
   parameterType:
     x-exclude: true
     description: The value type of the parameter
@@ -738,9 +751,6 @@ definitions:
       - file
     default: string
     example: string
-
-
-
 
   linkParameter3:
     x-exclude: true
@@ -781,19 +791,19 @@ definitions:
       pattern:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/validationPattern
       properties:
-        description: If the parameter is an object with flexible properties (additionProperties/dictionary), we will describe the properties of the object. 
+        description: If the parameter is an object with flexible properties (additionProperties/dictionary), we will describe the properties of the object.
         #type: object
         additionalProperties:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameterProperty3'
         example:
           "shipOrder":
             "type": '​string'
-          
+
   validationPattern:
     type: string
     description: The regular expression to validate the value
     example: '*.-api$'
-          
+
   linkParameterProperty3:
     x-exclude: true
     type: object
@@ -830,10 +840,6 @@ definitions:
       pattern:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/validationPattern
 
-
-
-
-        
   linkParameter2:
     x-exclude: true
     type: object
@@ -863,7 +869,7 @@ definitions:
         type: boolean
         description: If true, you MUST use indicate a value from the list of values otherwise it's a freetext
         example: true
-        
+
   LOVLink2:
     description: Describe the way you have to follow to get access to the LOV
     x-deprecated: true
@@ -883,7 +889,7 @@ definitions:
         type: string
         description: The name of the list of value
         example: Go2CultureName
-        
+
   LOVLink3:
     x-exclude: true
     description: Describe the way you have to follow to get access to the LOV
@@ -907,7 +913,7 @@ definitions:
     pattern: ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$
     x-pattern: ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$
     example: 'http://www.mydomain.com'
-   
+
   errorResponseMessage:
     x-exclude: true
     type: object
@@ -917,9 +923,8 @@ definitions:
       errors:
         type: array
         uniqueItems: false
-        items: 
+        items:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage'
-  
 
   docUrl:
     x-exclude: true
@@ -927,7 +932,6 @@ definitions:
     format: uri
     description: The documentation related to this operation.
     example: 'https://api-docs.imn.io/#operation/EnableChannelCatalog'
-
 
   userErrorMessage:
     x-exclude: true
@@ -954,10 +958,7 @@ definitions:
         x-lov: Go2CultureName
       arguments:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessageArguments
-        
-        
-        
-        
+
   userErrorMessageArguments:
     x-exclude: true
     type: object
@@ -984,7 +985,7 @@ definitions:
         type: array
         items:
           $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/infoSummary
-          
+
   successSummary:
     type: object
     properties:
@@ -1002,7 +1003,7 @@ definitions:
         type: string
       objectName:
         type: string
-        
+
   errorSummary:
     type: object
     properties:
@@ -1032,7 +1033,7 @@ definitions:
         type: string
       source:
         type: string
-        
+
   warningSummary:
     type: object
     properties:
@@ -1046,7 +1047,7 @@ definitions:
         type: object
         additionalProperties:
           type: string
-          
+
   infoSummary:
     type: object
     properties:
@@ -1064,7 +1065,7 @@ definitions:
         type: string
       objectName:
         type: string
-        
+
   exceptionDetail:
     type: object
     properties:
@@ -1078,19 +1079,16 @@ definitions:
         type: string
       type:
         type: string
-        
-        
-        
+
   marketplaceApiCredential:
     description: The API credentials of the merchant on his marketplace.
     type: object
     additionalProperties:
       type: string
-      example: 
+      example:
         login: mylogin
         password: myPassword
-      
-      
+
   merchantMarketplaceBase:
     type: object
     required:
@@ -1101,8 +1099,8 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
       marketplaceCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
-  
-  sort: 
+
+  sort:
     x-excludeSql: true
     type: string
     default: ascending
