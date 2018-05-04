@@ -22,6 +22,7 @@ x-beezup-ops:
 definitions:
 
   orderChangeEventBase:
+    x-exclude: true
     type: object
     required:
     - order
@@ -36,14 +37,17 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
 
   orderAccepted:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
 
   orderRefused:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
 
   orderShipped:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
     - type: object
@@ -60,6 +64,7 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/trackingNumber'
 
   orderShippedWithTrackingUrl:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
     - type: object
@@ -79,6 +84,7 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/trackingUrl'
 
   orderRefunded:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
     - type: object
@@ -94,6 +100,7 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/refundReason'
 
   orderCancelled:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
     - type: object
