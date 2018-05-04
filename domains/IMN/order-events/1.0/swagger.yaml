@@ -22,7 +22,6 @@ x-beezup-ops:
 definitions:
 
   orderChangeEventBase:
-    x-exclude: true
     type: object
     required:
     - order
