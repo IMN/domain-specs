@@ -688,12 +688,12 @@ definitions:
       - orderItems
       - merchantInfo
       - imnInfo
-    properties:
-      merchantInfo:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMerchantInfo'
-      imnInfo:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIMNInfo'
-      
+      properties:
+        merchantInfo:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMerchantInfo'
+        imnInfo:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIMNInfo'
+        
 
 
   orderIMNInfo:
