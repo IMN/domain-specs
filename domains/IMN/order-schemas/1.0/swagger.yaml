@@ -685,7 +685,6 @@ definitions:
       - pricingInfo
       - billingInfo
       - shippingInfo
-      - etag
       - orderItems
       - merchantInfo
       - imnInfo
