@@ -672,3 +672,47 @@ definitions:
 
       merchantECommerceSoftwareVersion:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/merchantECommerceSoftwareVersion'
+        
+        
+  orderInfo:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
+    - type: object
+      description: Describe in details all informations related to an order.
+      required:
+      - identifier
+      - etag
+      - generalInfo
+      - paymentInfo
+      - billingInfo
+      - shippingInfo
+      - etag
+      - orderItems
+      - merchantInfo
+      - imnInfo
+    properties:
+      merchantInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMerchantInfo'
+      imnInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIMNInfo'
+      
+
+
+  orderIMNInfo:
+    type: object
+    required:
+    - imnOrderUrl
+    - imnLastModificationUtcDate
+    - processing
+    properties:
+      imnOrderUrl:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
+
+      imnLastModificationUtcDate:
+        description: The last modification UTC date done by IMN of this order
+        format: date-time
+        type: string
+        example: '2017-04-16T10:30:23Z'
+
+      processing:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderProcessing'
