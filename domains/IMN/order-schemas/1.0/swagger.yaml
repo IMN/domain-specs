@@ -123,7 +123,7 @@ definitions:
       merchantCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
       imnOrderId:
-        $ref: '#/definitions/imnOrderId'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/imnOrderId'
 
   carrierName:
     type: string
@@ -423,7 +423,7 @@ definitions:
 
   orderCustomer:
     allOf:
-    - $ref: '#/definitions/person'
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/person'
     - type: object
       description: The customer
       properties:
@@ -458,10 +458,10 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
 
       phoneNumber:
-        $ref: '#/definitions/telephoneNumber'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/telephoneNumber'
 
       mobilePhoneNumber:
-        $ref: '#/definitions/telephoneNumber'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/telephoneNumber'
 
   telephoneNumber:
     type: string
