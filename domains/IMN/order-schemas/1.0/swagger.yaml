@@ -517,6 +517,7 @@ definitions:
         type: string
         example: FR
         
+        
   orderBasicMarketplaceInfo:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
