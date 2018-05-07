@@ -683,7 +683,7 @@ definitions:
       - identifier
       - etag
       - generalInfo
-      - paymentInfo
+      - pricingInfo
       - billingInfo
       - shippingInfo
       - etag
