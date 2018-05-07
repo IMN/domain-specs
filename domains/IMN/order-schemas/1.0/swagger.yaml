@@ -533,6 +533,10 @@ definitions:
       - purchaseUtcDate
       - marketplaceLastModificationUtcDate
       - paymentInfo
+      - billingInfo
+      - shippingInfo
+      - etag
+      - orderItems
       properties:
         marketplaceOrderId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
