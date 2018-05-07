@@ -368,16 +368,16 @@ definitions:
     description: The billing information related to the order
     properties:
       customer:
-        $ref: '#/definitions/orderCustomer'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderCustomer'
       adress:
-        $ref: '#/definitions/postalAddress'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/postalAddress'
 
   orderShippingInfo:
     type: object
     description: The shipping information related to the order
     properties:
       contact:
-        $ref: '#/definitions/person'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/person'
 
       relayId:
         description: The company name of The address for this order
@@ -385,7 +385,7 @@ definitions:
         example: My Company
 
       address:
-        $ref: '#/definitions/postalAddress'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/postalAddress'
 
       price:
         description: The shipping price of this order
