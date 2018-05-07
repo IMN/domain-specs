@@ -572,7 +572,6 @@ definitions:
     - pricingInfo
     - billingInfo
     - shippingInfo
-    - etag
     - orderItems
     properties:
       identifier:
