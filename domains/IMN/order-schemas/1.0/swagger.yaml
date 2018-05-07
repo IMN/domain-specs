@@ -300,7 +300,7 @@ definitions:
     - imnOrderItemId
     properties:
       imnOrderItemId:
-        description: The IMN identifier of the order Item
+        description: The IMN identifier of the order Item. Must be unique in the order.
         type: string
         example: '1'
 
@@ -329,6 +329,9 @@ definitions:
         description: The marketplace product identifier of the order item
         example: 'MarketplaceProductId'
         type: string
+
+      marketplaceProductUrl:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
 
       itemPrice:
         description: The price of the order item
@@ -360,8 +363,6 @@ definitions:
         type: number
         format: decimal
 
-      marketplaceProductUrl:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
 
   orderBillingInfo:
     type: object
@@ -540,6 +541,7 @@ definitions:
   
         marketplaceOrderStatus:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderStatus'
+  
         purchaseUtcDate:
           description: The purchase date of this order
           format: date-time
