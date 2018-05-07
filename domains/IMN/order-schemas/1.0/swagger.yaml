@@ -519,80 +519,91 @@ definitions:
         example: FR
         
         
+        
+  orderGeneralInfo:
+    type: object
+    required:
+    - marketplaceOrderId
+    - imnOrderStatus
+    - marketplaceOrderStatus
+    - purchaseUtcDate
+    - marketplaceLastModificationUtcDate
+    properties:
+      marketplaceOrderId:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
+
+      imnOrderStatus:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/imnOrderStatus'
+
+      marketplaceOrderStatus:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderStatus'
+
+      purchaseUtcDate:
+        description: The purchase date of this order
+        format: date-time
+        type: string
+        example: '2017-03-31T21:30:23Z'
+
+      marketplaceLastModificationUtcDate:
+        description: The last modification UTC date done by the marketplace on this order
+        format: date-time
+        type: string
+        example: '2017-04-16T10:25:23Z'
+
+
+      marketPlaceChannel:
+        description: Useful to identify the origin of the order. For example in Cdiscount.
+        type: string
+        example: Cdiscount France
+
+      comment:
+        description: The comment associated to this order
+        type: string
+        example: 'This is a comment'
+    
+        
   orderMarketplaceInfo:
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
-    - description: Describe the basic information related to an order.
-      type: object
-      required:
-      - marketplaceCode
-      - merchantCode
-      - imnOrderId
-      - marketplaceOrderId
-      - imnOrderStatus
-      - purchaseUtcDate
-      - marketplaceLastModificationUtcDate
-      - paymentInfo
-      - billingInfo
-      - shippingInfo
-      - etag
-      - orderItems
-      properties:
-        marketplaceOrderId:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
-  
-        imnOrderStatus:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/imnOrderStatus'
-  
-        marketplaceOrderStatus:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderStatus'
-  
-        purchaseUtcDate:
-          description: The purchase date of this order
-          format: date-time
-          type: string
-          example: '2017-03-31T21:30:23Z'
-
-        marketplaceLastModificationUtcDate:
-          description: The last modification UTC date done by the marketplace on this order
-          format: date-time
-          type: string
-          example: '2017-04-16T10:25:23Z'
-
-  
-        marketPlaceChannel:
-          description: Useful to identify the origin of the order. For example in Cdiscount.
-          type: string
-          example: Cdiscount France
-
-        comment:
-            description: The comment associated to this order
-            type: string
-            example: 'This is a comment'
-            
-        paymentInfo:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderPaymentInfo'
+    description: Describe the basic information related to an order.
+    type: object
+    required:
+    - identifier
+    - etag
+    - generalInfo
+    - paymentInfo
+    - billingInfo
+    - shippingInfo
+    - etag
+    - orderItems
+    properties:
+      identifier:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+      etag:
+       $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
+      
+      generalInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderGeneralInfo'
+      
+      pricingInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderPricingInfo'
 
 
 
-        billingInfo:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderBillingInfo'
-          
-        shippingInfo:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderShippingInfo'
-
-        etag:
-         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
-
-
-        orderItems:
-          type: array
-          items:
-            $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderItem'
+      billingInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderBillingInfo'
+        
+      shippingInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderShippingInfo'
 
 
 
-  orderPaymentInfo:
+      orderItems:
+        type: array
+        items:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderItem'
+
+
+
+  orderPricingInfo:
     type: object
     required:
     - totalPrice
@@ -637,6 +648,9 @@ definitions:
         type: string
         format: date-time
         example: '2017-04-01T13:22:01Z'
+      
+
+      
 
   
 
