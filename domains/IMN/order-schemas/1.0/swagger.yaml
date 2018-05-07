@@ -519,7 +519,7 @@ definitions:
         example: FR
         
         
-  orderBasicMarketplaceInfo:
+  orderMarketplaceInfo:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
     - description: Describe the basic information related to an order.
@@ -568,6 +568,24 @@ definitions:
             
         paymentInfo:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderPaymentInfo'
+
+
+
+        billingInfo:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderBillingInfo'
+          
+        shippingInfo:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderShippingInfo'
+
+        etag:
+         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
+
+
+        orderItems:
+          type: array
+          items:
+            $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderItem'
+
 
 
   orderPaymentInfo:
