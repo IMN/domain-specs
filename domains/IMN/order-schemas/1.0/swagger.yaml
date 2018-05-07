@@ -686,7 +686,6 @@ definitions:
       - billingInfo
       - shippingInfo
       - orderItems
-      - merchantInfo
       - imnInfo
       properties:
         merchantInfo:
