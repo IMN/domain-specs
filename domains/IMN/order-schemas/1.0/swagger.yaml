@@ -516,3 +516,45 @@ definitions:
         description: The address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#/decoding_table for more details)
         type: string
         example: FR
+        
+  orderBasicMarketplaceInfo:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+    - description: Describe the basic information related to an order.
+      type: object
+      required:
+      - marketplaceCode
+      - merchantCode
+      - imnOrderId
+      - marketplaceOrderId
+      - imnOrderStatus
+      - purchaseUtcDate
+      - marketplaceLastModificationUtcDate
+      properties:
+        marketplaceOrderId:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
+  
+        imnOrderStatus:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/imnOrderStatus'
+  
+        marketplaceOrderStatus:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderStatus'
+        purchaseUtcDate:
+          description: The purchase date of this order
+          format: date-time
+          type: string
+          example: '2017-03-31T21:30:23Z'
+
+        marketplaceLastModificationUtcDate:
+          description: The last modification UTC date done by the marketplace on this order
+          format: date-time
+          type: string
+          example: '2017-04-16T10:25:23Z'
+
+        totalPrice:
+          description: The total price of this order (corresponding to the amount paid by the customer)
+          format: decimal
+          type: number
+          example: 101.42
+        currencyCode:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
