@@ -73,17 +73,19 @@ definitions:
    
   merchantMarketplaceEventBase:
     x-exclude: true
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-    - type: object
-      discriminator: eventType
-      required:
-      - merchantCode
-      - marketplaceCode
-      - eventType
-      properties:
-        eventType:
-          type: string
+    type: object
+    discriminator: eventType
+    required:
+    - merchantCode
+    - marketplaceCode
+    - eventType
+    properties:
+      merchantCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      eventType:
+        type: string
    
    
   merchantMarketplaceCredentialConfigured:
