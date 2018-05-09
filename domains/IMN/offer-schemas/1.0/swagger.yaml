@@ -14,6 +14,7 @@ x-beezup-ops:
   apiName: TBD
   namespace: IMN.Offer.Schemas
   comment: |
+    20180509 - test
     IMN.Offer.Schemas
     changed to yaml format
   using:
