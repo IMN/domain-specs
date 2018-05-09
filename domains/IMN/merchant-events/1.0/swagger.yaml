@@ -76,6 +76,7 @@ definitions:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
     - type: object
+      discriminator: eventType
       required:
       - merchantCode
       - marketplaceCode
