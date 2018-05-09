@@ -74,7 +74,7 @@ definitions:
   merchantMarketplaceEventBase:
     x-exclude: true
     allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceBase'
     - type: object
       required:
       - merchantCode
