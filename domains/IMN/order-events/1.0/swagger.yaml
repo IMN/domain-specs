@@ -41,13 +41,6 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
       eventType:
         type: string
-        enum:
-        - orderAccepted
-        - orderRefused
-        - orderShipped
-        - orderShippedWithTrackingUrl
-        - orderRefunded
-        - orderCancelled
 
   orderAccepted:
     x-format: Event
