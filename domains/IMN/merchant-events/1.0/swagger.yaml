@@ -82,7 +82,8 @@ definitions:
       - marketplaceCode
       - eventType
       properties:
-        eventType: string
+        eventType:
+          type: string
    
    
   merchantMarketplaceCredentialConfigured:
