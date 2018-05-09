@@ -21,13 +21,17 @@ x-beezup-ops:
 
 definitions:
 
+  
+
   orderChangeEventBase:
     x-exclude: true
     type: object
+    discriminator: eventType
     required:
     - order
     - userId
     - userName
+    - eventType
     properties:
       order:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
@@ -35,6 +39,15 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
       userName:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
+      eventType:
+        type: string
+        enum:
+        - orderAccepted
+        - orderRefused
+        - orderShipped
+        - orderShippedWithTrackingUrl
+        - orderRefunded
+        - orderCancelled
 
   orderAccepted:
     x-format: Event
