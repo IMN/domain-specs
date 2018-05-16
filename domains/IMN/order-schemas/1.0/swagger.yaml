@@ -370,7 +370,7 @@ definitions:
     properties:
       customer:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderCustomer'
-      adress:
+      address:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/postalAddress'
 
   orderShippingInfo:
