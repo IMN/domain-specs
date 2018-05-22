@@ -23,12 +23,14 @@ definitions:
 
   
   orderCreated:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
     - type: object
       description: Order is created
 
   orderUpdated:
+    x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
     - type: object
