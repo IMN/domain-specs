@@ -25,11 +25,13 @@ definitions:
   orderCreated:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
+    - type: object
 
 
   orderUpdated:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
+    - type: object
 
 
 
