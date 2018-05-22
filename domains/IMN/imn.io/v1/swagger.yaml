@@ -477,6 +477,7 @@ definitions:
     example: FRA
 
   currencyCode:
+    x-exclude: true
     description: |
       The currency code <a href="https://en.wikipedia.org/wiki/ISO_4217">(ISO 4217)</a>
     type: string
