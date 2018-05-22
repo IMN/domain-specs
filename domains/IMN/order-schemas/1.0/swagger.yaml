@@ -50,8 +50,8 @@ definitions:
   imnOrderStatus:
     type: string
     description: IMN order status. Unified for all marketplaces.
-    example: Shipped
-    x-lov: IMNOrderState
+    example: shipped
+    x-lov: imnOrderStatus
     enum:
     - new
     - pending
