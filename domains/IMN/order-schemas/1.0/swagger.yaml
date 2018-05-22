@@ -52,7 +52,15 @@ definitions:
     description: IMN order status. Unified for all marketplaces.
     example: Shipped
     x-lov: IMNOrderState
-
+    enum:
+    - new
+    - pending
+    - accepted
+    - refused
+    - shipped
+    - cancelled
+    - refunded
+    
   marketplaceOrderStatus:
     description: The marketplace order state
     type: string
