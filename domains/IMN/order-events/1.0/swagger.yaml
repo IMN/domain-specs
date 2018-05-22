@@ -22,6 +22,16 @@ x-beezup-ops:
 definitions:
 
   
+  orderCreated:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
+
+
+  orderUpdated:
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
+
+
 
   orderChangeEventBase:
     x-exclude: true
