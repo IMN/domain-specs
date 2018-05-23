@@ -55,11 +55,14 @@ definitions:
     enum:
     - new
     - pending
-    - accepted
-    - refused
+    - inProgress
+    - received
     - shipped
     - cancelled
-    - refunded
+    - closed
+    - availableOnStore
+
+
     
   marketplaceOrderStatus:
     description: The marketplace order state
