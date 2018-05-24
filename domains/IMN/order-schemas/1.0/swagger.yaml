@@ -9,6 +9,8 @@ info:
 
 x-beezup-ops:
   codeGenType: domain
+  product: IMN.CORE
+  group: order
   repo: IMN
   appRoot: IMN.Order.Schemas
   apiName: TBD
