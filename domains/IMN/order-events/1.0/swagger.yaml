@@ -43,6 +43,7 @@ definitions:
     - userName
     - eventType
     - ipAddress
+    - testMode
     properties:
       order:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
@@ -56,6 +57,11 @@ definitions:
         description: The IP address who request this operation
         type: string
         example: '127.0.0.1'
+      testMode:
+        description: This operation was a test
+        type: boolean
+        example: false
+
 
 
   orderAccepted:
@@ -80,6 +86,7 @@ definitions:
       - carrierCode
       - trackingNumber
       - ipAddress
+      - testMode
       
       properties:
         carrierCode:
@@ -100,6 +107,7 @@ definitions:
       - trackingNumber
       - trackingUrl
       - ipAddress
+      - testMode
       properties:
         carrierName:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierName'
@@ -119,6 +127,7 @@ definitions:
       - userName
       - refundReason
       - ipAddress
+      - testMode
       properties:
         order:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
@@ -136,6 +145,7 @@ definitions:
       - userName
       - cancellationReason
       - ipAddress
+      - testMode
       properties:
         cancellationReason:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
