@@ -1120,3 +1120,13 @@ definitions:
     - api
     - ui
     example: api
+
+  processingStatus:
+    x-exclude: true
+    type: string
+    enum:
+    - none
+    - inProgress
+    - done
+    - failed
+    - aborted
