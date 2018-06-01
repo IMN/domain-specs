@@ -1123,6 +1123,7 @@ definitions:
 
   processingStatus:
     x-exclude: true
+    description: The processing status of an operation
     type: string
     enum:
     - none
