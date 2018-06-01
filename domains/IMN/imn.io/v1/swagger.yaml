@@ -1112,7 +1112,7 @@ definitions:
     
   operationSourceType:
     description: |
-      Indicates the origin of the operation
+      Indicates the origin of the operation:
       * api: the operation has been done using our api directly.
       * ui: the operation has been done using our user interface. 
     type: string
