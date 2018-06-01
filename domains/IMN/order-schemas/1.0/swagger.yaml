@@ -725,10 +725,10 @@ definitions:
       processing:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderProcessing'
         
-  orderChangeBusinessOperationType:
+  orderChangeType:
     type: string
     x-lov: OrderChangeBusinessOperationType
-    example: ShipOrder
+    example: ship
     enum:
     - accept
     - refuse
