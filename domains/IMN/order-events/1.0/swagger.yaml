@@ -42,6 +42,7 @@ definitions:
     - userId
     - userName
     - eventType
+    - ipAddress
     properties:
       order:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
@@ -78,6 +79,8 @@ definitions:
       - userName
       - carrierCode
       - trackingNumber
+      - ipAddress
+      
       properties:
         carrierCode:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierCode'
@@ -96,6 +99,7 @@ definitions:
       - carrierName
       - trackingNumber
       - trackingUrl
+      - ipAddress
       properties:
         carrierName:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierName'
@@ -114,6 +118,7 @@ definitions:
       - userId
       - userName
       - refundReason
+      - ipAddress
       properties:
         order:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
@@ -130,6 +135,7 @@ definitions:
       - userId
       - userName
       - cancellationReason
+      - ipAddress
       properties:
         cancellationReason:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
