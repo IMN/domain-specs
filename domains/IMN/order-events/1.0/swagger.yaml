@@ -51,6 +51,11 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
       eventType:
         type: string
+      ipAddress:
+        description: The IP address who request this operation
+        type: string
+        example: '127.0.0.1'
+
 
   orderAccepted:
     x-format: Event
