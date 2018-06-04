@@ -19,6 +19,7 @@ x-beezup-ops:
   using:
   - IMN.MER.Schemas
   - IMN.Schemas
+  - BeezUP2.Framework.Messaging
   - BeezUP2.ApiModels.Generated.Models.Generated
 
 definitions:
