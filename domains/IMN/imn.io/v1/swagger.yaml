@@ -301,6 +301,7 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/pageNumber'
 
   pageSize:
+    x-exclude: true
     description: Indicate the item count per page
     type: integer
     format: int32
@@ -312,6 +313,7 @@ definitions:
     example: 100
 
   pageNumber:
+    x-exclude: true
     description: Indicates the page number
     format: int32
     type: integer
