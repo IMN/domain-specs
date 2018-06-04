@@ -120,8 +120,6 @@ definitions:
   merchantOfferList:
    allOf:
     - type: object
-      required:
-      - merchantOffers
       properties:
         merchantOffers:
           type: array
