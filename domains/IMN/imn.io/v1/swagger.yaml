@@ -678,9 +678,7 @@ definitions:
       method:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpMethod
       parameters:
-        type: object
-        additionalProperties:
-          $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3
+        $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3Types
       urlTemplated:
         type: boolean
         description: indicates whether the href is templated or not
@@ -692,6 +690,22 @@ definitions:
         description: indicates whether all optionals params have been provided
       info:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/infoSummaries
+
+
+  linkParameter3Types:
+    x-exclude: true
+    type: object
+    additionalProperties:
+      $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter3
+
+  linkParameter2Types:
+    x-exclude: true
+    type: array
+    uniqueItems: true
+    minItems: 0
+    items:
+      $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter2
+
 
   link2:
     x-exclude: true
@@ -711,11 +725,7 @@ definitions:
       method:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpMethod
       parameters:
-        type: array
-        uniqueItems: true
-        minItems: 0
-        items:
-          $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter2
+        $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter2Types
       info:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/infoSummaries
 
