@@ -1,7 +1,6 @@
 ### Domains, a place to put your reusable components
 
 ### Examples...
-
 info:
   version: '1.0'
   title: IMN - Merchant Schemas
@@ -82,7 +81,7 @@ definitions:
     - preparationRuleType
     properties:
       preparationRuleType:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePreparationRuleType'
+        $ref: '#/definitions/marketplacePreparationRuleType'
       preparationDelay:
         type: number
         format: int32
@@ -95,7 +94,7 @@ definitions:
     - deliverySettings
     properties:
       preparationSetting:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePreparationSetting'
+        $ref: '#/definitions/marketplacePreparationSetting'
           
       deliverySettings:
         $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceDeliverySettingList'
