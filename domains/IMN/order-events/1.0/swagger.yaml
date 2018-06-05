@@ -33,6 +33,27 @@ definitions:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
 
 
+
+  orderMerchantInfoConfigured:
+    type: object
+    required:
+    - order
+    - merchantInfo
+    properties:
+      order:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+      merchantInfo:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMerchantInfo'
+    
+
+  orderMerchantInfoCleared:
+    type: object
+    required:
+    - order
+    properties:
+      order:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+
   orderChangeEventBase:
     x-exclude: true
     type: object
