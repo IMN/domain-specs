@@ -33,6 +33,9 @@ definitions:
       - merchantCode
       - marketplaceCode
       - credential
+      - offerImportationTimeoutInMinutes
       properties:
         credential:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential'
+        offerImportationTimeoutInMinutes:
+          type: number
