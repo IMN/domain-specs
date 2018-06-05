@@ -177,3 +177,19 @@ definitions:
       properties:
         cancellationReason:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
+          
+          
+  orderChangeCompleted:
+    x-format: Event
+    type: object
+    required:
+    - order
+    - success
+    properties:
+      order:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+      succeed:
+        type: boolean
+        description: If false, the error property must be fulfilled.
+      error:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage'
