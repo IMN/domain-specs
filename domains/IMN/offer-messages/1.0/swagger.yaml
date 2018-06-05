@@ -30,16 +30,14 @@ definitions:
     type: object
     description: Contains all changes for one marketplace for one merchant
     properties:
-      created:
+      offers:
         type: array
-        items:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer'
-      updated:
-        type: array
+        description: Offers that need to be created or replaced
         items:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer'
       deleted:
         type: array
+        description: Deleted offers
         items:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOfferIdentifier'
 
@@ -49,15 +47,13 @@ definitions:
     type: object
     description: Contains all changes
     properties:
-      created:
+      offers:
         type: array
-        items:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer'
-      updated:
-        type: array
+        description: Offers that need to be created or replaced
         items:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOffer'
       deleted:
         type: array
+        description: Deleted offers
         items:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
