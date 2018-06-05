@@ -18,6 +18,8 @@ x-beezup-ops:
   using:
   - IMN.Schemas
   - IMN.Order.Schemas
+  - BeezUP2.Framework.Messaging
+  - 
 
 definitions:
 
