@@ -67,6 +67,7 @@ definitions:
     - eventType
     - ipAddress
     - testMode
+    - sourceType
     properties:
       order:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
@@ -84,6 +85,8 @@ definitions:
         description: This operation was a test
         type: boolean
         example: false
+      sourceType:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/operationSourceType'
 
 
 
@@ -110,7 +113,7 @@ definitions:
       - trackingNumber
       - ipAddress
       - testMode
-      
+      - sourceType
       properties:
         carrierCode:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierCode'
@@ -131,6 +134,8 @@ definitions:
       - trackingUrl
       - ipAddress
       - testMode
+      - sourceType
+
       properties:
         carrierName:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/carrierName'
@@ -151,6 +156,7 @@ definitions:
       - refundReason
       - ipAddress
       - testMode
+      - sourceType
       properties:
         refundReason:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/refundReason'
@@ -167,6 +173,7 @@ definitions:
       - cancellationReason
       - ipAddress
       - testMode
+      - sourceType
       properties:
         cancellationReason:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
