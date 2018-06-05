@@ -20,6 +20,7 @@ x-beezup-ops:
   - IMN.Order.Schemas
   - BeezUP2.Framework.Messaging
   - BeezUP2.Framework.Processing
+  - BeezUP2.ApiModels.Generated.Models.Generated
 
 definitions:
 
