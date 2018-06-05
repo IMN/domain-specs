@@ -19,7 +19,6 @@ x-beezup-ops:
   - IMN.Schemas
   - IMN.Order.Schemas
   - BeezUP2.Framework.Messaging
-  - 
 
 definitions:
 
