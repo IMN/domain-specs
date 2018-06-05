@@ -79,14 +79,15 @@ definitions:
     required:
     - merchantCode
     - marketplaceCode
-    #- eventType
+    - eventType
     properties:
       merchantCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
       marketplaceCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
-      #eventType:
-      #  type: string
+      eventType:
+        x-exclude: true
+        type: string
    
    
   merchantMarketplaceCredentialConfigured:
