@@ -710,7 +710,6 @@ definitions:
     type: object
     required:
     - imnLastModificationUtcDate
-    - currentOrderChangeCorrelationId
     properties:
 
       imnLastModificationUtcDate:
