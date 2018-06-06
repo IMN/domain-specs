@@ -709,7 +709,6 @@ definitions:
   orderIMNInfo:
     type: object
     required:
-    - imnOrderUrl
     - imnLastModificationUtcDate
     - currentOrderChangeCorrelationId
     properties:
