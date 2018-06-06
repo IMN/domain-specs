@@ -17,6 +17,7 @@ x-beezup-ops:
     IMN.Order.Schemas
   using:
   - IMN.Schemas
+  - BeezUP2.Framework.Messaging
 
 parameters:
 
