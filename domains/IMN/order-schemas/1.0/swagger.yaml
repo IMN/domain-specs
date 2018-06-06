@@ -708,6 +708,7 @@ definitions:
 
   orderIMNInfo:
     type: object
+    description: The current order change correlation identifier indicates you if there is a pending order change on the marketplace side.
     required:
     - imnLastModificationUtcDate
     properties:
