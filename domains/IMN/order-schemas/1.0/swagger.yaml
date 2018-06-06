@@ -711,10 +711,8 @@ definitions:
     required:
     - imnOrderUrl
     - imnLastModificationUtcDate
-    - processing
+    - currentOrderChangeCorrelationId
     properties:
-      imnOrderUrl:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
 
       imnLastModificationUtcDate:
         description: The last modification UTC date done by IMN of this order
@@ -722,8 +720,8 @@ definitions:
         type: string
         example: '2017-04-16T10:30:23Z'
 
-      processing:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderProcessing'
+      currentOrderChangeCorrelationId:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/correlationId'
         
   orderChangeType:
     type: string
