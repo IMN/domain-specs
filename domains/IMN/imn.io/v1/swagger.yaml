@@ -1153,6 +1153,7 @@ definitions:
         example: MyDatabaseCheck
       message:
         type: string
+        description: Gets the status message of the check. A status can be provided for both healthy and unhealthy states.
       status:
         $ref: '#/definitions/healthCheckStatus'
       data:
