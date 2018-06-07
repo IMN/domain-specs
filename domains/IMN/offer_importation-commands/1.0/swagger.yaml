@@ -10,7 +10,7 @@ x-beezup-ops:
   codeGenType: domain
   repo: IMN
   appRoot: IMN.ADPT.OfferIMP.Commands
-  apiName: TBD
+  apiName: IMN.ADPT.OfferIMP.Commands
   namespace: IMN.ADPT.OfferIMP.Commands
   comment: |
     IMN.ADPT.OfferIMP.Commands
