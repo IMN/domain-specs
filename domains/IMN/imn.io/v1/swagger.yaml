@@ -1143,3 +1143,33 @@ definitions:
     - done
     - failed
     - aborted
+ 
+  healthCheck:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Health check name
+        example: MyDatabaseCheck
+      message:
+        type: string
+      status:
+        $ref: '#/definitions/healthCheckStatus'
+      data:
+        type: object
+        additionalProperties:
+          type: string
+    
+  healthCheckStatus:
+    type: string
+    description: |
+      Possible status values of a health check result.
+      * degraded:  The check is degraded, failing but not critical
+      * healthy: The check is healthy
+      * ignored: The check was ignored
+      * unhealthy:  The check is unhealthy
+    enum:
+    - degraded
+    - healthy
+    - ignored
+    - unhealthy
