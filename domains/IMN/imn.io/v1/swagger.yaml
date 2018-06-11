@@ -1205,6 +1205,7 @@ definitions:
     type: string
 
   eventBase:
+    x-exclude: true
     allOf:
     - $ref: '#/definitions/messageBase'
     - type: object
