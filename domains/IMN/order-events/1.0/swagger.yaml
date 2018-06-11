@@ -61,35 +61,39 @@ definitions:
 
   orderChangeEventBase:
     x-exclude: true
-    type: object
-    discriminator: eventType
-    required:
-    - order
-    - userId
-    - userName
-    - eventType
-    - ipAddress
-    - testMode
-    - sourceType
-    properties:
-      order:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
-      userId:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
-      userName:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
-      eventType:
-        type: string
-      ipAddress:
-        description: The IP address who request this operation
-        type: string
-        example: '127.0.0.1'
-      testMode:
-        description: This operation was a test
-        type: boolean
-        example: false
-      sourceType:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/operationSourceType'
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/eventBase'
+    - type: object
+      required:
+      - messageId
+      - correlationId
+      - order
+      - userId
+      - userName
+      - ipAddress
+      - testMode
+      - sourceType
+      properties:
+        messageId:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/messageId'
+        correlationId:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/correlationId'
+        order:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+        userId:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userName:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
+        ipAddress:
+          description: The IP address who request this operation
+          type: string
+          example: '127.0.0.1'
+        testMode:
+          description: This operation was a test
+          type: boolean
+          example: false
+        sourceType:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/operationSourceType'
 
 
 
