@@ -18,6 +18,15 @@ x-beezup-ops:
     changed to yaml format
 
 parameters:
+  correlationIdParameter:
+    name: correlationId
+    in: path
+    type: string
+    format: CorrelationId
+    required: true
+    description: |
+      It's the guid corresponding to the operation.
+      
   storeIdOnlyGeneralParameters:
     name: storeId
     in: path
