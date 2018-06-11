@@ -1209,6 +1209,7 @@ definitions:
     allOf:
     - $ref: '#/definitions/messageBase'
     - type: object
+      discriminator: eventType
       required: 
       - eventType
       properties:
