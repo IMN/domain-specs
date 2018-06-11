@@ -1184,3 +1184,17 @@ definitions:
     - healthy
     - ignored
     - unhealthy
+    
+  messageBase:
+    x-exclude: true
+    type: object
+    required:
+    - messageId
+    - correlationId
+    properties:
+      messageId:
+        $ref: '#/definitions/messageId'
+      correlationId:
+        $ref: '#/definitions/correlationId'
+      causeId: 
+        $ref: '#/definitions/causeId'
