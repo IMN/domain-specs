@@ -1211,7 +1211,7 @@ definitions:
     - type: object
       discriminator: eventType
       required: 
-      - eventType
+      - eventName
       properties:
         eventName:
           $ref: '#/definitions/eventName'
