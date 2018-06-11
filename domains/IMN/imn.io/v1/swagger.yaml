@@ -1204,8 +1204,8 @@ definitions:
     properties:
       messageId:
         allOf:
-        - $ref: '#/definitions/messageId'
         - x-excludeProperty: true
+        - $ref: '#/definitions/messageId'
       correlationId:
         $ref: '#/definitions/correlationId'
       causeId: 
