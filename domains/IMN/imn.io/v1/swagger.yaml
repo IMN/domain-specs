@@ -955,6 +955,21 @@ definitions:
     description: The documentation related to this operation.
     example: 'https://api-docs.imn.io/#operation/EnableChannelCatalog'
 
+
+  errorCode:
+    x-exclude: true
+    type: string
+    description: the error code. The error code can be a pattern containing the argument's name
+    example: CatalogImportationAlreadyInProgress(ExecutionId currentCatalogImportationId)
+
+  cultureName:
+    x-exclude: true
+    type: string
+    description: If the error is translated, the culture name will be indicated
+    example: en
+    x-lov: Go2CultureName
+
+    
   userErrorMessage:
     x-exclude: true
     type: object
@@ -965,19 +980,14 @@ definitions:
       docUrl:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/docUrl'
       code:
-        type: string
-        description: the error code. The error code can be a pattern containing the argument's name
-        example: CatalogImportationAlreadyInProgress(ExecutionId currentCatalogImportationId)
+        $ref: '#/definitions/errorCode'
       message:
         type: string
         description: The error message
         example: |
             There is already an importation in progress: b24d0dd8-a561-478a-9b26-34f573f03527
       cultureName:
-        type: string
-        description: If the error is translated, the culture name will be indicated
-        example: en
-        x-lov: Go2CultureName
+        $ref: '#/definitions/cultureName'
       arguments:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessageArguments
 
