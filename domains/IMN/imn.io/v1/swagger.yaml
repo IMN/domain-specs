@@ -1198,3 +1198,18 @@ definitions:
         $ref: '#/definitions/correlationId'
       causeId: 
         $ref: '#/definitions/causeId'
+
+  eventType:
+    x-exclude: true
+    description: The event name
+    type: string
+
+  eventBase:
+    allOf:
+    - $ref: '#/definitions/messageBase'
+    - type: object
+      required: 
+      - eventType
+      properties:
+        eventType:
+          $ref: '#/definitions/eventType'
