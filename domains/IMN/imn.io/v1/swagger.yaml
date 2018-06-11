@@ -1199,7 +1199,7 @@ definitions:
       causeId: 
         $ref: '#/definitions/causeId'
 
-  eventType:
+  eventName:
     x-exclude: true
     description: The event name
     type: string
@@ -1213,5 +1213,5 @@ definitions:
       required: 
       - eventType
       properties:
-        eventType:
-          $ref: '#/definitions/eventType'
+        eventName:
+          $ref: '#/definitions/eventName'
