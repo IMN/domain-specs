@@ -228,3 +228,7 @@ definitions:
   realOffer:
     x-exclude: true
     type: object
+    
+  realOfferDeleted:
+    x-exclude: true
+    type: object
