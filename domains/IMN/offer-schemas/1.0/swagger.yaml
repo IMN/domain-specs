@@ -223,12 +223,3 @@ definitions:
       actualValue:
         type: string
         description: The actual value causing the none importation of the offer
-        
-        
-  realOffer:
-    x-exclude: true
-    type: object
-    
-  realOfferDeleted:
-    x-exclude: true
-    type: object
