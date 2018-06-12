@@ -51,3 +51,8 @@ definitions:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    
+  initializationExportStartRequested: 
+    x-format: Event
+    allOf: 
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
