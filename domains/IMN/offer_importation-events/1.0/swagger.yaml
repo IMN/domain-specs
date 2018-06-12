@@ -9,7 +9,7 @@ info:
 x-beezup-ops:
   codeGenType: domain
   repo: IMN
-  appRoot: IMN.ADPT.OfferIMP.Events
+  appRoot: IMN.ADPT.OfferIMP..Events
   apiName: IMN.ADPT.OfferIMP.Events
   namespace: IMN.ADPT.OfferIMP.Events
   comment: |
