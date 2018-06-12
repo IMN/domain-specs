@@ -194,7 +194,7 @@ definitions:
           type: string
           description: The subscription id deleted by the marketplace
 
-  offerReportGenerationRequested:
+  offerImportationReportGenerationRequested:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
@@ -207,7 +207,7 @@ definitions:
           description: The report identifier received by the marketplace
         
 
-  offerReportGenerationFailed:
+  offerImportationReportGenerationFailed:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
@@ -225,7 +225,14 @@ definitions:
           items:
             $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage'
 
-  offerReportGenerationCompleted:
+  offerImportationReportGenerationCompleted:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    
+    - type: object
+      required:
+      - success
+      properties:
+        success:
+          type: boolean
