@@ -62,7 +62,7 @@ definitions:
   orderChangeEventBase:
     x-exclude: true
     allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/eventBase'
+    #- $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/eventBase'
     - type: object
       required:
       - order
