@@ -118,7 +118,38 @@ definitions:
       The credential are not configured for the marketplace '{marketplaceCode}'
     properties:
       marketplaceCode:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'        
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+        
+  partnerHttpException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    type: object
+    required: 
+    - correlationId
+    - marketplaceCode
+    - merchantCode
+    - logUri
+    - httpStatus
+    - operationName
+    description: |
+      Partner http request in error
+    properties:
+      correlationId: 
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/correlationId'
+      marketplaceCode: 
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+      merchantCode: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      logUri:
+        type: string
+        format: uri
+      httpStatus:
+        type: string
+        format: httpStatusCode
+      operationName:
+        type: string
+        
 #  emailBadFormattedException:
 #    x-format: Exception
  #   x-transient: true
