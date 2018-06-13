@@ -1252,5 +1252,8 @@ definitions:
       logUri:
         type: string
         format: uri
+      httpStatus:
+        type: string
+        format: httpStatusCode
       operationName:
         type: string
