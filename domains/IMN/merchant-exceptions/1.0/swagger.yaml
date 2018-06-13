@@ -133,7 +133,7 @@ definitions:
     - httpStatus
     - operationName
     description: |
-      Partner http request in error
+      The partner http request is in error
     properties:
       correlationId: 
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/correlationId'
