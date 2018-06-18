@@ -341,8 +341,8 @@ definitions:
   merchantMarketplacePricingSettingConfigured:
     x-format: Event
     allOf:
-     - $ref: '#/definitions/merchantEventPushed'
-     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
+    - $ref: '#/definitions/merchantEventPushed'
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
       - merchantCode
