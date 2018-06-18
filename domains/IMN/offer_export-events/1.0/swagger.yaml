@@ -18,46 +18,27 @@ x-beezup-ops:
 
 definitions:
 
+  offerExportInitializationRequested:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
 
   offerExportInitializationStarted:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
 
-  offerExportInitializationCompleted:
+  offerExportInitializationStopped:
     x-format: Event
-    type: object
-    required:
-    - merchantCode
-    - marketplaceCode
-    - merchantOffers
-    properties:
-      merchantCode:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
-      marketplaceCode:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
 
   offerExportInitializationExpired:
     x-format: Event
     allOf: 
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
 
-  offerExportInitializationRequested:
-    x-format: Event
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-    
-  offerExportInitializationDisabled:
-    x-format: Event
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-    
-  initializationExportStartRequested: 
-    x-format: Event
-    allOf: 
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-    
-  offerInitializationStopped:
+  offerExportInitializationCompleted:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
