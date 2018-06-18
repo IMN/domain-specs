@@ -24,6 +24,15 @@ x-beezup-ops:
 
 definitions:
 
+
+
+  orderReceived:
+    # for now I don't know how to handle the generation of this class
+    x-exclude: true
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
+
   
   orderCreated:
     # for now I don't know how to handle the generation of this class
