@@ -106,6 +106,7 @@ definitions:
   merchantMarketplaceCredentialConfigured:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -124,6 +125,7 @@ definitions:
     x-format: Event
     description: When the merchant marketplace subscription has been requested
     allOf: 
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -141,6 +143,7 @@ definitions:
     x-format: Event
     description: When the marketplace accept the mechant subscription request
     allOf: 
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -156,6 +159,7 @@ definitions:
     x-format: Event
     description: When the marketplace refuses the merchant subscription
     allOf: 
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -173,6 +177,7 @@ definitions:
     x-format: Event
     description: When the marketplace blocks the merchant subscription
     allOf: 
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -189,6 +194,7 @@ definitions:
   merchantOffersSourceMarketplaceDeclared:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -202,6 +208,7 @@ definitions:
   merchantOffersSourceMarketplaceUndeclared:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -215,6 +222,7 @@ definitions:
   merchantMarketplaceOfferImportationEnabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -228,6 +236,7 @@ definitions:
   merchantMarketplaceOfferImportationDisabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -242,6 +251,7 @@ definitions:
   merchantMarketplaceOfferPublicationEnabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -255,6 +265,7 @@ definitions:
   merchantMarketplaceOfferPublicationDisabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -270,6 +281,7 @@ definitions:
   merchantMarketplaceOrderImportationEnabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -283,6 +295,7 @@ definitions:
   merchantMarketplaceOrderImportationDisabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required: 
@@ -328,7 +341,8 @@ definitions:
   merchantMarketplacePricingSettingConfigured:
     x-format: Event
     allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
+     - $ref: '#/definitions/merchantEventPushed'
+     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
       - merchantCode
@@ -346,6 +360,7 @@ definitions:
   merchantMarketplaceShippingPreprationSettingConfigured:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -367,6 +382,7 @@ definitions:
   merchantMarketplaceShippingDeliverySettingConfigured:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -394,6 +410,7 @@ definitions:
   merchantMarketplaceShippingDeliverySettingDisabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -407,6 +424,7 @@ definitions:
   merchantMarketplaceShippingDeliverySettingDeleted:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -420,6 +438,7 @@ definitions:
   merchantMarketplaceShippingDeliverySettingEnabled:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
@@ -433,6 +452,7 @@ definitions:
   marketplaceMerchantCodeConfigured:
     x-format: Event
     allOf:
+    - $ref: '#/definitions/merchantEventPushed'
     - $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-events/1.0#/definitions/merchantMarketplaceEventBase'
     - type: object
       required:
