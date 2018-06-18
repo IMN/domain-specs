@@ -152,6 +152,7 @@ definitions:
         type: string
         
   partnerInvalidResponse:
+    x-exclude: true
     x-format: Exception
     x-transient: false
     x-technical: false
