@@ -150,7 +150,7 @@ definitions:
       operationName:
         type: string
         
-  PartnerInvalidResponse:
+  partnerInvalidResponse:
     x-format: Exception
     x-transient: false
     x-technical: false
