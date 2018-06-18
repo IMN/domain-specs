@@ -30,6 +30,10 @@ definitions:
     # for now I don't know how to handle the generation of this class
     x-exclude: true
     x-format: Event
+    description: |
+      This event his a technical one. It is stored in the event hub before it's processed by the OrderActor.
+      The order actor will create business event like order created or updated.
+      OrderReceived will be not be stored in the Event Store.
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
 
