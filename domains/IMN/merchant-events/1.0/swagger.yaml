@@ -24,7 +24,23 @@ x-beezup-ops:
 
 definitions:
 
-  
+
+
+
+  merchantEventPushed:
+    x-exclude: true
+    type: object
+    discriminator: eventType
+    required:
+    - merchantCode
+    - eventType
+    properties:
+      merchantCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      eventType:
+        x-exclude: true
+        type: string
+    
 
   merchantCreated:
     x-format: Event
@@ -72,23 +88,20 @@ definitions:
       imageUrl:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
    
+  
+  
+  
   merchantMarketplaceEventBase:
     x-exclude: true
-    type: object
-    discriminator: eventType
-    required:
-    - merchantCode
-    - marketplaceCode
-    - eventType
-    properties:
-      merchantCode:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
-      marketplaceCode:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
-      eventType:
-        x-exclude: true
-        type: string
-   
+    allOf:
+    - $ref: '#/definitions/merchantEventPushed'
+    - type: object
+      required:
+      - marketplaceCode
+      properties:
+        marketplaceCode:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+
    
   merchantMarketplaceCredentialConfigured:
     x-format: Event
@@ -435,23 +448,22 @@ definitions:
           
   merchantCurrencyConversionConfigured:
     x-format: Event
-    type: object
-    required:
-    - merchantCode
-    - userId
-    - from
-    - to
-    - rate
-    properties:
-      merchantCode:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
-      userId: 
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
-      from:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
-      to:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
-      rate:
-        type: number
-        format: decimal
-        description: The rate conversion to be applied from the currency to another one
+    allOf:
+    - $ref: '#/definitions/merchantEventPushed'
+    - type: object
+      required:
+      - userId
+      - from
+      - to
+      - rate
+      properties:
+        userId: 
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        from:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
+        to:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
+        rate:
+          type: number
+          format: decimal
+          description: The rate conversion to be applied from the currency to another one
