@@ -721,11 +721,7 @@ definitions:
       method:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpMethod
       parameters:
-        type: array
-        uniqueItems: true
-        minItems: 0
-        items:
-          $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter2
+        $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/linkParameter2Types
       info:
         $ref: https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/infoSummaries
 
