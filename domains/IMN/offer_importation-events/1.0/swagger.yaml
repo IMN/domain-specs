@@ -18,6 +18,7 @@ x-beezup-ops:
   using:
   - IMN.Schemas
   - BeezUP2.ApiModels.Generated.Models.Generated
+  - UserErrorMessage=BeezUP2.ApiModels.Generated.Models.Generated
   references:
   - IMN.Schemas
 
