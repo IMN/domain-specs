@@ -29,57 +29,6 @@ definitions:
       merchantCode: 
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
         
-  marketplaceCodeNotFoundException:
-    x-format: Exception
-    x-transient: false
-    x-technical: false
-    type: object
-    required: 
-    - marketplaceCode
-    description: |
-      The marketplace code '{marketplaceCode}' does not exists
-    properties:
-      marketplaceCode: 
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
-        
-  merchantCodeNotFoundException:
-    x-format: Exception
-    x-transient: false
-    x-technical: false
-    type: object
-    required: 
-    - merchantCode
-    description: |
-      The merchant code '{merchantCode}' does not exists
-    properties:
-      merchantCode: 
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
-  
-  invalidMarketplaceCodeException:      
-    x-format: Exception
-    x-transient: false
-    x-technical: false
-    type: object
-    required: 
-    - marketplaceCode
-    description: |
-      The merketplace code '{marketplaceCode}' is different from the state
-    properties:
-      marketplaceCode: 
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
-
-  invalidMerchantCodeException:
-    x-format: Exception
-    x-transient: false
-    x-technical: false
-    type: object
-    required: 
-    - merchantCode
-    description: |
-      The merchant code '{merchantCode}' is different from the state
-    properties:
-      merchantCode: 
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
         
   invalidMarketplaceCredentialException:
     x-format: Exception
