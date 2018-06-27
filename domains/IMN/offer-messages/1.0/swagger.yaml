@@ -18,6 +18,9 @@ x-beezup-ops:
     changed to yaml format
   using:
   - IMN.Offer.Schemas
+  - IMN.Schemas
+  references:
+  - IMN.Offer.Schemas
 
 definitions:
 
