@@ -15,6 +15,7 @@ x-beezup-ops:
   using:
   - IMN.Schemas
   references:
+  - IMN.Schemas
   
 
 definitions:
