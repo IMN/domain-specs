@@ -1,0 +1,66 @@
+info:
+  version: "1.0"
+  title: IMN - ADAPTER - Order Schemas
+  description: IMN - ADAPTER - Order Schemas
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.ADPT.Order.Schemas
+  apiName: TBD
+  namespace: IMN.ADPT.Order.Schemas
+  comment: |
+    IMN.ADPT.Order.Schemas
+    Changed to yaml format
+  using:
+  - IMN.Schemas
+  - IMN.Order.Schemas
+  - IMN.ADPT.Schemas
+  references:
+  - IMN.Order.Schemas
+  - IMN.ADPT.Schemas
+
+definitions:
+
+  beezUPOrderIdentifier:
+    description: The BeezUP order identifier
+    type: object
+    required:
+    - marketplaceTechnicalCode
+    - accountId
+    - beezUPOrderUUID
+    properties:
+      marketplaceTechnicalCode:
+        type: string
+      accountId:
+        type: integer
+      beezUPOrderUUID:
+        type: string
+
+  beezUPOrderChangeExecutionSummary:
+    description: The BeezUP order change execution summary
+    type: object
+    required:
+    - executionUUID
+    - correlationId
+    - marketplaceTechnicalCode
+    - accountId
+    - beezUPOrderUUID
+    - processingStatus
+    properties:
+      executionUUID:
+        type: string
+      correlationId:
+        type: string
+      marketplaceTechnicalCode:
+        type: string
+      accountId:
+        type: integer
+      beezUPOrderUUID:
+        type: string
+      processingStatus:
+        type: string
+      errorCode:
+        type: string
+      errorMessage:
+        type: string
