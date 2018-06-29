@@ -70,6 +70,7 @@ definitions:
     - firstName
     - country
     - phoneNumber
+    - currencyCode
     properties:
       merchantCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
@@ -87,6 +88,8 @@ definitions:
         type: string
       imageUrl:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
+      currencyCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
       ecommerceSoftwareName:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/ecommerceSoftwareName'
 
