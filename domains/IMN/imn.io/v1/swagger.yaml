@@ -241,9 +241,9 @@ definitions:
 
 
   ecommerceSoftwareName:
+    description: The e-commerce software name of the merchant
     type: string
-    description: The e-commerce software solution used for this merchant
-    example: Shopify
+    example: Prestashop
 
   firstName:
     type: string
