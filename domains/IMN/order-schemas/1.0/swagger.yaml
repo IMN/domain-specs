@@ -91,10 +91,6 @@ definitions:
     type: string
     example: MyOrderMerchantId
 
-  merchantECommerceSoftwareName:
-    description: The e-commerce software name of the merchant
-    type: string
-    example: Prestashop
 
   merchantECommerceSoftwareVersion:
     description: The e-commece software version of the merchant
