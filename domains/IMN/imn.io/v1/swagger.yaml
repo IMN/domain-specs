@@ -239,6 +239,12 @@ responses:
 
 definitions:
 
+
+  ecommerceSoftwareName:
+    type: string
+    description: The e-commerce software solution used for this merchant
+    example: Shopify
+
   firstName:
     type: string
     description: The first name of a person
