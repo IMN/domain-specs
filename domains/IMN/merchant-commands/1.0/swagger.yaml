@@ -36,6 +36,7 @@ definitions:
     - firstName
     - country
     - phoneNumber
+    - ecommerceSoftwareName
     properties:
       merchantCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
@@ -55,6 +56,8 @@ definitions:
         type: string
       imageUrl:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
+      ecommerceSoftwareName:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/ecommerceSoftwareName'
   
   updateMerchantAcountInfo:
     x-format: Command
@@ -85,6 +88,8 @@ definitions:
         type: string
       imageUrl:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
+      ecommerceSoftwareName:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/ecommerceSoftwareName'
 
   declareMerchantOffersSourceMarketplace:
     x-format: Command
