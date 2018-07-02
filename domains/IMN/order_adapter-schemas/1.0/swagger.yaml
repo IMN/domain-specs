@@ -56,14 +56,6 @@ definitions:
           type: string
         correlationId:
           type: string
-        marketplaceTechnicalCode:
-          type: string
-        accountId:
-          type: integer
-        beezUPOrderUUID:
-          type: string
-        processingStatus:
-          type: string
         errorCode:
           type: string
         errorMessage:
