@@ -22,6 +22,12 @@ x-beezup-ops:
 
 definitions:
 
+  beezUPOrderId:
+    description: The BeezUP Order identifier
+    type: string
+    format: uuid
+    example: '00000000000000000000000000000000000000000000000'
+
   beezUPOrderIdentifier:
     description: The BeezUP order identifier
     type: object
@@ -31,11 +37,11 @@ definitions:
     - beezUPOrderUUID
     properties:
       marketplaceTechnicalCode:
-        type: string
+        $ref: 'https://api.swaggerhub.com/domains/IMN/adapter-schemas/1.0#/definitions/beezUPMarketplaceTechnicalCode'
       accountId:
-        type: integer
+        $ref: 'https://api.swaggerhub.com/domains/IMN/adapter-schemas/1.0#/definitions/beezUPMarketplaceAccountId'
       beezUPOrderUUID:
-        type: string
+        $ref: '#/definitions/beezUPOrderId'
 
   beezUPOrderChangeExecutionSummary:
     allOf:
