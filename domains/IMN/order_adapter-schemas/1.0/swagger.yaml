@@ -34,7 +34,7 @@ definitions:
     required:
     - marketplaceTechnicalCode
     - accountId
-    - beezUPOrderUUID
+    - beezUPOrderId
     properties:
       marketplaceTechnicalCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/adapter-schemas/1.0#/definitions/beezUPMarketplaceTechnicalCode'
