@@ -52,12 +52,18 @@ definitions:
       required:
       - executionId
       - correlationId
+      - merchantCode
+      - marketplaceCode
       - processingStatus
       properties:
         executionId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/adapter-schemas/1.0#/definitions/beezUPExecutionId'
         correlationId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/correlationId'
+        merchantCode:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+        marketplaceCode:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
         errorCode:
           type: string
         errorMessage:
