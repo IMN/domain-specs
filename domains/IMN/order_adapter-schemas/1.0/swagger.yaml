@@ -38,29 +38,28 @@ definitions:
         type: string
 
   beezUPOrderChangeExecutionSummary:
-    description: The BeezUP order change execution summary
-    type: object
-    required:
-    - executionUUID
-    - correlationId
-    - marketplaceTechnicalCode
-    - accountId
-    - beezUPOrderUUID
-    - processingStatus
-    properties:
-      executionUUID:
-        type: string
-      correlationId:
-        type: string
-      marketplaceTechnicalCode:
-        type: string
-      accountId:
-        type: integer
-      beezUPOrderUUID:
-        type: string
-      processingStatus:
-        type: string
-      errorCode:
-        type: string
-      errorMessage:
-        type: string
+    allOf:
+    - type: object
+      description: The BeezUP order change execution summary
+      required:
+      - executionUUID
+      - correlationId
+      - processingStatus
+      properties:
+        executionUUID:
+          type: string
+        correlationId:
+          type: string
+        marketplaceTechnicalCode:
+          type: string
+        accountId:
+          type: integer
+        beezUPOrderUUID:
+          type: string
+        processingStatus:
+          type: string
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+    - $ref: '#/definitions/beezUPOrderIdentifier'
