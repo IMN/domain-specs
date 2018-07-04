@@ -89,7 +89,7 @@ definitions:
     x-exclude: true
     x-format: Exception
     x-transient: false
-    x-technical: false
+    x-technical: true
     type: object
     required: 
     - correlationId
@@ -120,7 +120,7 @@ definitions:
     x-exclude: true
     x-format: Exception
     x-transient: false
-    x-technical: false
+    x-technical: true
     type: object
     required: 
     - correlationId
