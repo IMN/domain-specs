@@ -63,14 +63,14 @@ definitions:
     example: shipped
     x-lov: imnOrderStatus
     enum:
-    - new
-    - pending
-    - inProgress
-    - received
-    - shipped
-    - cancelled
-    - closed
-    - availableOnStore
+    - New
+    - Pending
+    - InProgress
+    - Received
+    - Shipped
+    - Cancelled
+    - Closed
+    - AvailableOnStore
 
 
     
