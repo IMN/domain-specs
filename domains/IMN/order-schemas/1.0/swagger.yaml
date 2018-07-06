@@ -540,14 +540,11 @@ definitions:
   orderGeneralInfo:
     type: object
     required:
-    - marketplaceOrderId
     - imnOrderStatus
     - marketplaceOrderStatus
     - purchaseUtcDate
     - marketplaceLastModificationUtcDate
     properties:
-      marketplaceOrderId:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
 
       imnOrderStatus:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/imnOrderStatus'
