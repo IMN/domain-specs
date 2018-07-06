@@ -1,7 +1,3 @@
-### Domains, a place to put your reusable components
-
-### Examples...
-
 info:
   description: IMN Core - Order Schemas
   version: '1.0'
@@ -74,8 +70,6 @@ definitions:
     - Closed
     - AvailableOnStore
 
-
-    
   marketplaceOrderStatus:
     description: The marketplace order state
     type: string
@@ -101,7 +95,6 @@ definitions:
     description: The order merchant identifier
     type: string
     example: MyOrderMerchantId
-
 
   merchantECommerceSoftwareVersion:
     description: The e-commece software version of the merchant
@@ -382,7 +375,6 @@ definitions:
         type: number
         format: decimal
 
-
   orderBillingInfo:
     type: object
     description: The billing information related to the order
@@ -536,9 +528,7 @@ definitions:
         description: The address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#/decoding_table for more details)
         type: string
         example: FR
-        
-        
-        
+
   orderGeneralInfo:
     type: object
     required:
@@ -566,7 +556,6 @@ definitions:
         type: string
         example: '2017-04-16T10:25:23Z'
 
-
       marketplaceChannel:
         description: Useful to identify the origin of the order. For example in Cdiscount.
         type: string
@@ -576,8 +565,7 @@ definitions:
         description: The comment associated to this order
         type: string
         example: 'This is a comment'
-    
-        
+
   orderMarketplaceInfo:
     description: Describe the basic information related to an order.
     type: object
@@ -594,29 +582,23 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
       etag:
        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
-      
+
       generalInfo:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderGeneralInfo'
-      
+
       pricingInfo:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderPricingInfo'
 
-
-
       billingInfo:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderBillingInfo'
-        
+
       shippingInfo:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderShippingInfo'
-
-
 
       orderItems:
         type: array
         items:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderItem'
-
-
 
   orderPricingInfo:
     type: object
@@ -624,13 +606,13 @@ definitions:
     - totalPrice
     - currencyCode
     properties:
-  
+
       totalPrice:
         description: The total price of this order (corresponding to the amount paid by the customer)
         format: decimal
         type: number
         example: 101.42
-        
+
       currencyCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
 
@@ -645,7 +627,6 @@ definitions:
         type: number
         format: decimal
         example: 0.0
-
 
       additionalFee:
         description: Additional fee related to this order
@@ -663,13 +644,6 @@ definitions:
         type: string
         format: date-time
         example: '2017-04-01T13:22:01Z'
-      
-
-      
-
-  
-
-
 
   orderMerchantInfo:
     type: object
@@ -687,8 +661,7 @@ definitions:
 
       merchantECommerceSoftwareVersion:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/merchantECommerceSoftwareVersion'
-        
-        
+
   orderInfo:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
@@ -708,8 +681,6 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMerchantInfo'
         imnInfo:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIMNInfo'
-        
-
 
   orderIMNInfo:
     type: object
@@ -726,7 +697,7 @@ definitions:
 
       currentOrderChangeCorrelationId:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/correlationId'
-        
+
   orderChangeType:
     type: string
     x-lov: OrderChangeBusinessOperationType
