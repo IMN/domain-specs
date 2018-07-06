@@ -1,7 +1,7 @@
 info:
-  version: "1.0"
-  title: IMN - ADAPTER - Order Schemas
   description: IMN - ADAPTER - Order Schemas
+  version: '1.0'
+  title: IMN - ADAPTER - Order Schemas
 
 x-beezup-ops:
   codeGenType: domain
