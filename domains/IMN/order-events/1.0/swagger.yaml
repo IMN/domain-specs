@@ -21,7 +21,7 @@ x-beezup-ops:
   - BeezUP2.Framework.Processing
   - UserErrorMessage=BeezUP2.ApiModels.Generated.Models.Generated.UserErrorMessage
   references:
-  - 
+  - IMN.Order.Schemas
 
 definitions:
 
