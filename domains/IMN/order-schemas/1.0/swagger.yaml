@@ -30,6 +30,15 @@ parameters:
     format: imnOrderId
     x-example: 'A0CD3FG'
 
+  marketplaceOrderIdParameter:
+    description: The MKP Order identifier
+    name: marketplaceOrderId
+    in: path
+    required: true
+    type: string
+    format: marketplaceOrderId
+    x-example: 'CDISCOUNT12345'
+
   userNameInQueryParameter:
     name: userName
     description: Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
