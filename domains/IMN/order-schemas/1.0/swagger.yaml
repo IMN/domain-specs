@@ -18,6 +18,8 @@ x-beezup-ops:
   using:
   - IMN.Schemas
   - BeezUP2.Framework.Messaging
+  references:
+  - IMN.Schemas
 
 parameters:
 
@@ -730,11 +732,11 @@ definitions:
     x-lov: OrderChangeBusinessOperationType
     example: ship
     enum:
-    - accept
-    - refuse
-    - ship
-    - shipWithTrackingUrl
-    - refund
-    - cancel
-    - pickUp
-    - restock
+    - Accept
+    - Refuse
+    - Ship
+    - ShipWithTrackingUrl
+    - Refund
+    - Cancel
+    - PickUp
+    - Restock
