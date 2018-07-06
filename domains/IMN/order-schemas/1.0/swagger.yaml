@@ -112,9 +112,9 @@ definitions:
     description: Indicates on which date you want to make the filter
     type: string
     enum:
-    - Modification
+    - IMNModification
     - Purchase
-    - MarketPlaceModification
+    - MarketplaceModification
     default: Modification
 
   orderEtag:
