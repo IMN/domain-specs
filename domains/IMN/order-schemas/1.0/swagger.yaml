@@ -115,7 +115,7 @@ definitions:
     - IMNModification
     - Purchase
     - MarketplaceModification
-    default: Modification
+    default: IMNModification
 
   orderEtag:
     description: |
