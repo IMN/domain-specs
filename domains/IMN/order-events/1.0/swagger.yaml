@@ -59,6 +59,7 @@ definitions:
     allOf:
     #- $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/eventBase'
     - type: object
+      discriminator: eventName
       required:
       - order
       - userId
@@ -83,6 +84,8 @@ definitions:
           example: false
         sourceType:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/operationSourceType'
+        eventName:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/eventName'
 
   orderAccepted:
     x-format: Event
