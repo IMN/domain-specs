@@ -17,7 +17,7 @@ x-beezup-ops:
     changed to yaml format
   using:
   - IMN.Schemas
-  #- BeezUP2.ApiModels.Generated.Models.Generated
+  - BeezUP2.ApiModels.Generated.Models.Generated
   #- UserErrorMessage=BeezUP2.ApiModels.Generated.Models.Generated.UserErrorMessage
   references:
   - IMN.Schemas
