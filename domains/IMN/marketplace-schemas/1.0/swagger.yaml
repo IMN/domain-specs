@@ -25,9 +25,9 @@ definitions:
   marketplaceApiIntegrationStatus:
     type: string
     enum:
-    - up
-    - down
-    - paused
+    - Up
+    - Down
+    - Paused
 
 
   marketplaceStatus:
