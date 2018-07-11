@@ -318,6 +318,7 @@ definitions:
     required:
     - merchantCode
     - userId
+    - sourceMarketplaceCode
     - targetMarketplacesSubscriptionRequested
     - subscriptionRequestUtcDate
     - salesforceSubscriptionId
