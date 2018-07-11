@@ -327,7 +327,9 @@ definitions:
 
       userId:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
-          
+      sourceMarketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'   
+
       targetMarketplacesSubscriptionRequested:
         type: array
         minItems: 1
