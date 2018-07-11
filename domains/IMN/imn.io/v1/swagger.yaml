@@ -1212,7 +1212,7 @@ definitions:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/messageBase'
     - type: object
-      discriminator: eventType
+      discriminator: eventName
       required: 
       - eventName
       properties:
