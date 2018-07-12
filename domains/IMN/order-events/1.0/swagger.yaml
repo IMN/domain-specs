@@ -14,6 +14,7 @@ x-beezup-ops:
   using:
   - IMN.Schemas
   - IMN.Order.Schemas
+  - BeezUP2.Framework.Processing
   references:
   - IMN.Order.Schemas
 
