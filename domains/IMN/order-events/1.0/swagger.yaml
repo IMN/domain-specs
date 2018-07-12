@@ -32,7 +32,6 @@ definitions:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMarketplaceInfo'
 
-
   orderMerchantInfoConfigured:
     x-format: Event
     type: object
