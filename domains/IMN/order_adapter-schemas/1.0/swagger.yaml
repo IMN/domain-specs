@@ -44,13 +44,30 @@ definitions:
       beezUPOrderId:
         $ref: '#/definitions/beezUPOrderId'
 
-  beezUPOrderChangeExecutionSummary:
+  beezUPOrderChangeExecution:
+    x-exclude: true
     allOf:
     - $ref: '#/definitions/beezUPOrderIdentifier'
     - type: object
-      description: The BeezUP order change execution summary
+      description: The BeezUP order change execution
       required:
       - executionId
+      properties:
+        executionId:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/adapter-schemas/1.0#/definitions/beezUPExecutionId'
+        processingStatus:
+          type: string
+        errorCode:
+          type: string
+        errorMessage:
+          type: string
+
+  beezUPOrderChangeExecutionSummary:
+    allOf:
+    - $ref: '#/definitions/beezUPOrderChangeExecution'
+    - type: object
+      description: The BeezUP order change execution summary
+      required:
       - correlationId
       - merchantCode
       - marketplaceCode
@@ -66,9 +83,3 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
         marketplaceOrderId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
-        processingStatus:
-          type: string
-        errorCode:
-          type: string
-        errorMessage:
-          type: string
