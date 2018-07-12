@@ -13,10 +13,10 @@ x-beezup-ops:
     IMN.ADPT.Order.Schemas
     Changed to yaml format
   using:
-  - BeezUP2.Framework.Messaging
   - IMN.Schemas
   - IMN.Order.Schemas
   - IMN.ADPT.Schemas
+  - BeezUP2.Framework.Processing
   references:
   - IMN.Order.Schemas
   - IMN.ADPT.Schemas
