@@ -16,6 +16,7 @@ x-beezup-ops:
   - IMN.Schemas
   - IMN.Order.Schemas
   - IMN.ADPT.Schemas
+  - BeezUP2.Framework.Messaging
   - BeezUP2.Framework.Processing
   references:
   - IMN.Order.Schemas
