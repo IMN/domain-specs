@@ -1202,9 +1202,9 @@ definitions:
       causeId: 
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/causeId'
 
-  eventName:
+  eventType:
     x-exclude: true
-    description: The event name
+    description: The event type
     type: string
 
   eventBase:
@@ -1212,9 +1212,9 @@ definitions:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/messageBase'
     - type: object
-      discriminator: eventName
+      discriminator: eventType
       required: 
-      - eventName
+      - eventType
       properties:
-        eventName:
+        eventType:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/eventName'
