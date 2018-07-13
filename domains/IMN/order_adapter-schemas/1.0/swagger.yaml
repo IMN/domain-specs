@@ -46,6 +46,7 @@ definitions:
         $ref: '#/definitions/beezUPOrderId'
 
   beezUPOrderChangeExecution:
+    x-exclude: true
     allOf:
     - $ref: '#/definitions/beezUPOrderIdentifier'
     - type: object
