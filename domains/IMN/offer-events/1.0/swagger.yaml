@@ -36,17 +36,7 @@ definitions:
     - $ref: '#/definitions/merchantOfferEventBase'
 
   
-  merchantOfferCreated:
-    x-format: Event
-    allOf:
-    - $ref: '#/definitions/merchantOfferEventBase'
 
-
-  
-  merchantOfferUpdated:
-    x-format: Event
-    allOf:
-    - $ref: '#/definitions/merchantOfferEventBase'
 
 
   merchantOfferDeleted:
@@ -67,17 +57,6 @@ definitions:
     allOf:
     - $ref: '#/definitions/merchantMarketplaceOfferEventBase'
 
-  merchantMarketplaceOfferCreated:
-    x-format: Event
-    allOf:
-    - $ref: '#/definitions/merchantMarketplaceOfferEventBase'
-
-
-  
-  merchantMarketplaceOfferUpdated:
-    x-format: Event
-    allOf:
-    - $ref: '#/definitions/merchantMarketplaceOfferEventBase'
 
 
   merchantMarketplaceOfferDeleted:
