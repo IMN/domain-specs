@@ -570,7 +570,7 @@ definitions:
     description: Describe the basic information related to an order.
     type: object
     required:
-    - order
+    - identifier
     - etag
     - generalInfo
     - pricingInfo
@@ -578,7 +578,7 @@ definitions:
     - shippingInfo
     - orderItems
     properties:
-      order:
+      identifier:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
       etag:
        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
