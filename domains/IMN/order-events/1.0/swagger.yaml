@@ -21,8 +21,6 @@ x-beezup-ops:
 definitions:
 
   orderReceived:
-    # for now I don't know how to handle the generation of this class
-    x-exclude: true
     x-format: Event
     description: |
       This event his a technical one. It is stored in the event hub before it's processed by the OrderActor.
