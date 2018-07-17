@@ -103,20 +103,6 @@ definitions:
       fulfilledBy:
         $ref: '#/definitions/fulfilledBy'
 
-  merchantMarketplaceOfferIdentifier:
-    allOf:
-    - $ref: '#/definitions/merchantOfferIdentifier'
-    - type: object
-      required:
-      - merchantCode
-      - marketplaceCode
-      - sku
-      - gtin
-      - itemCondition
-      properties:
-        marketplaceCode:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
-
   merchantOfferList:
    allOf:
     - type: object
@@ -161,24 +147,7 @@ definitions:
           type: string
           format: date-time
           example: '2018-02-24T14:24:35'
-
-  merchantMarketplaceOffer:
-    allOf:
-    - $ref: '#/definitions/merchantOffer'
-    - type: object
-      required:
-      - merchantCode
-      - marketplaceCode
-      - sku
-      - gtin
-      - itemCondition
-      - price
-      - priceCurrency
-      - deliveryLeadTime
-      - inventoryLevel
-      - lastUpdateUtcDate
-      properties:
-        marketplaceCode:
+        sourceMarketplaceCode:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
 
   deliveryMethod:
