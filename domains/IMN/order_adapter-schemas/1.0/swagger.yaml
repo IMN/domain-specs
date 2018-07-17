@@ -53,6 +53,7 @@ definitions:
       description: The BeezUP order change execution
       required:
       - executionId
+      - processingStatus
       properties:
         executionId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/adapter-schemas/1.0#/definitions/beezUPExecutionId'
