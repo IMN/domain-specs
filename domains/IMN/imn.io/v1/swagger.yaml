@@ -1144,7 +1144,7 @@ definitions:
     example: api
 
   processingStatus:
-    #x-exclude: true
+    x-exclude: true
     description: The processing status of an operation
     type: string
     enum:
