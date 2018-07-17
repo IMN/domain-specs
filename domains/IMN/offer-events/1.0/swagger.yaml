@@ -45,24 +45,7 @@ definitions:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
     
 
-  merchantMarketplaceOfferEventBase:
-    x-exclude: true
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOffer'
 
-
-
-  merchantMarketplaceOfferReceived:
-    x-format: Event
-    allOf:
-    - $ref: '#/definitions/merchantMarketplaceOfferEventBase'
-
-
-
-  merchantMarketplaceOfferDeleted:
-    x-format: Event
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantMarketplaceOfferIdentifier'
 
 
 
