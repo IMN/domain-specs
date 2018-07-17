@@ -27,8 +27,8 @@ definitions:
   beezUPOrderId:
     description: The BeezUP Order identifier
     type: string
-    format: uuid
-    example: '00000000000000000000000000000000000000000000000'
+    #format: uuid
+    #example: '00000000000000000000000000000000000000000000000'
 
   beezUPOrderIdentifier:
     description: The BeezUP order identifier
