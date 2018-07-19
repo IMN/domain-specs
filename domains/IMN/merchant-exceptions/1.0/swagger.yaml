@@ -14,8 +14,10 @@ x-beezup-ops:
     changed to yaml format
   using:
   - IMN.Schemas
+  - IMN.MER.Schemas
   references:
   - IMN.Schemas
+  - IMN.MER.Schemas
   
 
 definitions:
