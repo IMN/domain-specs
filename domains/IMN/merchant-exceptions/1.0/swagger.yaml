@@ -6,7 +6,7 @@ info:
 x-beezup-ops:
   codeGenType: domain
   repo: IMN
-  appRoot: IMN.MER
+  appRoot: IMN.MER.Exceptions
   apiName: TBD
   namespace: IMN.MER.Exceptions
   comment: |
