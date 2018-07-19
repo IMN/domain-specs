@@ -327,9 +327,8 @@ definitions:
         type: string
 
       imageUrl:
-        description: The URL of the image of the order item
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/httpUrl'
         example: 'http://blabla.com//das6-45.jpg'
-        type: string
 
       merchantOfferSku:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/sku'
@@ -453,14 +452,12 @@ definitions:
         example: MRS
 
       firstName:
-        description: The first name of the person
-        type: string
-        example: Jacques
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/firstName'
 
       lastName:
-        description: The last name of the person
-        type: string
-        example: BAUREGARD
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/lastName'
+        
+      
       companyName:
         type: string
         description: The company name of the person
@@ -528,6 +525,7 @@ definitions:
         description: The address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#/decoding_table for more details)
         type: string
         example: FR
+        
 
   orderGeneralInfo:
     type: object
