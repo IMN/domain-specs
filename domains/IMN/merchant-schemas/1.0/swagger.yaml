@@ -83,7 +83,7 @@ definitions:
       preparationRuleType:
         $ref: '#/definitions/marketplacePreparationRuleType'
       preparationDelay:
-        type: number
+        type: integer
         format: int32
         description: The delay considering the rule
   
