@@ -80,9 +80,9 @@ definitions:
     required: 
     - preparationRuleType
     properties:
-      preparationRuleType:
+      ruleType:
         $ref: '#/definitions/marketplacePreparationRuleType'
-      preparationDelay:
+      delay:
         type: integer
         format: int32
         description: The delay considering the rule
