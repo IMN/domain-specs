@@ -78,7 +78,7 @@ definitions:
   marketplacePreparationSetting:
     type: object
     required: 
-    - preparationRuleType
+    - ruleType
     properties:
       ruleType:
         $ref: '#/definitions/marketplacePreparationRuleType'
