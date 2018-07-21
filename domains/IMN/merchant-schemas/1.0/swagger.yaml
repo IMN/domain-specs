@@ -173,7 +173,7 @@ definitions:
 
   marketplaceShippingChargeRuleType:
     type: string
-    default: SamePricing
+    default: Same
     enum:
     - PercentIncrease
     - PercentDecrease
