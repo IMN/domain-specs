@@ -87,10 +87,10 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/marketplaceOrderId'
           
           
-  beezUPOrderWithoutItems:
-    type: object
-    description: 'TODO: Put the beezup order properties without the beezup order items'
+  #beezUPOrderWithoutItems:
+  #  type: object
+  #  description: 'TODO: Put the beezup order properties without the beezup order items'
 
-  beezUPOrderItem:
-    type: object
-    description: 'TODO: Put the beezup order items properties'
+  #beezUPOrderItem:
+  #  type: object
+  #  description: 'TODO: Put the beezup order items properties'
