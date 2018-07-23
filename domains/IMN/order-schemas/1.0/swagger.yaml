@@ -309,7 +309,7 @@ definitions:
   orderItems:
     type: object
     description: The keys correspond to the order item identifier. Must be unique. 
-    additionalProperty:
+    additionalProperties:
       $ref: '#/definitions/orderItems'
   
   orderItem:
