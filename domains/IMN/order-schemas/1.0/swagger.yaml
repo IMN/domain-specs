@@ -569,7 +569,6 @@ definitions:
     type: object
     required:
     - identifier
-    - etag
     - generalInfo
     - pricingInfo
     - billingInfo
@@ -578,8 +577,6 @@ definitions:
     properties:
       identifier:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
-      etag:
-       $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
 
       generalInfo:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderGeneralInfo'
@@ -667,7 +664,6 @@ definitions:
       description: Describe in details all informations related to an order.
       required:
       - identifier
-      - etag
       - generalInfo
       - pricingInfo
       - billingInfo
@@ -684,8 +680,11 @@ definitions:
     type: object
     description: The current order change correlation identifier indicates you if there is a pending order change on the marketplace side.
     required:
+    - etag
     - imnLastModificationUtcDate
     properties:
+      etag:
+       $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderEtag'
 
       imnLastModificationUtcDate:
         description: The last modification UTC date done by IMN of this order
