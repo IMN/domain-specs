@@ -305,17 +305,18 @@ definitions:
     - ShippingAddressUndeliverable
     - Other
 
+
+  orderItems:
+    type: object
+    description: The keys correspond to the order item identifier. Must be unique. 
+    additionalProperty:
+      $ref: '#/definitions/orderItems'
+  
   orderItem:
     description: Describe an order item.
     type: object
-    required:
-    - imnOrderItemId
     properties:
-      imnOrderItemId:
-        description: The IMN identifier of the order Item. Must be unique in the order.
-        type: string
-        example: '1'
-
+    
       title:
         description: The title of the order item
         example: 'bLA acide-plomb 6v-4.5ah 70x48x106mm'
@@ -591,9 +592,7 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderShippingInfo'
 
       orderItems:
-        type: array
-        items:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderItem'
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderItems'
 
   orderPricingInfo:
     type: object
