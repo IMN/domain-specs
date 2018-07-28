@@ -89,8 +89,13 @@ definitions:
       required: 
       - merchantCode
       - marketplaceCode
+      - pageNumber
       - offerCount
       properties:
+        pageNumber:
+          type: integer
+          description: The page number fetched
+          example: 1
         offerCount:
           type: integer
           description: The offer count in the page
