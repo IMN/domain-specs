@@ -191,7 +191,7 @@ definitions:
       properties:
         subscriptionId:
           type: string
-          description: The subscription id received by the marketplace
+          description: The subscription id received from the marketplace
 
 
   offerImportationSubscriptionDeleted:
@@ -204,7 +204,7 @@ definitions:
       properties:
         subscriptionId:
           type: string
-          description: The subscription id deleted by the marketplace
+          description: The subscription id deleted from the marketplace
 
   offerImportationReportGenerationRequested:
     x-format: Event
@@ -216,8 +216,22 @@ definitions:
       properties:
         reportId:
           type: string
-          description: The report identifier received by the marketplace
+          description: The report identifier received from the marketplace
         
+  offerImportationReportGenerationChecked:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - reportId
+      properties:
+        reportId:
+          type: string
+          description: The report identifier received from the marketplace
+        reportStatus:
+          type: string
+          description: The report status received from the marketplace
 
   offerImportationReportGenerationFailed:
     x-format: Event
