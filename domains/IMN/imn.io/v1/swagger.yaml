@@ -988,8 +988,8 @@ definitions:
         type: string
       technicalErrorMessage:
         type: string
-      exceptionDetail:
-        $ref: '#/definitions/exceptionDetail'
+      #exceptionDetail:
+      #  $ref: '#/definitions/exceptionDetail'
       errorArguments:
         type: object
         additionalProperties:
