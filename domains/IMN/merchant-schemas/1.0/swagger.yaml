@@ -71,6 +71,7 @@ definitions:
     - Increase
     - Decrease
     - Same
+    - Fixed
     default: Same
     example: Same
 
@@ -180,7 +181,7 @@ definitions:
     - AmountIncrease
     - AmountDecrease
     - Same
-    - FixedAmount
+    - Fixed
 #    x-lov: MarketplaceShippingChargeRuleType
 
   marketplaceInfo:
