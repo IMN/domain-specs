@@ -116,6 +116,7 @@ definitions:
     allOf:
     - $ref: '#/definitions/merchantOfferIdentifier'
     - type: object
+      description: The defaultDeliveryMethod is required if the deliverySpecifications is fulfilled
       required:
       - merchantCode
       - sku
