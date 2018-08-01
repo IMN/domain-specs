@@ -332,44 +332,6 @@ definitions:
     x-minimum: 1
     default: 1
 
-  catalogCategoryFilter:
-    type: object
-    properties:
-      categoryPath:
-        type: array
-        items:
-          type: string
-        description: Indicates on which catalog category path you want to make the filter
-        example:
-          - Maison
-          - Chambre
-
-  channelCategoryFilter:
-    type: object
-    properties:
-      categoryPath:
-        type: array
-        items:
-          type: string
-        description: Indicates on which channel category path you want to make the filter
-        example:
-          - Home
-          - Bedroom
-
-  productFilters:
-    type: object
-    properties:
-      sku:
-        type: string
-        description: The product sku filter
-        example: 'M1234'
-      title:
-        type: string
-        description: The product title filter
-        example: 'Refrigérateur'
-
-      additionalProductFilters:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/additionalProductFilters'
 
 
 
