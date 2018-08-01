@@ -167,7 +167,7 @@ definitions:
     - price
     properties:
       deliveryMethod:
-        $ref: '#/definitions/deliveryMethod'
+        $ref: deliveryMethod
       price:
         $ref: '#/definitions/price'
       additionalPrice:
