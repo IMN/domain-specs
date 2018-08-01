@@ -141,7 +141,7 @@ definitions:
         inventoryLevel:
           $ref: '#/definitions/inventoryLevel'
         defaultDeliveryMethod:
-          $ref: '#/definitions/deliveryMethod'
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/deliveryMethod'
         deliverySpecifications:
           type: array
           items:
