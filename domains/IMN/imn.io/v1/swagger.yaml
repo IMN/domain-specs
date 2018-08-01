@@ -371,37 +371,7 @@ definitions:
       additionalProductFilters:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/additionalProductFilters'
 
-  additionalProductFiltersValue:
-    type: object
-    properties:
-  #      columnId:
-  #        type: string
-  #        format: guid
-  #        description: The column identifier of your catalog or a custom column.
-  #        example: 672644c7-5bd0-4e25-88c1-1f732bda5e4c
-      operatorName:
-        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/productFilterOperatorName'
-      values:
-        description: |
-          Must be null if the operator is "IsNull" or "IsNotNull".
-          Can contains multiple value in case of "InList" operator. Otherwise a single value is expected.
-        type: array
-        items:
-          type: string
-        example:
-          - My value
-    example:
-      '672644c7-5bd0-4e25-88c1-1f732bda5e4c':
-        operatorName: GreaterTo
-        values:
-          - 100
-  additionalProductFilters:
-    type: object
-    description: |
-      Describe a filter on a product's column.
-      The key is the column identifier of your catalog or a custom column.
-    additionalProperties:
-      $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/additionalProductFiltersValue'
+
 
   productFilterOperatorName:
     type: string
