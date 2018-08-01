@@ -100,11 +100,7 @@ definitions:
       deliverySettings:
         $ref: '#/definitions/marketplaceDeliverySettingList'
           
-  deliveryMode:
-    type: string
-    example: Standard
-    x-lov: DeliveryMode
-    
+
   marketplaceDeliverySettingList:
     type: array
     items:
@@ -113,11 +109,11 @@ definitions:
   marketplaceDeliverySetting:
     type: object
     required:
-    - deliveryMode
+    - deliveryMethod
     - ruleType
     properties:
-      deliveryMode:
-        $ref: '#/definitions/deliveryMode'
+      deliveryMethod:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/deliveryMethod'
       ruleType:
         $ref: '#/definitions/marketplaceShippingChargeRuleType'
       charge:
