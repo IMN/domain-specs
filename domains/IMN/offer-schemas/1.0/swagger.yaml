@@ -165,6 +165,8 @@ definitions:
 
   deliverySpecification:
     type: object
+    required:
+    - 
     properties:
       deliveryMethod:
         $ref: '#/definitions/deliveryMethod'
