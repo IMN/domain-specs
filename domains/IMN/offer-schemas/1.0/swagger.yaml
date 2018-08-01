@@ -166,7 +166,8 @@ definitions:
   deliverySpecification:
     type: object
     required:
-    - 
+    - deliveryMethod
+    - price
     properties:
       deliveryMethod:
         $ref: '#/definitions/deliveryMethod'
