@@ -32,7 +32,7 @@ definitions:
     example: started
     
 
-  realOffer:
+  realOfferReceived:
     x-exclude: true
     type: object
     
