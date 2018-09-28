@@ -38,6 +38,7 @@ definitions:
     - phoneNumber
     - currencyCode
     - ecommerceSoftwareName
+    - userIPAddress
     properties:
       merchantCode:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
@@ -61,6 +62,10 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/currencyCode'
       ecommerceSoftwareName:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/ecommerceSoftwareName'
+      userIPAddress:
+        type: string
+
+  
   
   updateMerchantAcountInfo:
     x-format: Command
@@ -69,6 +74,8 @@ definitions:
     required: 
     - merchantCode
     - userId
+    - userEmail
+    - userIPAddress
     - companyName
     - lastName
     - firstName
@@ -81,6 +88,10 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
       userId:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+      userEmail:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+      userIPAddress:
+        type: string
       companyName:
         $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantCompanyName'
       lastName:
@@ -107,10 +118,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
 
 
 
@@ -123,10 +140,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
       
   acceptMerchantMarketplaceSubscription:
     x-format: Command
@@ -137,10 +160,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
       
   refuseMerchantMarketplaceSubscription:
     x-format: Command
@@ -151,6 +180,8 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       - reason
       properties:
@@ -158,6 +189,10 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusalReason'
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
           
   blockMerchantMarketplaceSubscription:
     x-format: Command
@@ -168,6 +203,8 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       - reason
       properties:
@@ -175,6 +212,10 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/merchantMarketplaceSubscriptionRefusalReason'
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
 
       
   configureMerchantMarketplaceCredential:
@@ -185,6 +226,8 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       - credential
       properties:
@@ -192,6 +235,10 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceApiCredential'
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
   
   
   
@@ -204,10 +251,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
     
   disableMerchantMarketplace:
     x-format: Command
@@ -217,10 +270,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
   
   
 
@@ -232,10 +291,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
     
   disableMerchantMarketplaceOrderImportation:
     x-format: Command
@@ -245,10 +310,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       properties:
         userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
           
   configureMarketplacePricingSetting:
     x-format: Command
@@ -258,11 +329,17 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       - pricingSetting
       properties:
-        userId: 
+        userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
         pricingSetting:
           $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplacePricingSetting'
           
@@ -274,11 +351,17 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       - shippingSettings
       properties:
-        userId: 
+        userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
         shippingSettings:
           $ref: 'https://api.swaggerhub.com/domains/IMN/merchant-schemas/1.0#/definitions/marketplaceShippingSettings'
 
@@ -292,10 +375,16 @@ definitions:
       - merchantCode
       - marketplaceCode
       - userId
+      - userEmail
+      - userIPAddress
       - deliveryMethod
       properties:
-        userId: 
+        userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
         deliveryMethod:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/deliveryMethod'
 
@@ -309,10 +398,16 @@ definitions:
       - merchantCode
       - marketplaceCode
       - userId
+      - userEmail
+      - userIPAddress
       - deliveryMethod
       properties:
-        userId: 
+        userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
         deliveryMethod:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/deliveryMethod'
 
@@ -326,10 +421,16 @@ definitions:
       required: 
       - merchantCode
       - userId
+      - userEmail
+      - userIPAddress
       - marketplaceCode
       - marketplaceMerchantCode
       properties:
-        userId: 
+        userId:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
+          type: string
         marketplaceMerchantCode:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceMerchantCode'
