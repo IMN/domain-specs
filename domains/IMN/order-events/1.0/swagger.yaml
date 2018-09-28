@@ -35,20 +35,42 @@ definitions:
     required:
     - order
     - merchantInfo
+    - userId
+    - userEmail
+    - userIPAddress
     properties:
       order:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
       merchantInfo:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderMerchantInfo'
+      userId:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+      userEmail:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+      userIPAddress:
+        description: The IP address who request this operation
+        type: string
+        example: '127.0.0.1'
 
   orderMerchantInfoCleared:
     x-format: Event
     type: object
     required:
     - order
+    - userId
+    - userEmail
+    - userIPAddress
     properties:
       order:
         $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
+      userId:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
+      userEmail:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+      userIPAddress:
+        description: The IP address who request this operation
+        type: string
+        example: '127.0.0.1'
 
   orderChangeEventBase:
     x-exclude: true
@@ -60,7 +82,8 @@ definitions:
       - order
       - userId
       - userName
-      - ipAddress
+      - userEmail
+      - userIPAddress
       - testMode
       - sourceType
       - eventType
@@ -71,7 +94,9 @@ definitions:
           $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userId'
         userName:
           $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderChangeUserName'
-        ipAddress:
+        userEmail:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/email'
+        userIPAddress:
           description: The IP address who request this operation
           type: string
           example: '127.0.0.1'
@@ -104,9 +129,10 @@ definitions:
       - order
       - userId
       - userName
+      - userEmail
+      - userIPAddress
       - carrierCode
       - trackingNumber
-      - ipAddress
       - testMode
       - sourceType
       properties:
@@ -124,10 +150,11 @@ definitions:
       - order
       - userId
       - userName
+      - userEmail
+      - userIPAddress
       - carrierName
       - trackingNumber
       - trackingUrl
-      - ipAddress
       - testMode
       - sourceType
 
@@ -148,8 +175,9 @@ definitions:
       - order
       - userId
       - userName
+      - userEmail
+      - userIPAddress
       - refundReason
-      - ipAddress
       - testMode
       - sourceType
       properties:
@@ -165,8 +193,9 @@ definitions:
       - order
       - userId
       - userName
+      - userEmail
+      - userIPAddress
       - cancellationReason
-      - ipAddress
       - testMode
       - sourceType
       properties:
