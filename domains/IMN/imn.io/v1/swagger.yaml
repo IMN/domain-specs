@@ -438,8 +438,8 @@ definitions:
     description: The email
     type: string
     format: email
-    pattern: ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
-    x-pattern: ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+    pattern: ^(.+)@(.+)$
+    x-pattern: ^(.+)@(.+)$
     example: paulsimon@mysupercompany.com
 
   userId:
