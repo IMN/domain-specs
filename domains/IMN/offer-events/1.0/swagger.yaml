@@ -33,7 +33,7 @@ definitions:
   merchantOfferReceived:
     x-format: Event
     allOf:
-    - $ref: '#/definitions/merchantOfferEventBase'
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-events/1.0#/definitions/merchantOfferEventBase'
 
   
 
