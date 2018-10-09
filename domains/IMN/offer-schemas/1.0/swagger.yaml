@@ -177,7 +177,7 @@ definitions:
 
   merchantOfferNoneImportationReasonCode:
     type: string
-    description: A reason code related
+    description: A reason code related to a none importation of the offer
     enum:
     - InvalidEAN
     - InvariantNotAppliable
@@ -195,3 +195,12 @@ definitions:
       actualValue:
         type: string
         description: The actual value causing the none importation of the offer
+        
+        
+  merchantOfferUnpublicationReasonCode:
+    type: string
+    description: The reason of the unpublication of an offer
+    enum:
+    - MerchantMarketplaceOfferPublicationDisabled
+    - Excluded
+    - OfferDisabled
