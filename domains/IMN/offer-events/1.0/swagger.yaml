@@ -10,6 +10,7 @@ info:
 x-beezup-ops:
   codeGenType: domain
   repo: IMN
+  product: IMN-CORE
   appRoot: IMN.Offer.Events
   apiName: TBD
   namespace: IMN.Offer.Events
