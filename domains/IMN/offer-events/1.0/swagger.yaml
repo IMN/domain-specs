@@ -50,6 +50,8 @@ definitions:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
     - type: object
+      required:
+      - reason
       properties:
         reason:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferUnpublicationReasonCode'
