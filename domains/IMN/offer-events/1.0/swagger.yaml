@@ -45,10 +45,17 @@ definitions:
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
     
+  merchantOfferUnpublished:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferIdentifier'
+    - type: object
+      properties:
+        reason:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer-schemas/1.0#/definitions/merchantOfferUnpublicationReasonCode'
 
-
-
-
+  
+  
 
 
   merchantOfferNotImported:
