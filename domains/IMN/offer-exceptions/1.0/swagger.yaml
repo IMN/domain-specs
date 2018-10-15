@@ -1,0 +1,100 @@
+### Domains, a place to put your reusable components
+
+### Examples...
+
+info:
+  description: IMN - Offer Exceptions
+  version: "1.0"
+  title: IMN - Offer Exceptions
+
+x-beezup-ops:
+  codeGenType: domain
+  repo: IMN
+  appRoot: IMN.Offer.Exceptions
+  apiName: TBD
+  namespace: IMN.Offer.Exceptions
+  comment: |
+    IMN.Offer.Exceptions
+  using:
+  - IMN.Offer.Schemas
+  - IMN.Schemas
+  references:
+  - IMN.Offer.Schemas
+
+
+responses:
+
+
+
+
+  offerBatchBadRequest:
+    description: |
+      In case there is an error like:
+      - ValidationException
+      - DuplicateMerchantOfferOperationException
+      - DuplicateMerchantMarketplaceOfferOperationException
+      - InvalidMarketplaceCodeException
+      - InvalidMerchantCodeException
+    x-exceptions:
+    - ValidationException
+    - DuplicateMerchantOfferOperationException
+    - DuplicateMerchantMarketplaceOfferOperationException
+    - InvalidMarketplaceCodeException
+    - InvalidMerchantCodeException
+    schema:
+      $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/errorResponseMessage'
+
+
+
+
+definitions: 
+
+
+  duplicateMerchantOfferOperationException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    description: |
+      Duplicate operation on an offer has been {duplicateCount} times for the merchant '{merchantCode}':
+      - sku: '{sku}' 
+    type: object
+    required:
+    - merchantCode
+    - sku
+    - duplicateCount
+    properties:
+      merchantCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      sku: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/sku'
+      duplicateCount:
+        type: integer
+        minimum: 2
+
+
+  duplicateMerchantMarketplaceOfferOperationException:
+    x-format: Exception
+    x-transient: false
+    x-technical: false
+    description: |
+      Duplicate operation on an offer has been {duplicateCount} times for the marketplace '{marketplaceCode}' and the merchant '{merchantCode}':
+      - sku: '{sku}' 
+      - gtin: '{gtin}'
+      - itemCondition: '{itemCondition}' 
+      - fulfilledBy: '{fulfilledBy}'
+    type: object
+    required:
+    - marketplaceCode
+    - merchantCode
+    - sku
+    - duplicateCount
+    properties:
+      marketplaceCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/marketplaceCode'
+      merchantCode:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantCode'
+      sku: 
+        $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/sku'
+      duplicateCount:
+        type: integer
+        minimum: 2
