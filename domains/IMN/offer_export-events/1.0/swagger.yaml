@@ -4,6 +4,7 @@ info:
 
 x-beezup-ops:
   codeGenType: domain
+  product: IMN
   repo: IMN
   appRoot: IMN.Offer.EXP
   apiName: TBD
