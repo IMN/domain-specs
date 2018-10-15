@@ -5,6 +5,7 @@ info:
 x-beezup-ops:
   codeGenType: domain
   repo: IMN
+  product: IMN-CORE
   appRoot: IMN.Offer.EXP.Commands
   apiName: TBD
   namespace: IMN.Offer.EXP.Commands
