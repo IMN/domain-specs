@@ -316,6 +316,8 @@ definitions:
   orderItem:
     description: Describe an order item.
     type: object
+    required:
+    - id
     properties:
       
       id:
