@@ -215,3 +215,22 @@ definitions:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/processingStatus'
       error:
         $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/userErrorMessage'
+        
+        
+  orderShipmentOverdue:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
+    - type: object
+      required:
+      - order
+      - userId
+      - userName
+      - userEmail
+      - userIPAddress
+      - cancellationReason
+      - testMode
+      - sourceType
+      properties:
+        cancellationReason:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
