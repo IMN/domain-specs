@@ -219,18 +219,9 @@ definitions:
         
   orderShipmentOverdue:
     x-format: Event
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/order-events/1.0#/definitions/orderChangeEventBase'
-    - type: object
-      required:
-      - order
-      - userId
-      - userName
-      - userEmail
-      - userIPAddress
-      - cancellationReason
-      - testMode
-      - sourceType
-      properties:
-        cancellationReason:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/cancellationReason'
+    type: object
+    required:
+    - order
+    properties:
+      order:
+        $ref: 'https://api.swaggerhub.com/domains/IMN/order-schemas/1.0#/definitions/orderIdentifier'
