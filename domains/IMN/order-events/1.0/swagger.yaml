@@ -6,8 +6,9 @@ info:
 x-beezup-ops:
   codeGenType: domain
   repo: IMN
+  product: IMN-CORE
   appRoot: IMN.Order.Events
-  apiName: TBD
+  apiName: IMN.Order.Events
   namespace: IMN.Order.Events
   comment: |
     IMN.Order.Events
