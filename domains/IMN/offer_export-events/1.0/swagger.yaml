@@ -7,7 +7,7 @@ x-beezup-ops:
   product: IMN-CORE
   repo: IMN
   appRoot: IMN.Offer.EXP.Events
-  apiName: TBD
+  apiName: IMN.Offer.EXP.Events
   namespace: IMN.Offer.EXP.Events
   comment: |
     IMN.Offer.EXP.Events
