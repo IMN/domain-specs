@@ -96,6 +96,7 @@ definitions:
         totalOfferCount:
           type: integer      
         offerCountByPartition:
+          type: object
           additionalProperties:
             type: integer
     
