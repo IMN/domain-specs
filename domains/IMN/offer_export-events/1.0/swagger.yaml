@@ -93,9 +93,13 @@ definitions:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
     - type: object
       properties:
-        offerCount:
-          type: integer
+        offerCountByPartition:
+          additionalProperties:
+            type: integer
     
+    
+
+      
     
 ####################################
 
@@ -174,5 +178,6 @@ definitions:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
     - type: object
       properties:
-        offerCount:
-          type: integer
+        offerCountByPartition:
+          additionalProperties:
+            type: integer
