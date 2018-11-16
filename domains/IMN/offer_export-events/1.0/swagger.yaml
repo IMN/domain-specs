@@ -53,6 +53,27 @@ definitions:
         partitionKey:
           type: string
   
+  offerExportPartitionInitializationPushStarted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string
+
+  offerExportPartitionInitializationPushCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string  
   
   offerExportInitializationStopped:
     x-format: Event
@@ -105,6 +126,28 @@ definitions:
       properties:
         partitionKey:
           type: string
+  
+  offerExportPartitionUnpublicationPushStarted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string
+
+  offerExportPartitionUnpublicationPushCompleted:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required: 
+      - partitionKey
+      properties:
+        partitionKey:
+          type: string  
   
   
   offerExportUnpublicationStopped:
