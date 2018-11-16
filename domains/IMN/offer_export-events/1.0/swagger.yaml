@@ -52,6 +52,8 @@ definitions:
       properties:
         partitionKey:
           type: string
+        offerCount:
+          type: integer
   
   offerExportPartitionInitializationPushStarted:
     x-format: Event
@@ -89,6 +91,10 @@ definitions:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+      type: object
+      properties:
+        offerCount:
+          type: integer
     
     
 ####################################
@@ -126,7 +132,9 @@ definitions:
       properties:
         partitionKey:
           type: string
-  
+        offerCount:
+          type: integer
+
   offerExportPartitionUnpublicationPushStarted:
     x-format: Event
     allOf:
@@ -164,3 +172,7 @@ definitions:
     x-format: Event
     allOf:
     - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+      type: object
+      properties:
+        offerCount:
+          type: integer
