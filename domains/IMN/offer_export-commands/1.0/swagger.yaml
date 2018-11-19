@@ -25,6 +25,9 @@ definitions:
         required: 
         - merchantCode
         - marketplaceCode
+        properties:
+          parentOperationName:
+            type: string
         
   cancelInitOffersExport:
     x-format: Command
