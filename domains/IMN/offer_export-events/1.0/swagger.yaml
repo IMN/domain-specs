@@ -17,6 +17,9 @@ x-beezup-ops:
   - IMN.Offer.Schemas
   - IMN.Offer.Events
   - System.Collections.Generic
+  references:
+  - IMN.Offer.Events
+  - IMN.Offer.EXP.Schemas
 
 definitions:
 
