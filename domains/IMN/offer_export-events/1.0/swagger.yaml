@@ -43,7 +43,6 @@ definitions:
     - type: object
       required:
       - operation
-     
       properties: 
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
@@ -78,7 +77,6 @@ definitions:
       - operation
       - step
       - partitionKey
-      - offerCount
       properties: 
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
@@ -90,31 +88,7 @@ definitions:
           type: integer
   
  
-  
-  offerExportOperationStopped:
-    x-format: Event
-    allOf:
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-    - type: object
-      required:
-      - operation
-      - reason
-      properties: 
-        operation:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
-        reason:
-          type: string
 
-  offerExportOperationExpired:
-    x-format: Event
-    allOf: 
-    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
-    - type: object
-      required:
-      - operation
-      properties: 
-        operation:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
           
   offerExportOperationCompleted:
     x-format: Event
@@ -123,7 +97,11 @@ definitions:
     - type: object
       required:
       - operation
-      
+      - processingStatus
       properties: 
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
+        processingStatus:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/processingStatus'
+        errorMessage:
+          type: string
