@@ -43,13 +43,11 @@ definitions:
     - type: object
       required:
       - operation
-      - step
+     
       properties: 
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
-        step:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepName'          
-
+      
 
 
   offerExportPartitionOperationStarted:
@@ -100,11 +98,11 @@ definitions:
     - type: object
       required:
       - operation
-      - parentOperationName
+      - reason
       properties: 
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
-        parentOperationName:
+        reason:
           type: string
 
   offerExportOperationExpired:
@@ -125,9 +123,7 @@ definitions:
     - type: object
       required:
       - operation
-      - step
+      
       properties: 
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
-        step:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepName'
