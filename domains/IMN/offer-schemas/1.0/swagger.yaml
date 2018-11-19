@@ -12,7 +12,7 @@ x-beezup-ops:
   product: IMN-CORE
   repo: IMN
   appRoot: IMN.Offer.Schemas
-  apiName: TBD
+  apiName: IMN.Offer.Schemas
   namespace: IMN.Offer.Schemas
   comment: |
     20180509 - test
