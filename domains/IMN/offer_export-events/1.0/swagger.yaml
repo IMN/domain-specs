@@ -48,7 +48,7 @@ definitions:
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
         step:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepType'          
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepName'          
 
 
 
@@ -65,7 +65,7 @@ definitions:
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
         step:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepType'     
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepName'     
         partitionKey:
           type: string
 
@@ -85,7 +85,7 @@ definitions:
         operation:
           $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
         step:
-          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepType'          
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationStepName'          
         partitionKey:
           type: string
         offerCount:
