@@ -20,8 +20,6 @@ x-beezup-ops:
 
 definitions:
 
-#region old events
-
   offerExportOperationRequested:
     x-format: Event
     allOf:
@@ -122,6 +120,3 @@ definitions:
           type: object
           additionalProperties:
             type: integer
-
-
-#New events
