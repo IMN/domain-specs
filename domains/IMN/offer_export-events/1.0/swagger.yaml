@@ -92,6 +92,17 @@ definitions:
           type: string
   
  
+  offerExportOperationExpîred:
+    x-format: Event
+    allOf:
+    - $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/merchantMarketplaceBase'
+    - type: object
+      required:
+      - operation
+      properties: 
+        operation:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/offer_export-schemas/1.0#/definitions/exportOperationName'
+
 
           
   offerExportOperationCompleted:
