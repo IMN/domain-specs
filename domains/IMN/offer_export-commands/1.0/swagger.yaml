@@ -25,6 +25,7 @@ definitions:
         required: 
         - merchantCode
         - marketplaceCode
+        - parentOperationName
         properties:
           parentOperationName:
             type: string
