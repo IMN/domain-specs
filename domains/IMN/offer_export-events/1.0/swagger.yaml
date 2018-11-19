@@ -86,6 +86,10 @@ definitions:
           type: string
         offerCount:
           type: integer
+        processingStatus:
+          $ref: 'https://api.swaggerhub.com/domains/IMN/imn.io/v1#/definitions/processingStatus'
+        errorMessage:
+          type: string
   
  
 
